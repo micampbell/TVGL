@@ -1,0 +1,1015 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="A field" Url="html/1942068239.htm" />
+  <HelpKINode Title="AdjacentFaces property" Url="html/2082573819.htm" />
+  <HelpKINode Title="Af property" Url="html/374750317.htm" />
+  <HelpKINode Title="AliceBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="AliceBlue field" Url="html/1173226037.htm" />
+  <HelpKINode Title="Anchor property" Url="html/1988658360.htm" />
+  <HelpKINode Title="AntiqueWhite enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="AntiqueWhite field" Url="html/618346690.htm" />
+  <HelpKINode Title="Aperture property" Url="html/1132336119.htm" />
+  <HelpKINode Title="Apex property" Url="html/1501063281.htm" />
+  <HelpKINode Title="Aqua enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Aqua field" Url="html/191307306.htm" />
+  <HelpKINode Title="Aquamarine enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Aquamarine field" Url="html/740414977.htm" />
+  <HelpKINode Title="Area field">
+    <HelpKINode Title="Area Field" Url="html/83747950.htm" />
+    <HelpKINode Title="Area Field" Url="html/2118962049.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Area property">
+    <HelpKINode Title="Area Property " Url="html/690085395.htm" />
+    <HelpKINode Title="Area Property " Url="html/102182021.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AreaRatio property" Url="html/1295712274.htm" />
+  <HelpKINode Title="Artificial enumeration member" Url="html/274829933.htm" />
+  <HelpKINode Title="Artificial field" Url="html/1535409530.htm" />
+  <HelpKINode Title="ArtificiallyClosed field" Url="html/1026141505.htm" />
+  <HelpKINode Title="Axis property">
+    <HelpKINode Title="Axis Property " Url="html/278319314.htm" />
+    <HelpKINode Title="Axis Property " Url="html/366581253.htm" />
+    <HelpKINode Title="Axis Property " Url="html/1017945016.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Azure enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Azure field" Url="html/1576945952.htm" />
+  <HelpKINode Title="B field" Url="html/1942002703.htm" />
+  <HelpKINode Title="Beige enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Beige field" Url="html/1734331128.htm" />
+  <HelpKINode Title="Bf property" Url="html/374815853.htm" />
+  <HelpKINode Title="Binary enumeration member" Url="html/1435064099.htm" />
+  <HelpKINode Title="Binary field" Url="html/2011019564.htm" />
+  <HelpKINode Title="Bisque enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Bisque field" Url="html/917287720.htm" />
+  <HelpKINode Title="Black enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Black field" Url="html/556267651.htm" />
+  <HelpKINode Title="BlanchedAlmond enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="BlanchedAlmond field" Url="html/1838514307.htm" />
+  <HelpKINode Title="Blue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Blue field" Url="html/2000401445.htm" />
+  <HelpKINode Title="BlueViolet enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="BlueViolet field" Url="html/1990227244.htm" />
+  <HelpKINode Title="BoundingBox structure">
+    <HelpKINode Title="BoundingBox Members" Url="html/470758066.htm" />
+    <HelpKINode Title="BoundingBox Structure" Url="html/100021517.htm" />
+    <HelpKINode Title="about BoundingBox structure" Url="html/100021517.htm" />
+    <HelpKINode Title="all members" Url="html/470758066.htm" />
+    <HelpKINode Title="fields" Url="html/1809421802.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BoundingBox.Directions field" Url="html/23534301.htm" />
+  <HelpKINode Title="BoundingBox.ExtremeVertices field" Url="html/720788406.htm" />
+  <HelpKINode Title="BoundingBox.Volume field" Url="html/1777880055.htm" />
+  <HelpKINode Title="Bounds property" Url="html/1667227823.htm" />
+  <HelpKINode Title="Brown enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Brown field" Url="html/1892674375.htm" />
+  <HelpKINode Title="BurlyWood enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="BurlyWood field" Url="html/325594608.htm" />
+  <HelpKINode Title="CadetBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="CadetBlue field" Url="html/8969456.htm" />
+  <HelpKINode Title="Center property">
+    <HelpKINode Title="Center Property " Url="html/1606740982.htm" />
+    <HelpKINode Title="Center Property " Url="html/1019642528.htm" />
+    <HelpKINode Title="Center Property " Url="html/1553925686.htm" />
+    <HelpKINode Title="Center Property " Url="html/1802774245.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Chartreuse enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Chartreuse field" Url="html/1352118830.htm" />
+  <HelpKINode Title="Chocolate enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Chocolate field" Url="html/1335128564.htm" />
+  <HelpKINode Title="CoincidentEdge enumeration member" Url="html/274829933.htm" />
+  <HelpKINode Title="CoincidentEdge field" Url="html/864755296.htm" />
+  <HelpKINode Title="color property" Url="html/1085966575.htm" />
+  <HelpKINode Title="Color structure">
+    <HelpKINode Title="Color Members" Url="html/1140045142.htm" />
+    <HelpKINode Title="Color Structure" Url="html/366088298.htm" />
+    <HelpKINode Title="about Color structure" Url="html/366088298.htm" />
+    <HelpKINode Title="all members" Url="html/1140045142.htm" />
+    <HelpKINode Title="constructor" Url="html/1261146693.htm" />
+    <HelpKINode Title="fields" Url="html/92067518.htm" />
+    <HelpKINode Title="properties" Url="html/83078593.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Color.A field" Url="html/1942068239.htm" />
+  <HelpKINode Title="Color.Af property" Url="html/374750317.htm" />
+  <HelpKINode Title="Color.B field" Url="html/1942002703.htm" />
+  <HelpKINode Title="Color.Bf property" Url="html/374815853.htm" />
+  <HelpKINode Title="Color.Color constructor" Url="html/1261146693.htm" />
+  <HelpKINode Title="Color.G field" Url="html/1941675023.htm" />
+  <HelpKINode Title="Color.Gf property" Url="html/374619245.htm" />
+  <HelpKINode Title="Color.R field" Url="html/1940954127.htm" />
+  <HelpKINode Title="Color.Rf property" Url="html/373767277.htm" />
+  <HelpKINode Title="Concave enumeration member" Url="html/1487316449.htm" />
+  <HelpKINode Title="Concave field" Url="html/820237104.htm" />
+  <HelpKINode Title="Cone class">
+    <HelpKINode Title="Cone Class" Url="html/2121301412.htm" />
+    <HelpKINode Title="Cone Members" Url="html/430571148.htm" />
+    <HelpKINode Title="about Cone class" Url="html/2121301412.htm" />
+    <HelpKINode Title="all members" Url="html/430571148.htm" />
+    <HelpKINode Title="fields" Url="html/1453755626.htm" />
+    <HelpKINode Title="properties" Url="html/774557447.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Cone.Aperture property" Url="html/1132336119.htm" />
+  <HelpKINode Title="Cone.Apex property" Url="html/1501063281.htm" />
+  <HelpKINode Title="Cone.Axis property" Url="html/366581253.htm" />
+  <HelpKINode Title="Cone.IsPositive field" Url="html/1048652204.htm" />
+  <HelpKINode Title="Constants class">
+    <HelpKINode Title="Constants Class" Url="html/1692416802.htm" />
+    <HelpKINode Title="Constants Members" Url="html/1611786766.htm" />
+    <HelpKINode Title="about Constants class" Url="html/1692416802.htm" />
+    <HelpKINode Title="all members" Url="html/1611786766.htm" />
+    <HelpKINode Title="fields" Url="html/389214402.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Constants.EpsilonSameAngle field" Url="html/1967799410.htm" />
+  <HelpKINode Title="Constants.ErrorForFaceInSurface field" Url="html/1334079295.htm" />
+  <HelpKINode Title="Constants.FloatSize field" Url="html/615017809.htm" />
+  <HelpKINode Title="Constants.LookUpStringFormat field" Url="html/287875760.htm" />
+  <HelpKINode Title="Constants.MaxNumberEdgesPerFace field" Url="html/1488766553.htm" />
+  <HelpKINode Title="Constants.MinProbabilityForPrimitiveClassifer field" Url="html/1397712492.htm" />
+  <HelpKINode Title="Constants.MinProbabilityForPrimitiveOfWingedEdge field" Url="html/541957364.htm" />
+  <HelpKINode Title="Constants.NumberStyle field" Url="html/808552586.htm" />
+  <HelpKINode Title="Constants.RegExCoord field" Url="html/1576414120.htm" />
+  <HelpKINode Title="Constants.RegExSolid field" Url="html/1905536325.htm" />
+  <HelpKINode Title="Constants.SurfaceAreaFractionForPrimitive field" Url="html/1046351073.htm" />
+  <HelpKINode Title="Constants.VertexSize field" Url="html/89887836.htm" />
+  <HelpKINode Title="ContactData class">
+    <HelpKINode Title="ContactData Class" Url="html/1191216211.htm" />
+    <HelpKINode Title="ContactData Members" Url="html/280183410.htm" />
+    <HelpKINode Title="about ContactData class" Url="html/1191216211.htm" />
+    <HelpKINode Title="all members" Url="html/280183410.htm" />
+    <HelpKINode Title="fields" Url="html/1602811920.htm" />
+    <HelpKINode Title="properties" Url="html/531577586.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ContactData.Area field" Url="html/83747950.htm" />
+  <HelpKINode Title="ContactData.NegativeLoops property" Url="html/33440725.htm" />
+  <HelpKINode Title="ContactData.Perimeter field" Url="html/1487490496.htm" />
+  <HelpKINode Title="ContactData.PositiveLoops property" Url="html/1264815730.htm" />
+  <HelpKINode Title="ContactEdge property" Url="html/688771473.htm" />
+  <HelpKINode Title="ContactElement class">
+    <HelpKINode Title="ContactElement Class" Url="html/145148741.htm" />
+    <HelpKINode Title="ContactElement Members" Url="html/539204415.htm" />
+    <HelpKINode Title="about ContactElement class" Url="html/145148741.htm" />
+    <HelpKINode Title="all members" Url="html/539204415.htm" />
+    <HelpKINode Title="properties" Url="html/265719747.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ContactElement.ContactEdge property" Url="html/688771473.htm" />
+  <HelpKINode Title="ContactElement.SplitType property" Url="html/349998831.htm" />
+  <HelpKINode Title="Convex enumeration member" Url="html/1487316449.htm" />
+  <HelpKINode Title="Convex field" Url="html/1936105175.htm" />
+  <HelpKINode Title="ConvexHull2D method" Url="html/168399646.htm" />
+  <HelpKINode Title="ConvexHullEdges property" Url="html/1545598020.htm" />
+  <HelpKINode Title="ConvexHullFaces property" Url="html/385682361.htm" />
+  <HelpKINode Title="ConvexHullVertices property" Url="html/1341483281.htm" />
+  <HelpKINode Title="Copy method">
+    <HelpKINode Title="Copy Method " Url="html/1892300301.htm" />
+    <HelpKINode Title="Copy Method " Url="html/861350735.htm" />
+    <HelpKINode Title="Copy Method " Url="html/942795639.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Coral enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Coral field" Url="html/662299064.htm" />
+  <HelpKINode Title="CornflowerBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="CornflowerBlue field" Url="html/1934488968.htm" />
+  <HelpKINode Title="Cornsilk enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Cornsilk field" Url="html/57389210.htm" />
+  <HelpKINode Title="Crimson enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Crimson field" Url="html/754089121.htm" />
+  <HelpKINode Title="Curvature property">
+    <HelpKINode Title="Curvature Property " Url="html/1461009595.htm" />
+    <HelpKINode Title="Curvature Property " Url="html/1545633242.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CurvatureType enumeration" Url="html/1487316449.htm" />
+  <HelpKINode Title="CurvatureType.Concave field" Url="html/820237104.htm" />
+  <HelpKINode Title="CurvatureType.Convex field" Url="html/1936105175.htm" />
+  <HelpKINode Title="CurvatureType.SaddleOrFlat field" Url="html/1098353912.htm" />
+  <HelpKINode Title="CurvatureType.Undefined field" Url="html/770811836.htm" />
+  <HelpKINode Title="Cyan enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Cyan field" Url="html/507452297.htm" />
+  <HelpKINode Title="Cylinder class">
+    <HelpKINode Title="Cylinder Class" Url="html/1901632765.htm" />
+    <HelpKINode Title="Cylinder Members" Url="html/433888787.htm" />
+    <HelpKINode Title="about Cylinder class" Url="html/1901632765.htm" />
+    <HelpKINode Title="all members" Url="html/433888787.htm" />
+    <HelpKINode Title="fields" Url="html/758103926.htm" />
+    <HelpKINode Title="properties" Url="html/376489108.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Cylinder.Anchor property" Url="html/1988658360.htm" />
+  <HelpKINode Title="Cylinder.Axis property" Url="html/1017945016.htm" />
+  <HelpKINode Title="Cylinder.IsPositive field" Url="html/220678648.htm" />
+  <HelpKINode Title="Cylinder.Radius property" Url="html/728875250.htm" />
+  <HelpKINode Title="DarkBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkBlue field" Url="html/1405652480.htm" />
+  <HelpKINode Title="DarkCyan enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkCyan field" Url="html/381461064.htm" />
+  <HelpKINode Title="DarkGoldenrod enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkGoldenrod field" Url="html/1105550830.htm" />
+  <HelpKINode Title="DarkGray enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkGray field" Url="html/1905970442.htm" />
+  <HelpKINode Title="DarkGreen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkGreen field" Url="html/801213950.htm" />
+  <HelpKINode Title="DarkKhaki enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkKhaki field" Url="html/1264058358.htm" />
+  <HelpKINode Title="DarkMagenta enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkMagenta field" Url="html/579338796.htm" />
+  <HelpKINode Title="DarkOliveGreen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkOliveGreen field" Url="html/2045818078.htm" />
+  <HelpKINode Title="DarkOrange enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkOrange field" Url="html/264620919.htm" />
+  <HelpKINode Title="DarkOrchid enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkOrchid field" Url="html/551743530.htm" />
+  <HelpKINode Title="DarkRed enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkRed field" Url="html/336150574.htm" />
+  <HelpKINode Title="DarkSalmon enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkSalmon field" Url="html/606427414.htm" />
+  <HelpKINode Title="DarkSeaGreen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkSeaGreen field" Url="html/1887972952.htm" />
+  <HelpKINode Title="DarkSlateBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkSlateBlue field" Url="html/671341186.htm" />
+  <HelpKINode Title="DarkSlateGray enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkSlateGray field" Url="html/1058605413.htm" />
+  <HelpKINode Title="DarkTurquoise enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkTurquoise field" Url="html/1899276019.htm" />
+  <HelpKINode Title="DarkViolet enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DarkViolet field" Url="html/150070137.htm" />
+  <HelpKINode Title="DeepPink enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DeepPink field" Url="html/1701242186.htm" />
+  <HelpKINode Title="DeepSkyBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DeepSkyBlue field" Url="html/710387343.htm" />
+  <HelpKINode Title="DefineContact method" Url="html/1765279334.htm" />
+  <HelpKINode Title="DenseRegion class">
+    <HelpKINode Title="DenseRegion Class" Url="html/1722624917.htm" />
+    <HelpKINode Title="DenseRegion Members" Url="html/1284029818.htm" />
+    <HelpKINode Title="about DenseRegion class" Url="html/1722624917.htm" />
+    <HelpKINode Title="all members" Url="html/1284029818.htm" />
+    <HelpKINode Title="constructor" Url="html/2108315540.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DenseRegion.DenseRegion constructor" Url="html/2108315540.htm" />
+  <HelpKINode Title="DimGray enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DimGray field" Url="html/541032386.htm" />
+  <HelpKINode Title="Directions field" Url="html/23534301.htm" />
+  <HelpKINode Title="DistanceToOrigin property" Url="html/489084119.htm" />
+  <HelpKINode Title="DodgerBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="DodgerBlue field" Url="html/57336141.htm" />
+  <HelpKINode Title="Edge class">
+    <HelpKINode Title="Edge Class" Url="html/1744202510.htm" />
+    <HelpKINode Title="Edge Members" Url="html/334455524.htm" />
+    <HelpKINode Title="about Edge class" Url="html/1744202510.htm" />
+    <HelpKINode Title="all members" Url="html/334455524.htm" />
+    <HelpKINode Title="methods" Url="html/1786890160.htm" />
+    <HelpKINode Title="properties" Url="html/1605023421.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Edge.Curvature property" Url="html/1545633242.htm" />
+  <HelpKINode Title="Edge.From property" Url="html/1651320575.htm" />
+  <HelpKINode Title="Edge.InternalAngle property" Url="html/1428706787.htm" />
+  <HelpKINode Title="Edge.Length property" Url="html/2096961303.htm" />
+  <HelpKINode Title="Edge.OtherFace property" Url="html/1635427147.htm" />
+  <HelpKINode Title="Edge.OtherVertex method" Url="html/1647960759.htm" />
+  <HelpKINode Title="Edge.OwnedFace property" Url="html/1918703204.htm" />
+  <HelpKINode Title="Edge.PartofConvexHull property" Url="html/1163227781.htm" />
+  <HelpKINode Title="Edge.To property" Url="html/382503054.htm" />
+  <HelpKINode Title="Edge.Vector property" Url="html/169880886.htm" />
+  <HelpKINode Title="EdgeCurvature property" Url="html/189056711.htm" />
+  <HelpKINode Title="Edges property">
+    <HelpKINode Title="Edges Property " Url="html/2113924271.htm" />
+    <HelpKINode Title="Edges Property " Url="html/2042485849.htm" />
+    <HelpKINode Title="Edges Property " Url="html/388737017.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EpsilonSameAngle field" Url="html/1967799410.htm" />
+  <HelpKINode Title="ErrorForFaceInSurface field" Url="html/1334079295.htm" />
+  <HelpKINode Title="ExtremeVertices field" Url="html/720788406.htm" />
+  <HelpKINode Title="Faces property">
+    <HelpKINode Title="Faces Property " Url="html/754977726.htm" />
+    <HelpKINode Title="Faces Property " Url="html/1678933640.htm" />
+    <HelpKINode Title="Faces Property " Url="html/2047415124.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FaceSplitType enumeration" Url="html/274829933.htm" />
+  <HelpKINode Title="FaceSplitType.Artificial field" Url="html/1535409530.htm" />
+  <HelpKINode Title="FaceSplitType.CoincidentEdge field" Url="html/864755296.htm" />
+  <HelpKINode Title="FaceSplitType.ThroughFace field" Url="html/1569346939.htm" />
+  <HelpKINode Title="FaceSplitType.ThroughVertex field" Url="html/365492834.htm" />
+  <HelpKINode Title="FileType enumeration" Url="html/1435064099.htm" />
+  <HelpKINode Title="FileType.Binary field" Url="html/2011019564.htm" />
+  <HelpKINode Title="FileType.Text field" Url="html/1861850568.htm" />
+  <HelpKINode Title="FindOBBAlongDirection method" Url="html/1625903854.htm" />
+  <HelpKINode Title="Firebrick enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Firebrick field" Url="html/195621154.htm" />
+  <HelpKINode Title="Flat class">
+    <HelpKINode Title="Flat Class" Url="html/296856900.htm" />
+    <HelpKINode Title="Flat Members" Url="html/1901807744.htm" />
+    <HelpKINode Title="about Flat class" Url="html/296856900.htm" />
+    <HelpKINode Title="all members" Url="html/1901807744.htm" />
+    <HelpKINode Title="constructor" Url="html/1622153201.htm" />
+    <HelpKINode Title="properties" Url="html/1203819295.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Flat.DistanceToOrigin property" Url="html/489084119.htm" />
+  <HelpKINode Title="Flat.Flat constructor" Url="html/1622153201.htm" />
+  <HelpKINode Title="Flat.Normal property" Url="html/1366082564.htm" />
+  <HelpKINode Title="FloatSize field" Url="html/615017809.htm" />
+  <HelpKINode Title="FloralWhite enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="FloralWhite field" Url="html/88564042.htm" />
+  <HelpKINode Title="ForestGreen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="ForestGreen field" Url="html/1849980693.htm" />
+  <HelpKINode Title="From property" Url="html/1651320575.htm" />
+  <HelpKINode Title="Fuchsia enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Fuchsia field" Url="html/509091563.htm" />
+  <HelpKINode Title="G field" Url="html/1941675023.htm" />
+  <HelpKINode Title="Gainsboro enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Gainsboro field" Url="html/130843316.htm" />
+  <HelpKINode Title="Get2DProjectionPoints method" Url="html/280451710.htm" />
+  <HelpKINode Title="GetLengthAndExtremeVertices method" Url="html/807511366.htm" />
+  <HelpKINode Title="Gf property" Url="html/374619245.htm" />
+  <HelpKINode Title="GhostWhite enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="GhostWhite field" Url="html/1962821478.htm" />
+  <HelpKINode Title="Gold enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Gold field" Url="html/236640065.htm" />
+  <HelpKINode Title="Goldenrod enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Goldenrod field" Url="html/199567351.htm" />
+  <HelpKINode Title="Gray enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Gray field" Url="html/72732763.htm" />
+  <HelpKINode Title="Green enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Green field" Url="html/539931711.htm" />
+  <HelpKINode Title="GreenYellow enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="GreenYellow field" Url="html/917236299.htm" />
+  <HelpKINode Title="HasUniformColor field" Url="html/1916367958.htm" />
+  <HelpKINode Title="HelixPresenter class">
+    <HelpKINode Title="HelixPresenter Class" Url="html/184056143.htm" />
+    <HelpKINode Title="HelixPresenter Members" Url="html/198391428.htm" />
+    <HelpKINode Title="about HelixPresenter class" Url="html/184056143.htm" />
+    <HelpKINode Title="all members" Url="html/198391428.htm" />
+    <HelpKINode Title="methods" Url="html/602872387.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HelixPresenter.Show method" Url="html/133427712.htm" />
+  <HelpKINode Title="Honeydew enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Honeydew field" Url="html/1036390010.htm" />
+  <HelpKINode Title="HotPink enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="HotPink field" Url="html/1469230206.htm" />
+  <HelpKINode Title="IndexInList property" Url="html/1688354207.htm" />
+  <HelpKINode Title="IndianRed enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="IndianRed field" Url="html/1508763977.htm" />
+  <HelpKINode Title="Indigo enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Indigo field" Url="html/1209686319.htm" />
+  <HelpKINode Title="InnerEdges property" Url="html/2074767221.htm" />
+  <HelpKINode Title="InternalAngle property" Url="html/1428706787.htm" />
+  <HelpKINode Title="IO class">
+    <HelpKINode Title="IO Class" Url="html/1190010836.htm" />
+    <HelpKINode Title="IO Members" Url="html/2011133073.htm" />
+    <HelpKINode Title="about IO class" Url="html/1190010836.htm" />
+    <HelpKINode Title="all members" Url="html/2011133073.htm" />
+    <HelpKINode Title="methods" Url="html/1092848832.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IO.Open method" Url="html/73500023.htm" />
+  <HelpKINode Title="IO.Save method" Url="html/1790963030.htm" />
+  <HelpKINode Title="IsClosed field" Url="html/214493527.htm" />
+  <HelpKINode Title="IsConvex property" Url="html/1053226606.htm" />
+  <HelpKINode Title="IsPositive field">
+    <HelpKINode Title="IsPositive Field" Url="html/61881025.htm" />
+    <HelpKINode Title="IsPositive Field" Url="html/395002149.htm" />
+    <HelpKINode Title="IsPositive Field" Url="html/1048652204.htm" />
+    <HelpKINode Title="IsPositive Field" Url="html/220678648.htm" />
+    <HelpKINode Title="IsPositive Field" Url="html/787991270.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Ivory enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Ivory field" Url="html/257144548.htm" />
+  <HelpKINode Title="Khaki enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Khaki field" Url="html/558850721.htm" />
+  <HelpKINode Title="KnownColors enumeration" Url="html/1667917147.htm" />
+  <HelpKINode Title="KnownColors.AliceBlue field" Url="html/1173226037.htm" />
+  <HelpKINode Title="KnownColors.AntiqueWhite field" Url="html/618346690.htm" />
+  <HelpKINode Title="KnownColors.Aqua field" Url="html/191307306.htm" />
+  <HelpKINode Title="KnownColors.Aquamarine field" Url="html/740414977.htm" />
+  <HelpKINode Title="KnownColors.Azure field" Url="html/1576945952.htm" />
+  <HelpKINode Title="KnownColors.Beige field" Url="html/1734331128.htm" />
+  <HelpKINode Title="KnownColors.Bisque field" Url="html/917287720.htm" />
+  <HelpKINode Title="KnownColors.Black field" Url="html/556267651.htm" />
+  <HelpKINode Title="KnownColors.BlanchedAlmond field" Url="html/1838514307.htm" />
+  <HelpKINode Title="KnownColors.Blue field" Url="html/2000401445.htm" />
+  <HelpKINode Title="KnownColors.BlueViolet field" Url="html/1990227244.htm" />
+  <HelpKINode Title="KnownColors.Brown field" Url="html/1892674375.htm" />
+  <HelpKINode Title="KnownColors.BurlyWood field" Url="html/325594608.htm" />
+  <HelpKINode Title="KnownColors.CadetBlue field" Url="html/8969456.htm" />
+  <HelpKINode Title="KnownColors.Chartreuse field" Url="html/1352118830.htm" />
+  <HelpKINode Title="KnownColors.Chocolate field" Url="html/1335128564.htm" />
+  <HelpKINode Title="KnownColors.Coral field" Url="html/662299064.htm" />
+  <HelpKINode Title="KnownColors.CornflowerBlue field" Url="html/1934488968.htm" />
+  <HelpKINode Title="KnownColors.Cornsilk field" Url="html/57389210.htm" />
+  <HelpKINode Title="KnownColors.Crimson field" Url="html/754089121.htm" />
+  <HelpKINode Title="KnownColors.Cyan field" Url="html/507452297.htm" />
+  <HelpKINode Title="KnownColors.DarkBlue field" Url="html/1405652480.htm" />
+  <HelpKINode Title="KnownColors.DarkCyan field" Url="html/381461064.htm" />
+  <HelpKINode Title="KnownColors.DarkGoldenrod field" Url="html/1105550830.htm" />
+  <HelpKINode Title="KnownColors.DarkGray field" Url="html/1905970442.htm" />
+  <HelpKINode Title="KnownColors.DarkGreen field" Url="html/801213950.htm" />
+  <HelpKINode Title="KnownColors.DarkKhaki field" Url="html/1264058358.htm" />
+  <HelpKINode Title="KnownColors.DarkMagenta field" Url="html/579338796.htm" />
+  <HelpKINode Title="KnownColors.DarkOliveGreen field" Url="html/2045818078.htm" />
+  <HelpKINode Title="KnownColors.DarkOrange field" Url="html/264620919.htm" />
+  <HelpKINode Title="KnownColors.DarkOrchid field" Url="html/551743530.htm" />
+  <HelpKINode Title="KnownColors.DarkRed field" Url="html/336150574.htm" />
+  <HelpKINode Title="KnownColors.DarkSalmon field" Url="html/606427414.htm" />
+  <HelpKINode Title="KnownColors.DarkSeaGreen field" Url="html/1887972952.htm" />
+  <HelpKINode Title="KnownColors.DarkSlateBlue field" Url="html/671341186.htm" />
+  <HelpKINode Title="KnownColors.DarkSlateGray field" Url="html/1058605413.htm" />
+  <HelpKINode Title="KnownColors.DarkTurquoise field" Url="html/1899276019.htm" />
+  <HelpKINode Title="KnownColors.DarkViolet field" Url="html/150070137.htm" />
+  <HelpKINode Title="KnownColors.DeepPink field" Url="html/1701242186.htm" />
+  <HelpKINode Title="KnownColors.DeepSkyBlue field" Url="html/710387343.htm" />
+  <HelpKINode Title="KnownColors.DimGray field" Url="html/541032386.htm" />
+  <HelpKINode Title="KnownColors.DodgerBlue field" Url="html/57336141.htm" />
+  <HelpKINode Title="KnownColors.Firebrick field" Url="html/195621154.htm" />
+  <HelpKINode Title="KnownColors.FloralWhite field" Url="html/88564042.htm" />
+  <HelpKINode Title="KnownColors.ForestGreen field" Url="html/1849980693.htm" />
+  <HelpKINode Title="KnownColors.Fuchsia field" Url="html/509091563.htm" />
+  <HelpKINode Title="KnownColors.Gainsboro field" Url="html/130843316.htm" />
+  <HelpKINode Title="KnownColors.GhostWhite field" Url="html/1962821478.htm" />
+  <HelpKINode Title="KnownColors.Gold field" Url="html/236640065.htm" />
+  <HelpKINode Title="KnownColors.Goldenrod field" Url="html/199567351.htm" />
+  <HelpKINode Title="KnownColors.Gray field" Url="html/72732763.htm" />
+  <HelpKINode Title="KnownColors.Green field" Url="html/539931711.htm" />
+  <HelpKINode Title="KnownColors.GreenYellow field" Url="html/917236299.htm" />
+  <HelpKINode Title="KnownColors.Honeydew field" Url="html/1036390010.htm" />
+  <HelpKINode Title="KnownColors.HotPink field" Url="html/1469230206.htm" />
+  <HelpKINode Title="KnownColors.IndianRed field" Url="html/1508763977.htm" />
+  <HelpKINode Title="KnownColors.Indigo field" Url="html/1209686319.htm" />
+  <HelpKINode Title="KnownColors.Ivory field" Url="html/257144548.htm" />
+  <HelpKINode Title="KnownColors.Khaki field" Url="html/558850721.htm" />
+  <HelpKINode Title="KnownColors.Lavender field" Url="html/1997230501.htm" />
+  <HelpKINode Title="KnownColors.LavenderBlush field" Url="html/252610877.htm" />
+  <HelpKINode Title="KnownColors.LawnGreen field" Url="html/1706189801.htm" />
+  <HelpKINode Title="KnownColors.LemonChiffon field" Url="html/48715962.htm" />
+  <HelpKINode Title="KnownColors.LightBlue field" Url="html/1918015665.htm" />
+  <HelpKINode Title="KnownColors.LightCoral field" Url="html/2025612166.htm" />
+  <HelpKINode Title="KnownColors.LightCyan field" Url="html/348131318.htm" />
+  <HelpKINode Title="KnownColors.LightGoldenrodYellow field" Url="html/2127230619.htm" />
+  <HelpKINode Title="KnownColors.LightGray field" Url="html/1067847666.htm" />
+  <HelpKINode Title="KnownColors.LightGreen field" Url="html/152644787.htm" />
+  <HelpKINode Title="KnownColors.LightPink field" Url="html/1163643100.htm" />
+  <HelpKINode Title="KnownColors.LightSalmon field" Url="html/1017641763.htm" />
+  <HelpKINode Title="KnownColors.LightSeaGreen field" Url="html/1942877366.htm" />
+  <HelpKINode Title="KnownColors.LightSkyBlue field" Url="html/482696188.htm" />
+  <HelpKINode Title="KnownColors.LightSlateGray field" Url="html/145496422.htm" />
+  <HelpKINode Title="KnownColors.LightSteelBlue field" Url="html/1753090833.htm" />
+  <HelpKINode Title="KnownColors.LightYellow field" Url="html/1313473475.htm" />
+  <HelpKINode Title="KnownColors.Lime field" Url="html/1492798422.htm" />
+  <HelpKINode Title="KnownColors.LimeGreen field" Url="html/1838097832.htm" />
+  <HelpKINode Title="KnownColors.Linen field" Url="html/1467567062.htm" />
+  <HelpKINode Title="KnownColors.Magenta field" Url="html/878520693.htm" />
+  <HelpKINode Title="KnownColors.Maroon field" Url="html/675451447.htm" />
+  <HelpKINode Title="KnownColors.MediumAquamarine field" Url="html/1325256721.htm" />
+  <HelpKINode Title="KnownColors.MediumBlue field" Url="html/1495871584.htm" />
+  <HelpKINode Title="KnownColors.MediumOrchid field" Url="html/624241933.htm" />
+  <HelpKINode Title="KnownColors.MediumPurple field" Url="html/1636332111.htm" />
+  <HelpKINode Title="KnownColors.MediumSeaGreen field" Url="html/322645928.htm" />
+  <HelpKINode Title="KnownColors.MediumSlateBlue field" Url="html/1848956558.htm" />
+  <HelpKINode Title="KnownColors.MediumSpringGreen field" Url="html/1769246246.htm" />
+  <HelpKINode Title="KnownColors.MediumTurquoise field" Url="html/2137745796.htm" />
+  <HelpKINode Title="KnownColors.MediumVioletRed field" Url="html/503042676.htm" />
+  <HelpKINode Title="KnownColors.MidnightBlue field" Url="html/127096680.htm" />
+  <HelpKINode Title="KnownColors.MintCream field" Url="html/964343.htm" />
+  <HelpKINode Title="KnownColors.MistyRose field" Url="html/991778461.htm" />
+  <HelpKINode Title="KnownColors.Moccasin field" Url="html/1744856424.htm" />
+  <HelpKINode Title="KnownColors.NavajoWhite field" Url="html/610240623.htm" />
+  <HelpKINode Title="KnownColors.Navy field" Url="html/1278988366.htm" />
+  <HelpKINode Title="KnownColors.OldLace field" Url="html/318144770.htm" />
+  <HelpKINode Title="KnownColors.Olive field" Url="html/785484090.htm" />
+  <HelpKINode Title="KnownColors.OliveDrab field" Url="html/873891160.htm" />
+  <HelpKINode Title="KnownColors.Orange field" Url="html/874055692.htm" />
+  <HelpKINode Title="KnownColors.OrangeRed field" Url="html/1127849301.htm" />
+  <HelpKINode Title="KnownColors.Orchid field" Url="html/675406121.htm" />
+  <HelpKINode Title="KnownColors.PaleGoldenrod field" Url="html/515775079.htm" />
+  <HelpKINode Title="KnownColors.PaleGreen field" Url="html/1596536191.htm" />
+  <HelpKINode Title="KnownColors.PaleTurquoise field" Url="html/748337871.htm" />
+  <HelpKINode Title="KnownColors.PaleVioletRed field" Url="html/1203867027.htm" />
+  <HelpKINode Title="KnownColors.PapayaWhip field" Url="html/304116036.htm" />
+  <HelpKINode Title="KnownColors.PeachPuff field" Url="html/254026276.htm" />
+  <HelpKINode Title="KnownColors.Peru field" Url="html/838073822.htm" />
+  <HelpKINode Title="KnownColors.Pink field" Url="html/1287101792.htm" />
+  <HelpKINode Title="KnownColors.Plum field" Url="html/482171133.htm" />
+  <HelpKINode Title="KnownColors.PowderBlue field" Url="html/1775719785.htm" />
+  <HelpKINode Title="KnownColors.Purple field" Url="html/977716175.htm" />
+  <HelpKINode Title="KnownColors.Red field" Url="html/818728591.htm" />
+  <HelpKINode Title="KnownColors.RosyBrown field" Url="html/1238465561.htm" />
+  <HelpKINode Title="KnownColors.RoyalBlue field" Url="html/1118343591.htm" />
+  <HelpKINode Title="KnownColors.SaddleBrown field" Url="html/1019831736.htm" />
+  <HelpKINode Title="KnownColors.Salmon field" Url="html/2026994541.htm" />
+  <HelpKINode Title="KnownColors.SandyBrown field" Url="html/2079709309.htm" />
+  <HelpKINode Title="KnownColors.SeaGreen field" Url="html/1410195379.htm" />
+  <HelpKINode Title="KnownColors.SeaShell field" Url="html/2087811775.htm" />
+  <HelpKINode Title="KnownColors.Sienna field" Url="html/1269564885.htm" />
+  <HelpKINode Title="KnownColors.Silver field" Url="html/1492669794.htm" />
+  <HelpKINode Title="KnownColors.SkyBlue field" Url="html/401219875.htm" />
+  <HelpKINode Title="KnownColors.SlateBlue field" Url="html/1061960527.htm" />
+  <HelpKINode Title="KnownColors.SlateGray field" Url="html/382780422.htm" />
+  <HelpKINode Title="KnownColors.Snow field" Url="html/727772003.htm" />
+  <HelpKINode Title="KnownColors.SpringGreen field" Url="html/1608182564.htm" />
+  <HelpKINode Title="KnownColors.SteelBlue field" Url="html/1804791078.htm" />
+  <HelpKINode Title="KnownColors.Tan field" Url="html/437046923.htm" />
+  <HelpKINode Title="KnownColors.Teal field" Url="html/1620783711.htm" />
+  <HelpKINode Title="KnownColors.Thistle field" Url="html/1029152048.htm" />
+  <HelpKINode Title="KnownColors.Tomato field" Url="html/567737896.htm" />
+  <HelpKINode Title="KnownColors.Transparent field" Url="html/1207102787.htm" />
+  <HelpKINode Title="KnownColors.Turquoise field" Url="html/1119450414.htm" />
+  <HelpKINode Title="KnownColors.UnknownColor field" Url="html/901482772.htm" />
+  <HelpKINode Title="KnownColors.Violet field" Url="html/1055592714.htm" />
+  <HelpKINode Title="KnownColors.Wheat field" Url="html/328393149.htm" />
+  <HelpKINode Title="KnownColors.White field" Url="html/1079538292.htm" />
+  <HelpKINode Title="KnownColors.WhiteSmoke field" Url="html/1678253590.htm" />
+  <HelpKINode Title="KnownColors.Yellow field" Url="html/155905925.htm" />
+  <HelpKINode Title="KnownColors.YellowGreen field" Url="html/2015703097.htm" />
+  <HelpKINode Title="Lavender enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Lavender field" Url="html/1997230501.htm" />
+  <HelpKINode Title="LavenderBlush enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LavenderBlush field" Url="html/252610877.htm" />
+  <HelpKINode Title="LawnGreen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LawnGreen field" Url="html/1706189801.htm" />
+  <HelpKINode Title="LemonChiffon enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LemonChiffon field" Url="html/48715962.htm" />
+  <HelpKINode Title="Length property" Url="html/2096961303.htm" />
+  <HelpKINode Title="LightBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LightBlue field" Url="html/1918015665.htm" />
+  <HelpKINode Title="LightCoral enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LightCoral field" Url="html/2025612166.htm" />
+  <HelpKINode Title="LightCyan enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LightCyan field" Url="html/348131318.htm" />
+  <HelpKINode Title="LightGoldenrodYellow enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LightGoldenrodYellow field" Url="html/2127230619.htm" />
+  <HelpKINode Title="LightGray enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LightGray field" Url="html/1067847666.htm" />
+  <HelpKINode Title="LightGreen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LightGreen field" Url="html/152644787.htm" />
+  <HelpKINode Title="LightPink enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LightPink field" Url="html/1163643100.htm" />
+  <HelpKINode Title="LightSalmon enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LightSalmon field" Url="html/1017641763.htm" />
+  <HelpKINode Title="LightSeaGreen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LightSeaGreen field" Url="html/1942877366.htm" />
+  <HelpKINode Title="LightSkyBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LightSkyBlue field" Url="html/482696188.htm" />
+  <HelpKINode Title="LightSlateGray enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LightSlateGray field" Url="html/145496422.htm" />
+  <HelpKINode Title="LightSteelBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LightSteelBlue field" Url="html/1753090833.htm" />
+  <HelpKINode Title="LightYellow enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LightYellow field" Url="html/1313473475.htm" />
+  <HelpKINode Title="Lime enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Lime field" Url="html/1492798422.htm" />
+  <HelpKINode Title="LimeGreen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="LimeGreen field" Url="html/1838097832.htm" />
+  <HelpKINode Title="Linen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Linen field" Url="html/1467567062.htm" />
+  <HelpKINode Title="LookUpStringFormat field" Url="html/287875760.htm" />
+  <HelpKINode Title="Loop class">
+    <HelpKINode Title="Loop Class" Url="html/696107650.htm" />
+    <HelpKINode Title="Loop Members" Url="html/321186007.htm" />
+    <HelpKINode Title="about Loop class" Url="html/696107650.htm" />
+    <HelpKINode Title="all members" Url="html/321186007.htm" />
+    <HelpKINode Title="fields" Url="html/2046862050.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Loop.Area field" Url="html/2118962049.htm" />
+  <HelpKINode Title="Loop.ArtificiallyClosed field" Url="html/1026141505.htm" />
+  <HelpKINode Title="Loop.IsClosed field" Url="html/214493527.htm" />
+  <HelpKINode Title="Loop.IsPositive field" Url="html/61881025.htm" />
+  <HelpKINode Title="Loop.Perimeter field" Url="html/1524510897.htm" />
+  <HelpKINode Title="Magenta enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Magenta field" Url="html/878520693.htm" />
+  <HelpKINode Title="MainWindow class">
+    <HelpKINode Title="MainWindow Class" Url="html/40349263.htm" />
+    <HelpKINode Title="MainWindow Members" Url="html/2075902390.htm" />
+    <HelpKINode Title="about MainWindow class" Url="html/40349263.htm" />
+    <HelpKINode Title="all members" Url="html/2075902390.htm" />
+    <HelpKINode Title="constructor" Url="html/1963102844.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MainWindow.MainWindow constructor" Url="html/1963102844.htm" />
+  <HelpKINode Title="MajorRadius property" Url="html/2005968505.htm" />
+  <HelpKINode Title="Maroon enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Maroon field" Url="html/675451447.htm" />
+  <HelpKINode Title="MaxNumberEdgesPerFace field" Url="html/1488766553.htm" />
+  <HelpKINode Title="MediumAquamarine enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="MediumAquamarine field" Url="html/1325256721.htm" />
+  <HelpKINode Title="MediumBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="MediumBlue field" Url="html/1495871584.htm" />
+  <HelpKINode Title="MediumOrchid enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="MediumOrchid field" Url="html/624241933.htm" />
+  <HelpKINode Title="MediumPurple enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="MediumPurple field" Url="html/1636332111.htm" />
+  <HelpKINode Title="MediumSeaGreen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="MediumSeaGreen field" Url="html/322645928.htm" />
+  <HelpKINode Title="MediumSlateBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="MediumSlateBlue field" Url="html/1848956558.htm" />
+  <HelpKINode Title="MediumSpringGreen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="MediumSpringGreen field" Url="html/1769246246.htm" />
+  <HelpKINode Title="MediumTurquoise enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="MediumTurquoise field" Url="html/2137745796.htm" />
+  <HelpKINode Title="MediumVioletRed enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="MediumVioletRed field" Url="html/503042676.htm" />
+  <HelpKINode Title="MidnightBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="MidnightBlue field" Url="html/127096680.htm" />
+  <HelpKINode Title="MinimumEnclosure class">
+    <HelpKINode Title="MinimumEnclosure Class" Url="html/1769542384.htm" />
+    <HelpKINode Title="MinimumEnclosure Members" Url="html/493868979.htm" />
+    <HelpKINode Title="about MinimumEnclosure class" Url="html/1769542384.htm" />
+    <HelpKINode Title="all members" Url="html/493868979.htm" />
+    <HelpKINode Title="methods" Url="html/719469927.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MinimumEnclosure.ConvexHull2D method" Url="html/168399646.htm" />
+  <HelpKINode Title="MinimumEnclosure.FindOBBAlongDirection method" Url="html/1625903854.htm" />
+  <HelpKINode Title="MinimumEnclosure.Get2DProjectionPoints method" Url="html/280451710.htm" />
+  <HelpKINode Title="MinimumEnclosure.GetLengthAndExtremeVertices method" Url="html/807511366.htm" />
+  <HelpKINode Title="MinimumEnclosure.OrientedBoundingBox method" Url="html/1189276139.htm" />
+  <HelpKINode Title="MinorRadius property" Url="html/1549467393.htm" />
+  <HelpKINode Title="MinProbabilityForPrimitiveClassifer field" Url="html/1397712492.htm" />
+  <HelpKINode Title="MinProbabilityForPrimitiveOfWingedEdge field" Url="html/541957364.htm" />
+  <HelpKINode Title="MintCream enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="MintCream field" Url="html/964343.htm" />
+  <HelpKINode Title="MistyRose enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="MistyRose field" Url="html/991778461.htm" />
+  <HelpKINode Title="Moccasin enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Moccasin field" Url="html/1744856424.htm" />
+  <HelpKINode Title="Name property" Url="html/1310686856.htm" />
+  <HelpKINode Title="NavajoWhite enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="NavajoWhite field" Url="html/610240623.htm" />
+  <HelpKINode Title="Navy enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Navy field" Url="html/1278988366.htm" />
+  <HelpKINode Title="NegativeLoops property" Url="html/33440725.htm" />
+  <HelpKINode Title="Normal property">
+    <HelpKINode Title="Normal Property " Url="html/1366082564.htm" />
+    <HelpKINode Title="Normal Property " Url="html/757121171.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NumberOfEdges property" Url="html/729690305.htm" />
+  <HelpKINode Title="NumberOfFaces property" Url="html/783685190.htm" />
+  <HelpKINode Title="NumberOfVertices property" Url="html/158998941.htm" />
+  <HelpKINode Title="NumberStyle field" Url="html/808552586.htm" />
+  <HelpKINode Title="OldLace enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="OldLace field" Url="html/318144770.htm" />
+  <HelpKINode Title="Olive enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Olive field" Url="html/785484090.htm" />
+  <HelpKINode Title="OliveDrab enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="OliveDrab field" Url="html/873891160.htm" />
+  <HelpKINode Title="OnFlat method" Url="html/1088315876.htm" />
+  <HelpKINode Title="Open method" Url="html/73500023.htm" />
+  <HelpKINode Title="Orange enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Orange field" Url="html/874055692.htm" />
+  <HelpKINode Title="OrangeRed enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="OrangeRed field" Url="html/1127849301.htm" />
+  <HelpKINode Title="Orchid enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Orchid field" Url="html/675406121.htm" />
+  <HelpKINode Title="OrientedBoundingBox method" Url="html/1189276139.htm" />
+  <HelpKINode Title="OtherFace property" Url="html/1635427147.htm" />
+  <HelpKINode Title="OtherVertex method" Url="html/1647960759.htm" />
+  <HelpKINode Title="OuterEdges property" Url="html/1997837293.htm" />
+  <HelpKINode Title="OwnedFace property" Url="html/1918703204.htm" />
+  <HelpKINode Title="PaleGoldenrod enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="PaleGoldenrod field" Url="html/515775079.htm" />
+  <HelpKINode Title="PaleGreen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="PaleGreen field" Url="html/1596536191.htm" />
+  <HelpKINode Title="PaleTurquoise enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="PaleTurquoise field" Url="html/748337871.htm" />
+  <HelpKINode Title="PaleVioletRed enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="PaleVioletRed field" Url="html/1203867027.htm" />
+  <HelpKINode Title="PapayaWhip enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="PapayaWhip field" Url="html/304116036.htm" />
+  <HelpKINode Title="PartofConvexHull property">
+    <HelpKINode Title="PartofConvexHull Property " Url="html/1163227781.htm" />
+    <HelpKINode Title="PartofConvexHull Property " Url="html/1016937012.htm" />
+    <HelpKINode Title="PartofConvexHull Property " Url="html/1424205641.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PeachPuff enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="PeachPuff field" Url="html/254026276.htm" />
+  <HelpKINode Title="Perimeter field">
+    <HelpKINode Title="Perimeter Field" Url="html/1487490496.htm" />
+    <HelpKINode Title="Perimeter Field" Url="html/1524510897.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Peru enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Peru field" Url="html/838073822.htm" />
+  <HelpKINode Title="Pink enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Pink field" Url="html/1287101792.htm" />
+  <HelpKINode Title="Plum enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Plum field" Url="html/482171133.htm" />
+  <HelpKINode Title="PointCurvature property" Url="html/176749403.htm" />
+  <HelpKINode Title="PolygonalFace class">
+    <HelpKINode Title="PolygonalFace Class" Url="html/1226099893.htm" />
+    <HelpKINode Title="PolygonalFace Members" Url="html/397306584.htm" />
+    <HelpKINode Title="about PolygonalFace class" Url="html/1226099893.htm" />
+    <HelpKINode Title="all members" Url="html/397306584.htm" />
+    <HelpKINode Title="constructor" Url="html/159449996.htm" />
+    <HelpKINode Title="methods" Url="html/2105371157.htm" />
+    <HelpKINode Title="properties" Url="html/1668039488.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PolygonalFace.AdjacentFaces property" Url="html/2082573819.htm" />
+  <HelpKINode Title="PolygonalFace.Area property" Url="html/690085395.htm" />
+  <HelpKINode Title="PolygonalFace.AreaRatio property" Url="html/1295712274.htm" />
+  <HelpKINode Title="PolygonalFace.Center property" Url="html/1019642528.htm" />
+  <HelpKINode Title="PolygonalFace.color property" Url="html/1085966575.htm" />
+  <HelpKINode Title="PolygonalFace.Copy method" Url="html/861350735.htm" />
+  <HelpKINode Title="PolygonalFace.Curvature property" Url="html/1461009595.htm" />
+  <HelpKINode Title="PolygonalFace.Edges property" Url="html/388737017.htm" />
+  <HelpKINode Title="PolygonalFace.IsConvex property" Url="html/1053226606.htm" />
+  <HelpKINode Title="PolygonalFace.Normal property" Url="html/757121171.htm" />
+  <HelpKINode Title="PolygonalFace.PartofConvexHull property" Url="html/1016937012.htm" />
+  <HelpKINode Title="PolygonalFace.PolygonalFace constructor" Url="html/159449996.htm" />
+  <HelpKINode Title="PolygonalFace.Vertices property" Url="html/356930563.htm" />
+  <HelpKINode Title="Position property" Url="html/354878415.htm" />
+  <HelpKINode Title="PositiveLoops property" Url="html/1264815730.htm" />
+  <HelpKINode Title="PowderBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="PowderBlue field" Url="html/1775719785.htm" />
+  <HelpKINode Title="PrimitiveSurface class">
+    <HelpKINode Title="PrimitiveSurface Class" Url="html/196659523.htm" />
+    <HelpKINode Title="PrimitiveSurface Members" Url="html/1581006608.htm" />
+    <HelpKINode Title="about PrimitiveSurface class" Url="html/196659523.htm" />
+    <HelpKINode Title="all members" Url="html/1581006608.htm" />
+    <HelpKINode Title="properties" Url="html/717077874.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PrimitiveSurface.Area property" Url="html/102182021.htm" />
+  <HelpKINode Title="PrimitiveSurface.Faces property" Url="html/754977726.htm" />
+  <HelpKINode Title="PrimitiveSurface.InnerEdges property" Url="html/2074767221.htm" />
+  <HelpKINode Title="PrimitiveSurface.OuterEdges property" Url="html/1997837293.htm" />
+  <HelpKINode Title="PrimitiveSurface.Transformation property" Url="html/1252553756.htm" />
+  <HelpKINode Title="PrimitiveSurface.Vertices property" Url="html/974957455.htm" />
+  <HelpKINode Title="Purple enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Purple field" Url="html/977716175.htm" />
+  <HelpKINode Title="R field" Url="html/1940954127.htm" />
+  <HelpKINode Title="Radius property">
+    <HelpKINode Title="Radius Property " Url="html/2050047596.htm" />
+    <HelpKINode Title="Radius Property " Url="html/728875250.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Red enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Red field" Url="html/818728591.htm" />
+  <HelpKINode Title="RegExCoord field" Url="html/1576414120.htm" />
+  <HelpKINode Title="RegExSolid field" Url="html/1905536325.htm" />
+  <HelpKINode Title="Rf property" Url="html/373767277.htm" />
+  <HelpKINode Title="RosyBrown enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="RosyBrown field" Url="html/1238465561.htm" />
+  <HelpKINode Title="RoyalBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="RoyalBlue field" Url="html/1118343591.htm" />
+  <HelpKINode Title="SaddleBrown enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="SaddleBrown field" Url="html/1019831736.htm" />
+  <HelpKINode Title="SaddleOrFlat enumeration member" Url="html/1487316449.htm" />
+  <HelpKINode Title="SaddleOrFlat field" Url="html/1098353912.htm" />
+  <HelpKINode Title="Salmon enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Salmon field" Url="html/2026994541.htm" />
+  <HelpKINode Title="SandyBrown enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="SandyBrown field" Url="html/2079709309.htm" />
+  <HelpKINode Title="Save method" Url="html/1790963030.htm" />
+  <HelpKINode Title="SeaGreen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="SeaGreen field" Url="html/1410195379.htm" />
+  <HelpKINode Title="SeaShell enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="SeaShell field" Url="html/2087811775.htm" />
+  <HelpKINode Title="Show method" Url="html/133427712.htm" />
+  <HelpKINode Title="Sienna enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Sienna field" Url="html/1269564885.htm" />
+  <HelpKINode Title="Silver enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Silver field" Url="html/1492669794.htm" />
+  <HelpKINode Title="SkyBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="SkyBlue field" Url="html/401219875.htm" />
+  <HelpKINode Title="SlateBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="SlateBlue field" Url="html/1061960527.htm" />
+  <HelpKINode Title="SlateGray enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="SlateGray field" Url="html/382780422.htm" />
+  <HelpKINode Title="Slice class">
+    <HelpKINode Title="Slice Class" Url="html/1274694911.htm" />
+    <HelpKINode Title="Slice Members" Url="html/37855901.htm" />
+    <HelpKINode Title="about Slice class" Url="html/1274694911.htm" />
+    <HelpKINode Title="all members" Url="html/37855901.htm" />
+    <HelpKINode Title="methods" Url="html/588614476.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Slice.DefineContact method" Url="html/1765279334.htm" />
+  <HelpKINode Title="Slice.OnFlat method" Url="html/1088315876.htm" />
+  <HelpKINode Title="Snow enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Snow field" Url="html/727772003.htm" />
+  <HelpKINode Title="SolidColor field" Url="html/601665772.htm" />
+  <HelpKINode Title="Sphere class">
+    <HelpKINode Title="Sphere Class" Url="html/498388343.htm" />
+    <HelpKINode Title="Sphere Members" Url="html/2045927006.htm" />
+    <HelpKINode Title="about Sphere class" Url="html/498388343.htm" />
+    <HelpKINode Title="all members" Url="html/2045927006.htm" />
+    <HelpKINode Title="fields" Url="html/1974942958.htm" />
+    <HelpKINode Title="properties" Url="html/1726375403.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Sphere.Center property" Url="html/1802774245.htm" />
+  <HelpKINode Title="Sphere.IsPositive field" Url="html/395002149.htm" />
+  <HelpKINode Title="Sphere.Radius property" Url="html/2050047596.htm" />
+  <HelpKINode Title="SplitType property" Url="html/349998831.htm" />
+  <HelpKINode Title="SpringGreen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="SpringGreen field" Url="html/1608182564.htm" />
+  <HelpKINode Title="SteelBlue enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="SteelBlue field" Url="html/1804791078.htm" />
+  <HelpKINode Title="SurfaceArea property" Url="html/1657490234.htm" />
+  <HelpKINode Title="SurfaceAreaFractionForPrimitive field" Url="html/1046351073.htm" />
+  <HelpKINode Title="Tan enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Tan field" Url="html/437046923.htm" />
+  <HelpKINode Title="Teal enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Teal field" Url="html/1620783711.htm" />
+  <HelpKINode Title="TessellatedSolid class">
+    <HelpKINode Title="TessellatedSolid Class" Url="html/24174001.htm" />
+    <HelpKINode Title="TessellatedSolid Members" Url="html/1628637098.htm" />
+    <HelpKINode Title="about TessellatedSolid class" Url="html/24174001.htm" />
+    <HelpKINode Title="all members" Url="html/1628637098.htm" />
+    <HelpKINode Title="constructor" Url="html/746758774.htm" />
+    <HelpKINode Title="fields" Url="html/533234180.htm" />
+    <HelpKINode Title="methods" Url="html/54024406.htm" />
+    <HelpKINode Title="properties" Url="html/1180062541.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TessellatedSolid.Bounds property" Url="html/1667227823.htm" />
+  <HelpKINode Title="TessellatedSolid.Center property" Url="html/1606740982.htm" />
+  <HelpKINode Title="TessellatedSolid.ConvexHullEdges property" Url="html/1545598020.htm" />
+  <HelpKINode Title="TessellatedSolid.ConvexHullFaces property" Url="html/385682361.htm" />
+  <HelpKINode Title="TessellatedSolid.ConvexHullVertices property" Url="html/1341483281.htm" />
+  <HelpKINode Title="TessellatedSolid.Copy method" Url="html/942795639.htm" />
+  <HelpKINode Title="TessellatedSolid.Edges property" Url="html/2042485849.htm" />
+  <HelpKINode Title="TessellatedSolid.Faces property" Url="html/1678933640.htm" />
+  <HelpKINode Title="TessellatedSolid.HasUniformColor field" Url="html/1916367958.htm" />
+  <HelpKINode Title="TessellatedSolid.Name property" Url="html/1310686856.htm" />
+  <HelpKINode Title="TessellatedSolid.NumberOfEdges property" Url="html/729690305.htm" />
+  <HelpKINode Title="TessellatedSolid.NumberOfFaces property" Url="html/783685190.htm" />
+  <HelpKINode Title="TessellatedSolid.NumberOfVertices property" Url="html/158998941.htm" />
+  <HelpKINode Title="TessellatedSolid.SolidColor field" Url="html/601665772.htm" />
+  <HelpKINode Title="TessellatedSolid.SurfaceArea property" Url="html/1657490234.htm" />
+  <HelpKINode Title="TessellatedSolid.TessellatedSolid constructor" Url="html/746758774.htm" />
+  <HelpKINode Title="TessellatedSolid.Vertices property" Url="html/1308779175.htm" />
+  <HelpKINode Title="TessellatedSolid.Volume property" Url="html/223876016.htm" />
+  <HelpKINode Title="TessellatedSolid.XMax property" Url="html/1144405873.htm" />
+  <HelpKINode Title="TessellatedSolid.XMin property" Url="html/384942201.htm" />
+  <HelpKINode Title="TessellatedSolid.YMax property" Url="html/1146568561.htm" />
+  <HelpKINode Title="TessellatedSolid.YMin property" Url="html/382779513.htm" />
+  <HelpKINode Title="TessellatedSolid.ZMax property" Url="html/1148731249.htm" />
+  <HelpKINode Title="TessellatedSolid.ZMin property" Url="html/380616825.htm" />
+  <HelpKINode Title="Text enumeration member" Url="html/1435064099.htm" />
+  <HelpKINode Title="Text field" Url="html/1861850568.htm" />
+  <HelpKINode Title="Thistle enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Thistle field" Url="html/1029152048.htm" />
+  <HelpKINode Title="ThroughFace enumeration member" Url="html/274829933.htm" />
+  <HelpKINode Title="ThroughFace field" Url="html/1569346939.htm" />
+  <HelpKINode Title="ThroughVertex enumeration member" Url="html/274829933.htm" />
+  <HelpKINode Title="ThroughVertex field" Url="html/365492834.htm" />
+  <HelpKINode Title="To property" Url="html/382503054.htm" />
+  <HelpKINode Title="Tomato enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Tomato field" Url="html/567737896.htm" />
+  <HelpKINode Title="Torus class">
+    <HelpKINode Title="Torus Class" Url="html/2068432724.htm" />
+    <HelpKINode Title="Torus Members" Url="html/877029022.htm" />
+    <HelpKINode Title="about Torus class" Url="html/2068432724.htm" />
+    <HelpKINode Title="all members" Url="html/877029022.htm" />
+    <HelpKINode Title="constructor" Url="html/1079960330.htm" />
+    <HelpKINode Title="fields" Url="html/1529681058.htm" />
+    <HelpKINode Title="properties" Url="html/1894638183.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Torus.Axis property" Url="html/278319314.htm" />
+  <HelpKINode Title="Torus.Center property" Url="html/1553925686.htm" />
+  <HelpKINode Title="Torus.IsPositive field" Url="html/787991270.htm" />
+  <HelpKINode Title="Torus.MajorRadius property" Url="html/2005968505.htm" />
+  <HelpKINode Title="Torus.MinorRadius property" Url="html/1549467393.htm" />
+  <HelpKINode Title="Torus.Torus constructor" Url="html/1079960330.htm" />
+  <HelpKINode Title="Transformation property" Url="html/1252553756.htm" />
+  <HelpKINode Title="Transparent enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Transparent field" Url="html/1207102787.htm" />
+  <HelpKINode Title="Turquoise enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Turquoise field" Url="html/1119450414.htm" />
+  <HelpKINode Title="TVGL namespace" Url="html/1103637655.htm" />
+  <HelpKINode Title="TVGL.Boolean_Operations namespace" Url="html/220536184.htm" />
+  <HelpKINode Title="TVGL.Boolean_Operations.ContactData class">
+    <HelpKINode Title="ContactData Class" Url="html/1191216211.htm" />
+    <HelpKINode Title="ContactData Members" Url="html/280183410.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.Boolean_Operations.ContactElement class">
+    <HelpKINode Title="ContactElement Class" Url="html/145148741.htm" />
+    <HelpKINode Title="ContactElement Members" Url="html/539204415.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.Boolean_Operations.FaceSplitType enumeration" Url="html/274829933.htm" />
+  <HelpKINode Title="TVGL.Boolean_Operations.Loop class">
+    <HelpKINode Title="Loop Class" Url="html/696107650.htm" />
+    <HelpKINode Title="Loop Members" Url="html/321186007.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.Boolean_Operations.Slice class">
+    <HelpKINode Title="Slice Class" Url="html/1274694911.htm" />
+    <HelpKINode Title="Slice Members" Url="html/37855901.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.BoundingBox structure">
+    <HelpKINode Title="BoundingBox Members" Url="html/470758066.htm" />
+    <HelpKINode Title="BoundingBox Structure" Url="html/100021517.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.Color structure">
+    <HelpKINode Title="Color Members" Url="html/1140045142.htm" />
+    <HelpKINode Title="Color Structure" Url="html/366088298.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.Cone class">
+    <HelpKINode Title="Cone Class" Url="html/2121301412.htm" />
+    <HelpKINode Title="Cone Members" Url="html/430571148.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.Constants class">
+    <HelpKINode Title="Constants Class" Url="html/1692416802.htm" />
+    <HelpKINode Title="Constants Members" Url="html/1611786766.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.CurvatureType enumeration" Url="html/1487316449.htm" />
+  <HelpKINode Title="TVGL.Cylinder class">
+    <HelpKINode Title="Cylinder Class" Url="html/1901632765.htm" />
+    <HelpKINode Title="Cylinder Members" Url="html/433888787.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.DenseRegion class">
+    <HelpKINode Title="DenseRegion Class" Url="html/1722624917.htm" />
+    <HelpKINode Title="DenseRegion Members" Url="html/1284029818.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.FileType enumeration" Url="html/1435064099.htm" />
+  <HelpKINode Title="TVGL.Flat class">
+    <HelpKINode Title="Flat Class" Url="html/296856900.htm" />
+    <HelpKINode Title="Flat Members" Url="html/1901807744.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.IOFunctions namespace" Url="html/241652094.htm" />
+  <HelpKINode Title="TVGL.IOFunctions.IO class">
+    <HelpKINode Title="IO Class" Url="html/1190010836.htm" />
+    <HelpKINode Title="IO Members" Url="html/2011133073.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.KnownColors enumeration" Url="html/1667917147.htm" />
+  <HelpKINode Title="TVGL.MinimumEnclosure class">
+    <HelpKINode Title="MinimumEnclosure Class" Url="html/1769542384.htm" />
+    <HelpKINode Title="MinimumEnclosure Members" Url="html/493868979.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.PrimitiveSurface class">
+    <HelpKINode Title="PrimitiveSurface Class" Url="html/196659523.htm" />
+    <HelpKINode Title="PrimitiveSurface Members" Url="html/1581006608.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.Sphere class">
+    <HelpKINode Title="Sphere Class" Url="html/498388343.htm" />
+    <HelpKINode Title="Sphere Members" Url="html/2045927006.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.Tessellation namespace" Url="html/1334845097.htm" />
+  <HelpKINode Title="TVGL.Tessellation.Edge class">
+    <HelpKINode Title="Edge Class" Url="html/1744202510.htm" />
+    <HelpKINode Title="Edge Members" Url="html/334455524.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.Tessellation.PolygonalFace class">
+    <HelpKINode Title="PolygonalFace Class" Url="html/1226099893.htm" />
+    <HelpKINode Title="PolygonalFace Members" Url="html/397306584.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.Tessellation.TessellatedSolid class">
+    <HelpKINode Title="TessellatedSolid Class" Url="html/24174001.htm" />
+    <HelpKINode Title="TessellatedSolid Members" Url="html/1628637098.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.Tessellation.Vertex class">
+    <HelpKINode Title="Vertex Class" Url="html/1625161389.htm" />
+    <HelpKINode Title="Vertex Members" Url="html/1744042123.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL.Torus class">
+    <HelpKINode Title="Torus Class" Url="html/2068432724.htm" />
+    <HelpKINode Title="Torus Members" Url="html/877029022.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL_Helix_Presenter namespace" Url="html/1388022963.htm" />
+  <HelpKINode Title="TVGL_Helix_Presenter.HelixPresenter class">
+    <HelpKINode Title="HelixPresenter Class" Url="html/184056143.htm" />
+    <HelpKINode Title="HelixPresenter Members" Url="html/198391428.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TVGL_Helix_Presenter.MainWindow class">
+    <HelpKINode Title="MainWindow Class" Url="html/40349263.htm" />
+    <HelpKINode Title="MainWindow Members" Url="html/2075902390.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Undefined enumeration member" Url="html/1487316449.htm" />
+  <HelpKINode Title="Undefined field" Url="html/770811836.htm" />
+  <HelpKINode Title="UnknownColor enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="UnknownColor field" Url="html/901482772.htm" />
+  <HelpKINode Title="Vector property" Url="html/169880886.htm" />
+  <HelpKINode Title="Vertex class">
+    <HelpKINode Title="Vertex Class" Url="html/1625161389.htm" />
+    <HelpKINode Title="Vertex Members" Url="html/1744042123.htm" />
+    <HelpKINode Title="about Vertex class" Url="html/1625161389.htm" />
+    <HelpKINode Title="all members" Url="html/1744042123.htm" />
+    <HelpKINode Title="constructor" Url="html/873427423.htm" />
+    <HelpKINode Title="methods" Url="html/680328493.htm" />
+    <HelpKINode Title="properties" Url="html/1763854549.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Vertex.Copy method" Url="html/1892300301.htm" />
+  <HelpKINode Title="Vertex.EdgeCurvature property" Url="html/189056711.htm" />
+  <HelpKINode Title="Vertex.Edges property" Url="html/2113924271.htm" />
+  <HelpKINode Title="Vertex.Faces property" Url="html/2047415124.htm" />
+  <HelpKINode Title="Vertex.IndexInList property" Url="html/1688354207.htm" />
+  <HelpKINode Title="Vertex.PartofConvexHull property" Url="html/1424205641.htm" />
+  <HelpKINode Title="Vertex.PointCurvature property" Url="html/176749403.htm" />
+  <HelpKINode Title="Vertex.Position property" Url="html/354878415.htm" />
+  <HelpKINode Title="Vertex.Vertex constructor" Url="html/873427423.htm" />
+  <HelpKINode Title="Vertex.X property" Url="html/551430878.htm" />
+  <HelpKINode Title="Vertex.Y property" Url="html/1787221282.htm" />
+  <HelpKINode Title="Vertex.Z property" Url="html/169093854.htm" />
+  <HelpKINode Title="VertexSize field" Url="html/89887836.htm" />
+  <HelpKINode Title="Vertices property">
+    <HelpKINode Title="Vertices Property " Url="html/356930563.htm" />
+    <HelpKINode Title="Vertices Property " Url="html/1308779175.htm" />
+    <HelpKINode Title="Vertices Property " Url="html/974957455.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Violet enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Violet field" Url="html/1055592714.htm" />
+  <HelpKINode Title="Volume field" Url="html/1777880055.htm" />
+  <HelpKINode Title="Volume property" Url="html/223876016.htm" />
+  <HelpKINode Title="Wheat enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Wheat field" Url="html/328393149.htm" />
+  <HelpKINode Title="White enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="White field" Url="html/1079538292.htm" />
+  <HelpKINode Title="WhiteSmoke enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="WhiteSmoke field" Url="html/1678253590.htm" />
+  <HelpKINode Title="X property" Url="html/551430878.htm" />
+  <HelpKINode Title="XMax property" Url="html/1144405873.htm" />
+  <HelpKINode Title="XMin property" Url="html/384942201.htm" />
+  <HelpKINode Title="Y property" Url="html/1787221282.htm" />
+  <HelpKINode Title="Yellow enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="Yellow field" Url="html/155905925.htm" />
+  <HelpKINode Title="YellowGreen enumeration member" Url="html/1667917147.htm" />
+  <HelpKINode Title="YellowGreen field" Url="html/2015703097.htm" />
+  <HelpKINode Title="YMax property" Url="html/1146568561.htm" />
+  <HelpKINode Title="YMin property" Url="html/382779513.htm" />
+  <HelpKINode Title="Z property" Url="html/169093854.htm" />
+  <HelpKINode Title="ZMax property" Url="html/1148731249.htm" />
+  <HelpKINode Title="ZMin property" Url="html/380616825.htm" />
+</HelpKI>

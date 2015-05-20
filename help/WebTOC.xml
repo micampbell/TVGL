@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="ad72e577-8530-469f-ae9c-ff987ac5aeed" Title="TVGL Namespace" Url="html/1103637655.htm">
+    <HelpTOCNode Id="248d8f36-dd6b-4922-bbf5-526429dd934d" Title="BoundingBox Structure" Url="html/100021517.htm">
+      <HelpTOCNode Title="BoundingBox Members" Url="html/470758066.htm" />
+      <HelpTOCNode Id="b2fb78e5-4195-4abd-b6d8-994f61549dd5" Title="BoundingBox Fields" Url="html/1809421802.htm">
+        <HelpTOCNode Title="Directions Field" Url="html/23534301.htm" />
+        <HelpTOCNode Title="ExtremeVertices Field" Url="html/720788406.htm" />
+        <HelpTOCNode Title="Volume Field" Url="html/1777880055.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c66064a2-407b-49e1-b849-6a4b8faec225" Title="Color Structure" Url="html/366088298.htm">
+      <HelpTOCNode Title="Color Members" Url="html/1140045142.htm" />
+      <HelpTOCNode Id="fafa684c-1e4e-4714-b96f-fad9ef6bbd70" Title="Color Constructor " Url="html/1261146693.htm">
+        <HelpTOCNode Title="Color Constructor (KnownColors)" Url="html/589188492.htm" />
+        <HelpTOCNode Title="Color Constructor (UInt32)" Url="html/386629752.htm" />
+        <HelpTOCNode Title="Color Constructor (Single, Single, Single, Single)" Url="html/276294846.htm" />
+        <HelpTOCNode Title="Color Constructor (Byte, Byte, Byte, Byte)" Url="html/1915499939.htm" />
+        <HelpTOCNode Title="Color Constructor (Byte, Byte, Byte)" Url="html/1842846272.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="4468bb27-b1db-43c9-9a86-6fd1f905746b" Title="Color Fields" Url="html/92067518.htm">
+        <HelpTOCNode Title="A Field" Url="html/1942068239.htm" />
+        <HelpTOCNode Title="B Field" Url="html/1942002703.htm" />
+        <HelpTOCNode Title="G Field" Url="html/1941675023.htm" />
+        <HelpTOCNode Title="R Field" Url="html/1940954127.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="39b66ad3-4d51-4c97-b02a-f3ae126b90a6" Title="Color Properties" Url="html/83078593.htm">
+        <HelpTOCNode Title="Af Property " Url="html/374750317.htm" />
+        <HelpTOCNode Title="Bf Property " Url="html/374815853.htm" />
+        <HelpTOCNode Title="Gf Property " Url="html/374619245.htm" />
+        <HelpTOCNode Title="Rf Property " Url="html/373767277.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="17cce63f-ecad-44be-b0da-7e55cff89f31" Title="Cone Class" Url="html/2121301412.htm">
+      <HelpTOCNode Title="Cone Members" Url="html/430571148.htm" />
+      <HelpTOCNode Id="ae335e02-fcf2-4d0b-95ee-3099f8a48978" Title="Cone Fields" Url="html/1453755626.htm">
+        <HelpTOCNode Title="IsPositive Field" Url="html/1048652204.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a08996b0-d477-4500-9114-7a0bd741f5d4" Title="Cone Properties" Url="html/774557447.htm">
+        <HelpTOCNode Title="Aperture Property " Url="html/1132336119.htm" />
+        <HelpTOCNode Title="Apex Property " Url="html/1501063281.htm" />
+        <HelpTOCNode Title="Axis Property " Url="html/366581253.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="cc943a39-e69f-41b6-a95b-ff737d3ba881" Title="Constants Class" Url="html/1692416802.htm">
+      <HelpTOCNode Title="Constants Members" Url="html/1611786766.htm" />
+      <HelpTOCNode Id="b62e3892-3195-42f6-b919-bd21741d7d65" Title="Constants Fields" Url="html/389214402.htm">
+        <HelpTOCNode Title="EpsilonSameAngle Field" Url="html/1967799410.htm" />
+        <HelpTOCNode Title="ErrorForFaceInSurface Field" Url="html/1334079295.htm" />
+        <HelpTOCNode Title="FloatSize Field" Url="html/615017809.htm" />
+        <HelpTOCNode Title="LookUpStringFormat Field" Url="html/287875760.htm" />
+        <HelpTOCNode Title="MaxNumberEdgesPerFace Field" Url="html/1488766553.htm" />
+        <HelpTOCNode Title="MinProbabilityForPrimitiveClassifer Field" Url="html/1397712492.htm" />
+        <HelpTOCNode Title="MinProbabilityForPrimitiveOfWingedEdge Field" Url="html/541957364.htm" />
+        <HelpTOCNode Title="NumberStyle Field" Url="html/808552586.htm" />
+        <HelpTOCNode Title="RegExCoord Field" Url="html/1576414120.htm" />
+        <HelpTOCNode Title="RegExSolid Field" Url="html/1905536325.htm" />
+        <HelpTOCNode Title="SurfaceAreaFractionForPrimitive Field" Url="html/1046351073.htm" />
+        <HelpTOCNode Title="VertexSize Field" Url="html/89887836.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="CurvatureType Enumeration" Url="html/1487316449.htm" />
+    <HelpTOCNode Id="bb695ae7-22d2-40f5-8fca-621280ffa014" Title="Cylinder Class" Url="html/1901632765.htm">
+      <HelpTOCNode Title="Cylinder Members" Url="html/433888787.htm" />
+      <HelpTOCNode Id="ac19decc-9fc8-46d0-89f8-190a0183c00c" Title="Cylinder Fields" Url="html/758103926.htm">
+        <HelpTOCNode Title="IsPositive Field" Url="html/220678648.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="8cafacc5-381a-4b44-a178-7e518b0cdc45" Title="Cylinder Properties" Url="html/376489108.htm">
+        <HelpTOCNode Title="Anchor Property " Url="html/1988658360.htm" />
+        <HelpTOCNode Title="Axis Property " Url="html/1017945016.htm" />
+        <HelpTOCNode Title="Radius Property " Url="html/728875250.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="7641d93a-19a3-40af-80ce-81c315b15049" Title="DenseRegion Class" Url="html/1722624917.htm">
+      <HelpTOCNode Title="DenseRegion Members" Url="html/1284029818.htm" />
+      <HelpTOCNode Title="DenseRegion Constructor " Url="html/2108315540.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Title="FileType Enumeration" Url="html/1435064099.htm" />
+    <HelpTOCNode Id="ae4f0217-e78d-4c87-9038-d9d2632c6975" Title="Flat Class" Url="html/296856900.htm">
+      <HelpTOCNode Title="Flat Members" Url="html/1901807744.htm" />
+      <HelpTOCNode Id="d5383d35-266e-4a01-b27e-07fd86ce4466" Title="Flat Constructor " Url="html/1622153201.htm">
+        <HelpTOCNode Title="Flat Constructor (List(PolygonalFace))" Url="html/1089650214.htm" />
+        <HelpTOCNode Title="Flat Constructor " Url="html/339460825.htm" />
+        <HelpTOCNode Title="Flat Constructor (Double, Double[])" Url="html/1946073704.htm" />
+        <HelpTOCNode Title="Flat Constructor (Double[], Double[])" Url="html/1742559138.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d980ed9f-cbe2-4b95-88c3-a1f7302a61e8" Title="Flat Properties" Url="html/1203819295.htm">
+        <HelpTOCNode Title="DistanceToOrigin Property " Url="html/489084119.htm" />
+        <HelpTOCNode Title="Normal Property " Url="html/1366082564.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="KnownColors Enumeration" Url="html/1667917147.htm" />
+    <HelpTOCNode Id="8437eb9b-4bb8-4654-9859-85ca0cf4616e" Title="MinimumEnclosure Class" Url="html/1769542384.htm">
+      <HelpTOCNode Title="MinimumEnclosure Members" Url="html/493868979.htm" />
+      <HelpTOCNode Id="bc9e01f6-5702-4b0f-ab00-a4883df595e8" Title="MinimumEnclosure Methods" Url="html/719469927.htm">
+        <HelpTOCNode Id="25a06bdc-6938-4870-bf76-418931425ac7" Title="ConvexHull2D Method " Url="html/168399646.htm">
+          <HelpTOCNode Title="ConvexHull2D Method (IList(IVertex), Double[])" Url="html/1710536768.htm" />
+          <HelpTOCNode Title="ConvexHull2D Method (IList(Double[]))" Url="html/75238577.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="FindOBBAlongDirection Method " Url="html/1625903854.htm" />
+        <HelpTOCNode Id="29993e71-f928-4aa0-8361-114d4ea665a7" Title="Get2DProjectionPoints Method " Url="html/280451710.htm">
+          <HelpTOCNode Title="Get2DProjectionPoints Method (IList(IVertex), Double[], Double[,])" Url="html/952911177.htm" />
+          <HelpTOCNode Title="Get2DProjectionPoints Method (IList(IVertex), Double[])" Url="html/571986527.htm" />
+          <HelpTOCNode Title="Get2DProjectionPoints Method (IList(Double[]), Double[])" Url="html/1748122641.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetLengthAndExtremeVertices Method " Url="html/807511366.htm" />
+        <HelpTOCNode Title="OrientedBoundingBox Method " Url="html/1189276139.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6c34bb54-b9ff-4e65-a140-650afa144afc" Title="PrimitiveSurface Class" Url="html/196659523.htm">
+      <HelpTOCNode Title="PrimitiveSurface Members" Url="html/1581006608.htm" />
+      <HelpTOCNode Id="643b794d-5111-4883-be2d-7b7b6fe29c3f" Title="PrimitiveSurface Properties" Url="html/717077874.htm">
+        <HelpTOCNode Title="Area Property " Url="html/102182021.htm" />
+        <HelpTOCNode Title="Faces Property " Url="html/754977726.htm" />
+        <HelpTOCNode Title="InnerEdges Property " Url="html/2074767221.htm" />
+        <HelpTOCNode Title="OuterEdges Property " Url="html/1997837293.htm" />
+        <HelpTOCNode Title="Transformation Property " Url="html/1252553756.htm" />
+        <HelpTOCNode Title="Vertices Property " Url="html/974957455.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="2fac3d69-b883-4493-b835-89e57e12e247" Title="Sphere Class" Url="html/498388343.htm">
+      <HelpTOCNode Title="Sphere Members" Url="html/2045927006.htm" />
+      <HelpTOCNode Id="e9738720-bc63-42b4-90ae-a52f8da0c1ac" Title="Sphere Fields" Url="html/1974942958.htm">
+        <HelpTOCNode Title="IsPositive Field" Url="html/395002149.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="bfab19ad-c35b-4d91-a3fa-de683f3bc7eb" Title="Sphere Properties" Url="html/1726375403.htm">
+        <HelpTOCNode Title="Center Property " Url="html/1802774245.htm" />
+        <HelpTOCNode Title="Radius Property " Url="html/2050047596.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="64f717ac-34a2-4839-9116-0e6a91f1d15f" Title="Torus Class" Url="html/2068432724.htm">
+      <HelpTOCNode Title="Torus Members" Url="html/877029022.htm" />
+      <HelpTOCNode Title="Torus Constructor " Url="html/1079960330.htm" />
+      <HelpTOCNode Id="d1a33cb8-992b-428d-a9c0-5fa71e9289c2" Title="Torus Fields" Url="html/1529681058.htm">
+        <HelpTOCNode Title="IsPositive Field" Url="html/787991270.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c5fce2f4-154a-41a8-bf3f-f99a698c25e7" Title="Torus Properties" Url="html/1894638183.htm">
+        <HelpTOCNode Title="Axis Property " Url="html/278319314.htm" />
+        <HelpTOCNode Title="Center Property " Url="html/1553925686.htm" />
+        <HelpTOCNode Title="MajorRadius Property " Url="html/2005968505.htm" />
+        <HelpTOCNode Title="MinorRadius Property " Url="html/1549467393.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="abc731dd-7cbd-4209-97c1-48678e19cff5" Title="TVGL.Boolean_Operations Namespace" Url="html/220536184.htm">
+    <HelpTOCNode Id="ecac586b-4289-474b-8c53-7a0956bb25b9" Title="ContactData Class" Url="html/1191216211.htm">
+      <HelpTOCNode Title="ContactData Members" Url="html/280183410.htm" />
+      <HelpTOCNode Id="548792fd-30ea-48d7-ba6a-4d8aeed5030a" Title="ContactData Fields" Url="html/1602811920.htm">
+        <HelpTOCNode Title="Area Field" Url="html/83747950.htm" />
+        <HelpTOCNode Title="Perimeter Field" Url="html/1487490496.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="4106d27d-d4bb-409a-9089-4693e020510b" Title="ContactData Properties" Url="html/531577586.htm">
+        <HelpTOCNode Title="NegativeLoops Property " Url="html/33440725.htm" />
+        <HelpTOCNode Title="PositiveLoops Property " Url="html/1264815730.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="56db5817-ac02-47cc-951e-53998e892d49" Title="ContactElement Class" Url="html/145148741.htm">
+      <HelpTOCNode Title="ContactElement Members" Url="html/539204415.htm" />
+      <HelpTOCNode Id="3e3f6b8e-0c9e-4bbe-b9b1-0d94caf1bc8e" Title="ContactElement Properties" Url="html/265719747.htm">
+        <HelpTOCNode Title="ContactEdge Property " Url="html/688771473.htm" />
+        <HelpTOCNode Title="SplitType Property " Url="html/349998831.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="FaceSplitType Enumeration" Url="html/274829933.htm" />
+    <HelpTOCNode Id="b223644c-048d-4b68-b292-d68a67510a12" Title="Loop Class" Url="html/696107650.htm">
+      <HelpTOCNode Title="Loop Members" Url="html/321186007.htm" />
+      <HelpTOCNode Id="c5cc7033-1f99-4813-b9ef-5143529fc4f5" Title="Loop Fields" Url="html/2046862050.htm">
+        <HelpTOCNode Title="Area Field" Url="html/2118962049.htm" />
+        <HelpTOCNode Title="ArtificiallyClosed Field" Url="html/1026141505.htm" />
+        <HelpTOCNode Title="IsClosed Field" Url="html/214493527.htm" />
+        <HelpTOCNode Title="IsPositive Field" Url="html/61881025.htm" />
+        <HelpTOCNode Title="Perimeter Field" Url="html/1524510897.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="67827e3d-889f-469e-89f8-c9f5c6bf3ad6" Title="Slice Class" Url="html/1274694911.htm">
+      <HelpTOCNode Title="Slice Members" Url="html/37855901.htm" />
+      <HelpTOCNode Id="edc8a65c-99b9-4c49-8e1b-172c12054c83" Title="Slice Methods" Url="html/588614476.htm">
+        <HelpTOCNode Title="DefineContact Method " Url="html/1765279334.htm" />
+        <HelpTOCNode Title="OnFlat Method " Url="html/1088315876.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="98b4e401-33d2-429d-9427-233664e179bd" Title="TVGL.IOFunctions Namespace" Url="html/241652094.htm">
+    <HelpTOCNode Id="ecaf238d-ae0d-4172-b647-2efdf76bba87" Title="IO Class" Url="html/1190010836.htm">
+      <HelpTOCNode Title="IO Members" Url="html/2011133073.htm" />
+      <HelpTOCNode Id="d89fec35-6c1e-4761-8b04-f761fca8b52b" Title="IO Methods" Url="html/1092848832.htm">
+        <HelpTOCNode Title="Open Method " Url="html/73500023.htm" />
+        <HelpTOCNode Id="555a335b-c115-4528-a8d7-03e814bb34ea" Title="Save Method " Url="html/1790963030.htm">
+          <HelpTOCNode Title="Save Method (Stream, FileType)" Url="html/2050047066.htm" />
+          <HelpTOCNode Title="Save Method (String, FileType)" Url="html/1043933150.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="dc177b9d-40ec-48f6-9a5a-e6f09d1f9db9" Title="TVGL.Tessellation Namespace" Url="html/1334845097.htm">
+    <HelpTOCNode Id="4c5dca99-8a20-407f-8b57-08ee005f8f43" Title="Edge Class" Url="html/1744202510.htm">
+      <HelpTOCNode Title="Edge Members" Url="html/334455524.htm" />
+      <HelpTOCNode Title="Edge Constructor (Vertex, Vertex, PolygonalFace, PolygonalFace)" Url="html/1869071245.htm" />
+      <HelpTOCNode Id="9d464cf7-8f23-40dd-95f3-8e0150849772" Title="Edge Methods" Url="html/1786890160.htm">
+        <HelpTOCNode Title="OtherVertex Method " Url="html/1647960759.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="1796c5a0-b708-4325-b78f-bf1c2e34b32d" Title="Edge Properties" Url="html/1605023421.htm">
+        <HelpTOCNode Title="Curvature Property " Url="html/1545633242.htm" />
+        <HelpTOCNode Title="From Property " Url="html/1651320575.htm" />
+        <HelpTOCNode Title="InternalAngle Property " Url="html/1428706787.htm" />
+        <HelpTOCNode Title="Length Property " Url="html/2096961303.htm" />
+        <HelpTOCNode Title="OtherFace Property " Url="html/1635427147.htm" />
+        <HelpTOCNode Title="OwnedFace Property " Url="html/1918703204.htm" />
+        <HelpTOCNode Title="PartofConvexHull Property " Url="html/1163227781.htm" />
+        <HelpTOCNode Title="To Property " Url="html/382503054.htm" />
+        <HelpTOCNode Title="Vector Property " Url="html/169880886.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="406a5813-96c7-49aa-9af2-1e2c3dc05492" Title="PolygonalFace Class" Url="html/1226099893.htm">
+      <HelpTOCNode Title="PolygonalFace Members" Url="html/397306584.htm" />
+      <HelpTOCNode Id="892f3741-9334-4896-89fd-371817282b85" Title="PolygonalFace Constructor " Url="html/159449996.htm">
+        <HelpTOCNode Title="PolygonalFace Constructor (Double[], Color)" Url="html/1489643407.htm" />
+        <HelpTOCNode Title="PolygonalFace Constructor (Double[])" Url="html/1394304810.htm" />
+        <HelpTOCNode Title="PolygonalFace Constructor " Url="html/1138866046.htm" />
+        <HelpTOCNode Title="PolygonalFace Constructor (List(Vertex))" Url="html/1245859517.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="7763f266-646a-4724-842f-d13ecf2e749f" Title="PolygonalFace Methods" Url="html/2105371157.htm">
+        <HelpTOCNode Title="Copy Method " Url="html/861350735.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="676c63c0-d55e-4572-9c41-2e64a559ca2a" Title="PolygonalFace Properties" Url="html/1668039488.htm">
+        <HelpTOCNode Title="AdjacentFaces Property " Url="html/2082573819.htm" />
+        <HelpTOCNode Title="Area Property " Url="html/690085395.htm" />
+        <HelpTOCNode Title="AreaRatio Property " Url="html/1295712274.htm" />
+        <HelpTOCNode Title="Center Property " Url="html/1019642528.htm" />
+        <HelpTOCNode Title="color Property " Url="html/1085966575.htm" />
+        <HelpTOCNode Title="Curvature Property " Url="html/1461009595.htm" />
+        <HelpTOCNode Title="Edges Property " Url="html/388737017.htm" />
+        <HelpTOCNode Title="IsConvex Property " Url="html/1053226606.htm" />
+        <HelpTOCNode Title="Normal Property " Url="html/757121171.htm" />
+        <HelpTOCNode Title="PartofConvexHull Property " Url="html/1016937012.htm" />
+        <HelpTOCNode Title="Vertices Property " Url="html/356930563.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="57410a26-42ca-4e9c-bb4e-85d7c123c8f6" Title="TessellatedSolid Class" Url="html/24174001.htm">
+      <HelpTOCNode Title="TessellatedSolid Members" Url="html/1628637098.htm" />
+      <HelpTOCNode Id="3eb9531b-c2d2-45cc-8710-5e59f9c28981" Title="TessellatedSolid Constructor " Url="html/746758774.htm">
+        <HelpTOCNode Title="TessellatedSolid Constructor (String, List(Double[]), List(List(Double[])), List(Color), Boolean)" Url="html/70028616.htm" />
+        <HelpTOCNode Title="TessellatedSolid Constructor (String, List(Double[]), List(List(Int32)), List(Color), Boolean)" Url="html/993897776.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="499d3039-bdd3-4ff6-a6a9-660ed999602a" Title="TessellatedSolid Fields" Url="html/533234180.htm">
+        <HelpTOCNode Title="HasUniformColor Field" Url="html/1916367958.htm" />
+        <HelpTOCNode Title="SolidColor Field" Url="html/601665772.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="204b15e1-9df3-484a-babe-f4a6d5d6e91d" Title="TessellatedSolid Methods" Url="html/54024406.htm">
+        <HelpTOCNode Title="Copy Method " Url="html/942795639.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="6b17ddd2-2591-44bc-aff1-4ba939cba9c5" Title="TessellatedSolid Properties" Url="html/1180062541.htm">
+        <HelpTOCNode Title="Bounds Property " Url="html/1667227823.htm" />
+        <HelpTOCNode Title="Center Property " Url="html/1606740982.htm" />
+        <HelpTOCNode Title="ConvexHullEdges Property " Url="html/1545598020.htm" />
+        <HelpTOCNode Title="ConvexHullFaces Property " Url="html/385682361.htm" />
+        <HelpTOCNode Title="ConvexHullVertices Property " Url="html/1341483281.htm" />
+        <HelpTOCNode Title="Edges Property " Url="html/2042485849.htm" />
+        <HelpTOCNode Title="Faces Property " Url="html/1678933640.htm" />
+        <HelpTOCNode Title="Name Property " Url="html/1310686856.htm" />
+        <HelpTOCNode Title="NumberOfEdges Property " Url="html/729690305.htm" />
+        <HelpTOCNode Title="NumberOfFaces Property " Url="html/783685190.htm" />
+        <HelpTOCNode Title="NumberOfVertices Property " Url="html/158998941.htm" />
+        <HelpTOCNode Title="SurfaceArea Property " Url="html/1657490234.htm" />
+        <HelpTOCNode Title="Vertices Property " Url="html/1308779175.htm" />
+        <HelpTOCNode Title="Volume Property " Url="html/223876016.htm" />
+        <HelpTOCNode Title="XMax Property " Url="html/1144405873.htm" />
+        <HelpTOCNode Title="XMin Property " Url="html/384942201.htm" />
+        <HelpTOCNode Title="YMax Property " Url="html/1146568561.htm" />
+        <HelpTOCNode Title="YMin Property " Url="html/382779513.htm" />
+        <HelpTOCNode Title="ZMax Property " Url="html/1148731249.htm" />
+        <HelpTOCNode Title="ZMin Property " Url="html/380616825.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="5ff44add-db46-4dd6-a523-e14c888e4bca" Title="Vertex Class" Url="html/1625161389.htm">
+      <HelpTOCNode Title="Vertex Members" Url="html/1744042123.htm" />
+      <HelpTOCNode Id="a3a2dd7b-c3d3-4769-bfaf-1b2bc7f97658" Title="Vertex Constructor " Url="html/873427423.htm">
+        <HelpTOCNode Title="Vertex Constructor (Double[], Int32)" Url="html/637325815.htm" />
+        <HelpTOCNode Title="Vertex Constructor (Double[])" Url="html/414051636.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="48ee6f18-f945-4006-919b-2d1ceb7f866b" Title="Vertex Methods" Url="html/680328493.htm">
+        <HelpTOCNode Title="Copy Method " Url="html/1892300301.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d4705b36-09a2-4eae-a059-f9540ac41f31" Title="Vertex Properties" Url="html/1763854549.htm">
+        <HelpTOCNode Title="EdgeCurvature Property " Url="html/189056711.htm" />
+        <HelpTOCNode Title="Edges Property " Url="html/2113924271.htm" />
+        <HelpTOCNode Title="Faces Property " Url="html/2047415124.htm" />
+        <HelpTOCNode Title="IndexInList Property " Url="html/1688354207.htm" />
+        <HelpTOCNode Title="PartofConvexHull Property " Url="html/1424205641.htm" />
+        <HelpTOCNode Title="PointCurvature Property " Url="html/176749403.htm" />
+        <HelpTOCNode Title="Position Property " Url="html/354878415.htm" />
+        <HelpTOCNode Title="X Property " Url="html/551430878.htm" />
+        <HelpTOCNode Title="Y Property " Url="html/1787221282.htm" />
+        <HelpTOCNode Title="Z Property " Url="html/169093854.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="662e62b0-68a1-471c-b025-95a0d42ae5fc" Title="TVGL_Helix_Presenter Namespace" Url="html/1388022963.htm">
+    <HelpTOCNode Id="8f7f6c2e-f2f2-4af4-ac0e-6b02f2eb3954" Title="HelixPresenter Class" Url="html/184056143.htm">
+      <HelpTOCNode Title="HelixPresenter Members" Url="html/198391428.htm" />
+      <HelpTOCNode Id="b081c666-95ac-441f-8ba6-9f73b46ab9b9" Title="HelixPresenter Methods" Url="html/602872387.htm">
+        <HelpTOCNode Id="812ac772-db35-40cc-aaa6-774c91db4a5c" Title="Show Method " Url="html/133427712.htm">
+          <HelpTOCNode Title="Show Method (TessellatedSolid)" Url="html/190471736.htm" />
+          <HelpTOCNode Title="Show Method (IList(TessellatedSolid))" Url="html/392102920.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d99bb192-5e27-4dfd-8c5d-3fa11326dacb" Title="MainWindow Class" Url="html/40349263.htm">
+      <HelpTOCNode Title="MainWindow Members" Url="html/2075902390.htm" />
+      <HelpTOCNode Title="MainWindow Constructor " Url="html/1963102844.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>
