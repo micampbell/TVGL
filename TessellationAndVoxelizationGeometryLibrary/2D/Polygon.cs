@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using StarMathLib;
 
 namespace TVGL._2D
 {
@@ -159,42 +160,147 @@ namespace TVGL._2D
             throw new Exception("Concavity could not be determined. May be due to colinear points. Add functionality to code to account for this.");
         }
 
+        /// <summary>
+        /// Returns a list of lines that make up the path of this polygon
+        /// </summary>
+        /// <returns></returns>
+        public List<Line> PathLines()
+        {
+            var lines = new List<Line>();
+            var n = Path.Count;
+            for (var i = 0; i < n; i++)
+            {
+                var j = (i + 1) % n;
+                lines.Add(new Line(Path[i], Path[j], true));
+            }
+            return lines;
+        }
+
         private bool IsSelfIntersecting()
         {
-            var successful = false;
-            var attempts = 0;
-            while (successful == false && attempts < 4)
-            {
-                try
-                {
-                    //Change point X and Y coordinates to be changed to mostly random primary axis
-                    //Removed random value to make function repeatable for debugging.
-                    var values = new List<double>() {0.82348, 0.13905, 0.78932, 0.37510};
-                    var theta = values[attempts - 1];
+            var lines = PathLines();
+            var orderedLoop = Path;
+            const int precision = 15;
+            var sortedPoints = orderedLoop.OrderBy(point => Math.Round(point.Y, precision)).ThenBy(point => Math.Round(point.X, precision)).ToList();
+            var index = orderedLoop.IndexOf(sortedPoints[0]); // index of first point in orderedLoop
 
-                    var pHighest = double.NegativeInfinity;
-                    foreach (var point in Path)
+            //inititallize lineList 
+            var lineList = new HashSet<Line>();
+            for (var i = 0; i < sortedPoints.Count; i++)
+            {
+                //Add to or remove lines from Red-Black Tree
+                foreach (var line in sortedPoints[i].Lines)
+                {
+                    if (lineList.Contains(line))
                     {
-                        point.X = point.X*Math.Cos(theta) - point.Y*Math.Sin(theta);
-                        point.Y = point.X*Math.Sin(theta) + point.Y*Math.Cos(theta);
-                        if (point.Y > pHighest)
+                        lineList.Remove(line);
+                    }
+                    else
+                    {
+                        lineList.Add(line);
+                    }
+                }
+                //Create a second lineList in a perpendicular direction
+                var unsortedPointSet2 = new HashSet<Point>();
+                foreach (var line in lineList)
+                {
+                    if (!unsortedPointSet2.Contains(line.ToPoint)) unsortedPointSet2.Add(line.ToPoint);
+                    if (!unsortedPointSet2.Contains(line.FromPoint)) unsortedPointSet2.Add(line.FromPoint);
+                }
+                var sortedPointSet2 =
+                    unsortedPointSet2.OrderBy(point => Math.Round(point.X, precision))
+                        .ThenBy(point => Math.Round(point.Y, precision))
+                        .ToList();
+                var lineList2 = new HashSet<Line>();
+                for (var j = 0; j < sortedPointSet2.Count; j++)
+                {
+                    //Add to or remove lines from Red-Black Tree
+                    foreach (var line in sortedPointSet2[j].Lines.Where(line => lineList.Contains(line)))
+                    {
+                        if (lineList2.Contains(line))
                         {
-                            pHighest = point.Y;
+                            lineList2.Remove(line);
+                        }
+                        else
+                        {
+                            lineList2.Add(line);
                         }
                     }
 
-
-                    successful = true;
-                }
-                catch
-                {
-                    attempts ++;
+                    //Check if any of the lines are intersecting
+                    foreach (var line1 in lineList2)
+                    {
+                        foreach (var line2 in lineList2)
+                        {
+                            var linesIntersect = LineLineIntersection();
+                        }
+                    }
                 }
             }
-            if(!successful) throw new Exception("Failed to determine if polygon is self intersecting");
+        }
 
+        /// <summary>
+        /// Detemines if Two Lines intersect. Outputs intersection point if they do.
+        /// If two lines are colinear, they are not considered intersecting.
+        /// </summary>
+        /// <param name="line1"></param>
+        /// <param name="line2"></param>
+        /// <param name="intersectionPoint"></param>
+        /// <source>
+        /// http://www.codeproject.com/Tips/862988/Find-the-Intersection-Point-of-Two-Line-Segments
+        /// </source>
+        /// <returns></returns>
+        public bool LineLineIntersection(Line line1, Line line2, out Point intersectionPoint, bool considerCollinearOverlapAsIntersect = false)
+        {
+            var p = line1.FromPoint.Position2D;
+            var p2 = line1.ToPoint.Position2D;
+            var q = line2.FromPoint.Position2D;
+            var q2 = line2.ToPoint.Position2D;
+            intersectionPoint = null;
+            var r = p2.subtract(p);
+            var s = q2.subtract(q);
+            var rxs = r[0]*s[1]-r[1]*s[0]; //2D cross product
+            var qp = q.subtract(p);
+            var qpxr = qp[0]*r[1] - qp[1] * r[0];//2D cross product
 
-            var linesInLoops = new List<List<TVGL.Line>>();
+            // If r x s = 0 and (q - p) x r = 0, then the two lines are collinear.
+            if (rxs.IsNegligible() && qpxr.IsNegligible())
+            {
+                // 1. If either  0 <= (q - p) * r <= r * r or 0 <= (p - q) * s <= * s
+                // then the two lines are overlapping,
+                // 2. If neither 0 <= (q - p) * r = r * r nor 0 <= (p - q) * s <= s * s
+                // then the two lines are collinear but disjoint.
+                if (!considerCollinearOverlapAsIntersect) return false;
+                var qpr = qp[0]*r[0] + qp[1]*r[1];
+                var pqs = p.subtract(q)[0] * s[0] + p.subtract(q)[1] * s[1];
+                return (0 <= qpr && qpr <= r[0] * r[0] + r[1] * r[1]) || (0 <= pqs && pqs <= s[0] * s[0] + s[1] + s[1]);
+            }
+
+            // 3. If r x s = 0 and (q - p) x r != 0, then the two lines are parallel and non-intersecting.
+            if (rxs.IsNegligible() && !qpxr.IsNegligible()) return false;
+
+            // t = (q - p) x s / (r x s)
+            var t = q.subtract(p).crossProduct(s).divide(rxs);
+
+            // u = (q - p) x r / (r x s)
+            var u = q.subtract(p).crossProduct(r).divide(rxs);
+
+            // 4. If r x s != 0 and 0 <= t <= 1 and 0 <= u <= 1
+            // the two line segments meet at the point p + t r = q + u s.
+            var tNorm = t.norm1(); //ToDo: check to make sure this returns distance, not something else
+            if (!rxs.IsNegligible() && (0 <= t.norm1() && t.norm1() <= 1) && (0 <= u.norm1() && u.norm1() <= 1))
+            {
+                // We can calculate the intersection point using either t or u.
+                var x = p[0] + t[0] * r[0];
+                var y = p[1] + t[1] * r[1];
+                intersectionPoint = new Point(x, y);
+
+                // An intersection was found.
+                return true;
+            }
+
+            // 5. Otherwise, the two line segments are not parallel but do not intersect.
+            return false;
         }
     }
 }

@@ -12,12 +12,14 @@ namespace TVGL._2D
     public class Line
     {
         #region Constructor
+
         /// <summary>
         ///     Sets to and from points as well as slope and intercept of line.
         /// </summary>
         /// <param name="fromPoint"></param>
         /// <param name="toPoint"></param>
-        internal Line(Point fromPoint, Point toPoint)
+        /// <param name="twoWayReference"></param>
+        internal Line(Point fromPoint, Point toPoint, bool twoWayReference = true)
         {
             FromPoint = fromPoint;
             ToPoint= toPoint;
@@ -39,6 +41,10 @@ namespace TVGL._2D
                 Slope = (ToPoint.Y - FromPoint.Y) / (ToPoint.X - FromPoint.X);
                 Yintercept = ToPoint.Y - Slope * ToPoint.X;
             }
+
+            if (!twoWayReference) return;
+            FromPoint.Lines.Add(this);
+            ToPoint.Lines.Add(this);
         }
         #endregion
         
