@@ -344,7 +344,7 @@ namespace TVGL
                         else
                         {
                             //Find perpendicular slope, and midpoint of line 2. 
-                            //Then use the midpoint to find "b" and solve y = mx+b
+                            //Then use the midpoint to find "b" and solve y = mx+Yintercept
                             //This is condensed into a single line because VS rounds the numbers 
                             //during division.
                             y = (Points[1].Y + Points[2].Y)/2 + -run2/rise2*(x - (Points[1].X + Points[2].X)/2);
@@ -365,7 +365,7 @@ namespace TVGL
                         else
                         {
                             //Find perpendicular slope, and midpoint of line 2. 
-                            //Then use the midpoint to find "b" and solve y = mx+b
+                            //Then use the midpoint to find "b" and solve y = mx+Yintercept
                             //This is condensed into a single line because VS rounds the numbers 
                             //during division.
                             y = (Points[0].Y + Points[1].Y)/2 + -run1/rise1*(x - (Points[0].X + Points[1].X)/2);
@@ -377,7 +377,7 @@ namespace TVGL
                     {
                         y = (Points[0].Y + Points[1].Y)/2;
                         //Find perpendicular slope, and midpoint of line 2. 
-                        //Then use the midpoint to find "b" and solve y = mx+b
+                        //Then use the midpoint to find "b" and solve y = mx+Yintercept
                         //This is condensed into a single line because VS rounds the numbers 
                         //during division.
                         x = (y - ((Points[1].Y + Points[2].Y)/2 - -run2/rise2*
@@ -389,7 +389,7 @@ namespace TVGL
                     {
                         y = (Points[1].Y + Points[2].Y)/2;
                         //Find perpendicular slope, and midpoint of line 2. 
-                        //Then use the midpoint to find "b" and solve y = mx+b
+                        //Then use the midpoint to find "b" and solve y = mx+Yintercept
                         //This is condensed into a single line because VS rounds the numbers 
                         //during division.
                         x = (y - ((Points[1].Y + Points[0].Y)/2 - -run1/rise1*

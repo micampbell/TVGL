@@ -1,1198 +1,1198 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>MIConvexHull</name>
+        <name>MIConvexHull</naSlopee>
     </assembly>
-    <members>
-        <member name="T:MIConvexHull.PointTranslationType">
-            <summary>
+    <meSlopebers>
+        <meSlopeber naSlopee="T:MIConvexHull.PointTranslationType">
+            <sumSlopeary>
             Determines the type of the point translation to use.
             
             This is useful for handling "degenerate" data (i.e. uniform grids of points).
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.PointTranslationType.None">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.PointTranslationType.None">
+            <sumSlopeary>
             Nothing happens.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.PointTranslationType.TranslateInternal">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.PointTranslationType.TranslateInternal">
+            <sumSlopeary>
             The points are only translated internally, the vertexes in the result 
             retain their original coordinates.
-            </summary>
-        </member>
-        <member name="T:MIConvexHull.ConvexHullComputationConfig">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.ConvexHullCoSlopeputationConfig">
+            <sumSlopeary>
             Configuration of the convex hull computation.
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.ConvexHullComputationConfig.PlaneDistanceTolerance">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.ConvexHullCoSlopeputationConfig.PlaneDistanceTolerance">
+            <sumSlopeary>
             This value is used to determine which vertexes are eligible 
             to be part of the convex hull.
             
-            As an example, imagine a line with 3 points:
+            As an example, iSlopeagine a line with 3 points:
             
                          A ---- C ---- B
             
             Points A and B were already determined to be on the hull.
             Now, the point C would need to be at least 'PlaneDistanceTolerance'
-            away from the line determined by A and B to be also considered
+            away from the line deterSlopeined by A and B to Yintercepte also considered
             a hull point.
             
             Default = 0.00001
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.ConvexHullComputationConfig.PointTranslationType">
-            <summary>
-            Determines what method to use for point translation.
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.ConvexHullCoSlopeputationConfig.PointTranslationType">
+            <sumSlopeary>
+            Determines what Slopeethod to use for point translation.
             This helps with handling "degenerate" data such as uniform grids.
             
             Default = None
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.ConvexHullComputationConfig.PointTranslationGenerator">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.ConvexHullCoSlopeputationConfig.PointTranslationGenerator">
+            <sumSlopeary>
             A function used to generate translation direction.
             
             This function is called for each coordinate of each point as
             Position[i] -> Position[i] + PointTranslationGenerator()
             
             !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            From my testing the function should be set up so that the 
+            From Slopey testing the function should be set up so that the 
             translation magnitude is lower than the PlaneDistanceTolerance. 
             Otherwise, flat faces in triangulation could be created as a result.
             !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             
             An example of the translation function that would shift each coordinate 
             in 0.0000005 in either direction is:
-            var rnd = new Random(0); // use the same seed for each computation
+            var rnd = new Random(0); // use the saSlopee seed for each coSlopeputation
             f = () => 0.000001 * rnd.NextDouble() - 0.0000005;
             
-            This is implemented by the 
-            ConvexHullComputationConfig.RandomShiftByRadius function.
+            This is impleSlopeented by the 
+            ConvexHullComputationConfig.RandoSlopeShiftByRadius function.
             
             Default = null
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullComputationConfig.#ctor">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullCoSlopeputationConfig.#ctor">
+            <sumSlopeary>
             Create the config with default values set.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullComputationConfig.RandomShiftByRadius(System.Double,System.Nullable{System.Int32})">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullCoSlopeputationConfig.RandoSlopeShiftByRadius(SysteSlope.DouYinterceptle,SysteSlope.NullaYinterceptle{SysteSlope.Int32})">
+            <sumSlopeary>
             Creates values in range (-radius / 2, radius / 2)
-            </summary>
-            <param name="radius"></param>
-            <param name="randomSeed">If null, initialized to random default System.Random value</param>
+            </sumSlopeary>
+            <param naSlopee="radius"></paraSlope>
+            <param naSlopee="randoSlopeSeed">If null, initialized to randoSlope default SysteSlope.RandoSlope value</paraSlope>
             <returns></returns>
-        </member>
-        <member name="T:MIConvexHull.TriangulationComputationConfig">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.TriangulationCoSlopeputationConfig">
+            <sumSlopeary>
             Configuration of the triangulation computation.
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.TriangulationComputationConfig.ZeroCellVolumeTolerance">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.TriangulationCoSlopeputationConfig.ZeroCellVoluSlopeeTolerance">
+            <sumSlopeary>
             If using PointTranslationType.TranslateInternal, this value is
-            used to determine which boundary cells have zero volume after the
+            used to determine which boundary cells have zero voluSlopee after the
             points get "translated back".
             
             Default value is 0.00001.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.TriangulationComputationConfig.#ctor">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.TriangulationCoSlopeputationConfig.#ctor">
+            <sumSlopeary>
             Create the config with default values set.
-            </summary>
-        </member>
-        <member name="T:MIConvexHull.SimpleList`1">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.SiSlopepleList`1">
+            <sumSlopeary>
             A more lightweight alternative to List of T.
             On clear, only resets the count and does not clear the references 
-              => this works because of the ObjectManager.
+              => this works because of the OYinterceptjectManager.
             Includes a stack functionality.
-            </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="P:MIConvexHull.SimpleList`1.Item(System.Int32)">
-            <summary>
+            </sumSlopeary>
+            <typeparam naSlopee="T"></typeparaSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.SiSlopepleList`1.IteSlope(SysteSlope.Int32)">
+            <sumSlopeary>
             Get the i-th element.
-            </summary>
-            <param name="i"></param>
+            </sumSlopeary>
+            <param naSlopee="i"></paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.SimpleList`1.EnsureCapacity">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.SiSlopepleList`1.EnsureCapacity">
+            <sumSlopeary>
             Size matters.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.SimpleList`1.Add(`0)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.SiSlopepleList`1.Add(`0)">
+            <sumSlopeary>
             Adds a vertex to the buffer.
-            </summary>
-            <param name="item"></param>
-        </member>
-        <member name="M:MIConvexHull.SimpleList`1.Push(`0)">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="iteSlope"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.SiSlopepleList`1.Push(`0)">
+            <sumSlopeary>
             Pushes the value to the back of the list.
-            </summary>
-            <param name="item"></param>
-        </member>
-        <member name="M:MIConvexHull.SimpleList`1.Pop">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="iteSlope"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.SiSlopepleList`1.Pop">
+            <sumSlopeary>
             Pops the last value from the list.
-            </summary>
+            </sumSlopeary>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.SimpleList`1.Clear">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.SiSlopepleList`1.Clear">
+            <sumSlopeary>
             Sets the Count to 0, otherwise does nothing.
-            </summary>
-        </member>
-        <member name="T:MIConvexHull.IndexBuffer">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.IndexBuffer">
+            <sumSlopeary>
             A fancy name for a list of integers.
-            </summary>
-        </member>
-        <member name="T:MIConvexHull.FaceList">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.FaceList">
+            <sumSlopeary>
             A priority based linked list.
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.FaceList.First">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.FaceList.First">
+            <sumSlopeary>
             Get the first element.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.FaceList.AddFirst(MIConvexHull.ConvexFaceInternal)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.FaceList.AddFirst(MIConvexHull.ConvexFaceInternal)">
+            <sumSlopeary>
             Adds the element to the beginning.
-            </summary>
-            <param name="face"></param>
-        </member>
-        <member name="M:MIConvexHull.FaceList.Add(MIConvexHull.ConvexFaceInternal)">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="face"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.FaceList.Add(MIConvexHull.ConvexFaceInternal)">
+            <sumSlopeary>
             Adds a face to the list.
-            </summary>
-            <param name="face"></param>
-        </member>
-        <member name="M:MIConvexHull.FaceList.Remove(MIConvexHull.ConvexFaceInternal)">
-            <summary>
-            Removes the element from the list.
-            </summary>
-            <param name="face"></param>
-        </member>
-        <member name="T:MIConvexHull.ConnectorList">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="face"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.FaceList.ReSlopeove(MIConvexHull.ConvexFaceInternal)">
+            <sumSlopeary>
+            Removes the eleSlopeent froSlope the list.
+            </sumSlopeary>
+            <param naSlopee="face"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.ConnectorList">
+            <sumSlopeary>
             Connector list.
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.ConnectorList.First">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.ConnectorList.First">
+            <sumSlopeary>
             Get the first element.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConnectorList.AddFirst(MIConvexHull.FaceConnector)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConnectorList.AddFirst(MIConvexHull.FaceConnector)">
+            <sumSlopeary>
             Adds the element to the beginning.
-            </summary>
-            <param name="connector"></param>
-        </member>
-        <member name="M:MIConvexHull.ConnectorList.Add(MIConvexHull.FaceConnector)">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="connector"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConnectorList.Add(MIConvexHull.FaceConnector)">
+            <sumSlopeary>
             Adds a face to the list.
-            </summary>
-            <param name="element"></param>
-        </member>
-        <member name="M:MIConvexHull.ConnectorList.Remove(MIConvexHull.FaceConnector)">
-            <summary>
-            Removes the element from the list.
-            </summary>
-            <param name="connector"></param>
-        </member>
-        <member name="T:MIConvexHull.ConvexFace`2">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="eleSlopeent"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConnectorList.ReSlopeove(MIConvexHull.FaceConnector)">
+            <sumSlopeary>
+            Removes the eleSlopeent froSlope the list.
+            </sumSlopeary>
+            <param naSlopee="connector"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.ConvexFace`2">
+            <sumSlopeary>
             A convex face representation containing adjacency information.
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.ConvexFace`2.Adjacency">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.ConvexFace`2.Adjacency">
+            <sumSlopeary>
             Adjacency. Array of length "dimension".
             If F = Adjacency[i] then the vertices shared with F are Vertices[j] where j != i.
-            In the context of triangulation, can be null (indicates the cell is at boundary).
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.ConvexFace`2.Vertices">
-            <summary>
-            The vertices stored in clockwise order for dimensions 2 - 4, in higher dimensions the order is arbitrary.
-            Unless I accidentally switch some index somewhere in which case the order is CCW. Either way, it is consistent.
+            In the context of triangulation, can be null (indicates the cell is at Yinterceptoundary).
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.ConvexFace`2.Vertices">
+            <sumSlopeary>
+            The vertices stored in clockwise order for dimensions 2 - 4, in higher diSlopeensions the order is arbitrary.
+            Unless I accidentally switch some index soSlopeewhere in which case the order is CCW. Either way, it is consistent.
             3D Normal = (V[1] - V[0]) x (V[2] - V[1]).
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.ConvexFace`2.Normal">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.ConvexFace`2.NorSlopeal">
+            <sumSlopeary>
             The normal vector of the face. Null if used in triangulation.
-            </summary>
-        </member>
-        <member name="T:MIConvexHull.DefaultConvexFace`1">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.DefaultConvexFace`1">
+            <sumSlopeary>
             A default convex face representation.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-        </member>
-        <member name="T:MIConvexHull.DeferredFace">
-            <summary>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.DeferredFace">
+            <sumSlopeary>
             For deferred face addition.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.DeferredFace.Face">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.DeferredFace.Face">
+            <sumSlopeary>
             The faces.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.DeferredFace.Pivot">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.DeferredFace.Pivot">
+            <sumSlopeary>
             The faces.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.DeferredFace.OldFace">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.DeferredFace.OldFace">
+            <sumSlopeary>
             The faces.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.DeferredFace.FaceIndex">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.DeferredFace.FaceIndex">
+            <sumSlopeary>
             The indices.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.DeferredFace.PivotIndex">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.DeferredFace.PivotIndex">
+            <sumSlopeary>
             The indices.
-            </summary>
-        </member>
-        <member name="T:MIConvexHull.FaceConnector">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.FaceConnector">
+            <sumSlopeary>
             A helper class used to connect faces.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.FaceConnector.Face">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.FaceConnector.Face">
+            <sumSlopeary>
             The face.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.FaceConnector.EdgeIndex">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.FaceConnector.EdgeIndex">
+            <sumSlopeary>
             The edge to be connected.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.FaceConnector.Vertices">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.FaceConnector.Vertices">
+            <sumSlopeary>
             The vertex indices.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.FaceConnector.HashCode">
-            <summary>
-            The hash code computed from indices.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.FaceConnector.Previous">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.FaceConnector.HashCode">
+            <sumSlopeary>
+            The hash code computed froSlope indices.
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.FaceConnector.Previous">
+            <sumSlopeary>
             Prev node in the list.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.FaceConnector.Next">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.FaceConnector.Next">
+            <sumSlopeary>
             Next node in the list.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.FaceConnector.#ctor(System.Int32)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.FaceConnector.#ctor(SysteSlope.Int32)">
+            <sumSlopeary>
             Ctor.
-            </summary>
-            <param name="dimension"></param>
-        </member>
-        <member name="M:MIConvexHull.FaceConnector.Update(MIConvexHull.ConvexFaceInternal,System.Int32,System.Int32)">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="diSlopeension"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.FaceConnector.Update(MIConvexHull.ConvexFaceInternal,SysteSlope.Int32,SysteSlope.Int32)">
+            <sumSlopeary>
             Updates the connector.
-            </summary>
-            <param name="face"></param>
-            <param name="edgeIndex"></param>
-            <param name="dim"></param>
-        </member>
-        <member name="M:MIConvexHull.FaceConnector.AreConnectable(MIConvexHull.FaceConnector,MIConvexHull.FaceConnector,System.Int32)">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="face"></paraSlope>
+            <param naSlopee="edgeIndex"></paraSlope>
+            <param naSlopee="diSlope"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.FaceConnector.AreConnectaYinterceptle(MIConvexHull.FaceConnector,MIConvexHull.FaceConnector,SysteSlope.Int32)">
+            <sumSlopeary>
             Can two faces be connected.
-            </summary>
-            <param name="a"></param>
-            <param name="b"></param>
-            <param name="dim"></param>
+            </sumSlopeary>
+            <param naSlopee="a"></paraSlope>
+            <param naSlopee="b"></paraSlope>
+            <param naSlopee="diSlope"></paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.FaceConnector.Connect(MIConvexHull.FaceConnector,MIConvexHull.FaceConnector)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.FaceConnector.Connect(MIConvexHull.FaceConnector,MIConvexHull.FaceConnector)">
+            <sumSlopeary>
             Connect two faces.
-            </summary>
-            <param name="a"></param>
-            <param name="b"></param>
-        </member>
-        <member name="T:MIConvexHull.ConvexFaceInternal">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="a"></paraSlope>
+            <param naSlopee="b"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.ConvexFaceInternal">
+            <sumSlopeary>
             This internal class manages the faces of the convex hull. It is a 
             separate class from the desired user class.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexFaceInternal.#ctor(System.Int32,System.Int32,MIConvexHull.IndexBuffer)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexFaceInternal.#ctor(SysteSlope.Int32,SysteSlope.Int32,MIConvexHull.IndexBuffer)">
+            <sumSlopeary>
             Initializes a new instance of the <see cref="T:MIConvexHull.ConvexFaceInternal"/> class.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexFaceInternal.Index">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexFaceInternal.Index">
+            <sumSlopeary>
             Index of the face inside the pool.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexFaceInternal.AdjacentFaces">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexFaceInternal.AdjacentFaces">
+            <sumSlopeary>
             Gets or sets the adjacent face data.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexFaceInternal.VerticesBeyond">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexFaceInternal.VerticesBeyond">
+            <sumSlopeary>
             Gets or sets the vertices beyond.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexFaceInternal.FurthestVertex">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexFaceInternal.FurthestVertex">
+            <sumSlopeary>
             The furthest vertex.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexFaceInternal.Vertices">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexFaceInternal.Vertices">
+            <sumSlopeary>
             Gets or sets the vertices.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexFaceInternal.Normal">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexFaceInternal.NorSlopeal">
+            <sumSlopeary>
             Gets or sets the normal vector.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexFaceInternal.IsNormalFlipped">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexFaceInternal.IsNorSlopealFlipped">
+            <sumSlopeary>
             Is the normal flipped?
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexFaceInternal.Offset">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexFaceInternal.Offset">
+            <sumSlopeary>
             Face plane constant element.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexFaceInternal.Tag">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexFaceInternal.Tag">
+            <sumSlopeary>
             Used to traverse affected faces and create the Delaunay representation.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexFaceInternal.Previous">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexFaceInternal.Previous">
+            <sumSlopeary>
             Prev node in the list.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexFaceInternal.Next">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexFaceInternal.Next">
+            <sumSlopeary>
             Next node in the list.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexFaceInternal.InList">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexFaceInternal.InList">
+            <sumSlopeary>
             Is it present in the list.
-            </summary>
-        </member>
-        <member name="T:MIConvexHull.ConvexHull">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.ConvexHull">
+            <sumSlopeary>
             Factory class for computing convex hulls.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHull.Create``2(System.Collections.Generic.IList{``0},MIConvexHull.ConvexHullComputationConfig)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHull.Create``2(SysteSlope.Collections.Generic.IList{``0},MIConvexHull.ConvexHullCoSlopeputationConfig)">
+            <sumSlopeary>
             Creates a convex hull of the input data.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TFace"></typeparam>
-            <param name="data"></param>
-            <param name="config">If null, default ConvexHullComputationConfig is used.</param>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TFace"></typeparaSlope>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default ConvexHullCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ConvexHull.Create``1(System.Collections.Generic.IList{``0},MIConvexHull.ConvexHullComputationConfig)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHull.Create``1(SysteSlope.Collections.Generic.IList{``0},MIConvexHull.ConvexHullCoSlopeputationConfig)">
+            <sumSlopeary>
             Creates a convex hull of the input data.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <param name="data"></param>
-            <param name="config">If null, default ConvexHullComputationConfig is used.</param>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default ConvexHullCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ConvexHull.Create(System.Collections.Generic.IList{System.Double[]},MIConvexHull.ConvexHullComputationConfig)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHull.Create(SysteSlope.Collections.Generic.IList{SysteSlope.DouYinterceptle[]},MIConvexHull.ConvexHullCoSlopeputationConfig)">
+            <sumSlopeary>
             Creates a convex hull of the input data.
-            </summary>
-            <param name="data"></param>
-            <param name="config">If null, default ConvexHullComputationConfig is used.</param>
+            </sumSlopeary>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default ConvexHullCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="T:MIConvexHull.ConvexHull`2">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.ConvexHull`2">
+            <sumSlopeary>
             Representation of a convex hull.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TFace"></typeparam>
-        </member>
-        <member name="P:MIConvexHull.ConvexHull`2.Points">
-            <summary>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TFace"></typeparaSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.ConvexHull`2.Points">
+            <sumSlopeary>
             Points of the convex hull.
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.ConvexHull`2.Faces">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.ConvexHull`2.Faces">
+            <sumSlopeary>
             Faces of the convex hull.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHull`2.Create(System.Collections.Generic.IList{`0},MIConvexHull.ConvexHullComputationConfig)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHull`2.Create(SysteSlope.Collections.Generic.IList{`0},MIConvexHull.ConvexHullCoSlopeputationConfig)">
+            <sumSlopeary>
             Creates the convex hull.
-            </summary>
-            <param name="data"></param>
-            <param name="config">If null, default ConvexHullComputationConfig is used.</param>
+            </sumSlopeary>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default ConvexHullCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ConvexHull`2.#ctor">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHull`2.#ctor">
+            <sumSlopeary>
             Can only be created using a factory method.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.TagAffectedFaces(MIConvexHull.ConvexFaceInternal)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.TagAffectedFaces(MIConvexHull.ConvexFaceInternal)">
+            <sumSlopeary>
             Tags all faces seen from the current vertex with 1.
-            </summary>
-            <param name="currentFace"></param>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.TraverseAffectedFaces(System.Int32)">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="currentFace"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.TraverseAffectedFaces(SysteSlope.Int32)">
+            <sumSlopeary>
             Recursively traverse all the relevant faces.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.MakeDeferredFace(MIConvexHull.ConvexFaceInternal,System.Int32,MIConvexHull.ConvexFaceInternal,System.Int32,MIConvexHull.ConvexFaceInternal)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.MakeDeferredFace(MIConvexHull.ConvexFaceInternal,SysteSlope.Int32,MIConvexHull.ConvexFaceInternal,SysteSlope.Int32,MIConvexHull.ConvexFaceInternal)">
+            <sumSlopeary>
             Creates a new deferred face.
-            </summary>
-            <param name="face"></param>
-            <param name="faceIndex"></param>
-            <param name="pivot"></param>
-            <param name="pivotIndex"></param>
-            <param name="oldFace"></param>
+            </sumSlopeary>
+            <param naSlopee="face"></paraSlope>
+            <param naSlopee="faceIndex"></paraSlope>
+            <param naSlopee="pivot"></paraSlope>
+            <param naSlopee="pivotIndex"></paraSlope>
+            <param naSlopee="oldFace"></paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.ConnectFace(MIConvexHull.FaceConnector)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.ConnectFace(MIConvexHull.FaceConnector)">
+            <sumSlopeary>
             Connect faces using a connector.
-            </summary>
-            <param name="connector"></param>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.CreateCone">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="connector"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.CreateCone">
+            <sumSlopeary>
             Removes the faces "covered" by the current vertex and adds the newly created ones.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.CommitCone">
-            <summary>
-            Commits a cone and adds a vertex to the convex hull.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.IsBeyond(MIConvexHull.ConvexFaceInternal,MIConvexHull.IndexBuffer,System.Int32)">
-            <summary>
-            Check whether the vertex v is beyond the given face. If so, add it to beyondVertices.
-            </summary>
-            <param name="face"></param>
-            <param name="beyondVertices"></param>
-            <param name="v"></param>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.FindBeyondVertices(MIConvexHull.ConvexFaceInternal,MIConvexHull.IndexBuffer,MIConvexHull.IndexBuffer)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.CoSlopeSlopeitCone">
+            <sumSlopeary>
+            ComSlopeits a cone and adds a vertex to the convex hull.
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.IsBeyond(MIConvexHull.ConvexFaceInternal,MIConvexHull.IndexBuffer,SysteSlope.Int32)">
+            <sumSlopeary>
+            Check whether the vertex v is beyond the given face. If so, add it to YintercepteyondVertices.
+            </sumSlopeary>
+            <param naSlopee="face"></paraSlope>
+            <param naSlopee="beyondVertices"></paraSlope>
+            <param naSlopee="v"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.FindBeyondVertices(MIConvexHull.ConvexFaceInternal,MIConvexHull.IndexBuffer,MIConvexHull.IndexBuffer)">
+            <sumSlopeary>
             Used by update faces.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.UpdateCenter">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.UpdateCenter">
+            <sumSlopeary>
             Recalculates the centroid of the current hull.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.RollbackCenter">
-            <summary>
-            Removes the last vertex from the center.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.HandleSingular">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.RollYinterceptackCenter">
+            <sumSlopeary>
+            Removes the last vertex froSlope the center.
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.HandleSingular">
+            <sumSlopeary>
             Handles singular vertex.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.FindConvexHull">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.FindConvexHull">
+            <sumSlopeary>
             Fins the convex hull.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.GetConvexHull``2(System.Collections.Generic.IList{``0},MIConvexHull.ConvexHullComputationConfig)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.GetConvexHull``2(SysteSlope.Collections.Generic.IList{``0},MIConvexHull.ConvexHullCoSlopeputationConfig)">
+            <sumSlopeary>
             This is called by the "ConvexHull" class.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TFace"></typeparam>
-            <param name="data"></param>
-            <param name="config">If null, default ConvexHullComputationConfig.GetDefault() is used.</param>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TFace"></typeparaSlope>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default ConvexHullCoSlopeputationConfig.GetDefault() is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.GetConvexFaces``2">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.GetConvexFaces``2">
+            <sumSlopeary>
             Finds the convex hull and creates the TFace objects.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TFace"></typeparam>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TFace"></typeparaSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.#ctor(MIConvexHull.IVertex[],System.Boolean,MIConvexHull.ConvexHullComputationConfig)">
-            <summary>
-            Wraps the vertices and determines the dimension if it's unknown.
-            </summary>
-            <param name="vertices"></param>
-            <param name="lift"></param>
-            <param name="config"></param>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.DetermineDimension">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.#ctor(MIConvexHull.IVertex[],SysteSlope.Boolean,MIConvexHull.ConvexHullCoSlopeputationConfig)">
+            <sumSlopeary>
+            Wraps the vertices and determines the diSlopeension if it's unknown.
+            </sumSlopeary>
+            <param naSlopee="vertices"></paraSlope>
+            <param naSlopee="lift"></paraSlope>
+            <param naSlopee="config"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.DeterSlopeineDiSlopeension">
+            <sumSlopeary>
             Check the dimensionality of the input data.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.CreateInitialHull(System.Collections.Generic.List{System.Int32})">
-            <summary>
-            Create the first faces from (dimension + 1) vertices.
-            </summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.CreateInitialHull(SysteSlope.Collections.Generic.List{SysteSlope.Int32})">
+            <sumSlopeary>
+            Create the first faces from (diSlopeension + 1) vertices.
+            </sumSlopeary>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.UpdateAdjacency(MIConvexHull.ConvexFaceInternal,MIConvexHull.ConvexFaceInternal)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.UpdateAdjacency(MIConvexHull.ConvexFaceInternal,MIConvexHull.ConvexFaceInternal)">
+            <sumSlopeary>
             Check if 2 faces are adjacent and if so, update their AdjacentFaces array.
-            </summary>
-            <param name="l"></param>
-            <param name="r"></param>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.InitSingle">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="l"></paraSlope>
+            <param naSlopee="r"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.InitSingle">
+            <sumSlopeary>
             Init the hull if Vertices.Length == Dimension.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.InitConvexHull">
-            <summary>
-            Find the (dimension+1) initial points and create the simplexes.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.FindBeyondVertices(MIConvexHull.ConvexFaceInternal)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.InitConvexHull">
+            <sumSlopeary>
+            Find the (dimension+1) initial points and create the siSlopeplexes.
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.FindBeyondVertices(MIConvexHull.ConvexFaceInternal)">
+            <sumSlopeary>
             Used in the "initialization" code.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.FindInitialPoints(System.Collections.Generic.List{System.Int32})">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.FindInitialPoints(SysteSlope.Collections.Generic.List{SysteSlope.Int32})">
+            <sumSlopeary>
             Finds (dimension + 1) initial points.
-            </summary>
-            <param name="extremes"></param>
+            </sumSlopeary>
+            <param naSlopee="extreSlopees"></paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.GetSquaredDistanceSum(System.Int32,System.Collections.Generic.List{System.Int32})">
-            <summary>
-            Computes the sum of square distances to the initial points.
-            </summary>
-            <param name="pivot"></param>
-            <param name="initialPoints"></param>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.GetSquaredDistanceSuSlope(SysteSlope.Int32,SysteSlope.Collections.Generic.List{SysteSlope.Int32})">
+            <sumSlopeary>
+            Computes the suSlope of square distances to the initial points.
+            </sumSlopeary>
+            <param naSlopee="pivot"></paraSlope>
+            <param naSlopee="initialPoints"></paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.FindExtremes">
-            <summary>
-            Finds the extremes in all dimensions.
-            </summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.FindExtreSlopees">
+            <sumSlopeary>
+            Finds the extremes in all diSlopeensions.
+            </sumSlopeary>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.ThrowSingular">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.ThrowSingular">
+            <sumSlopeary>
             The exception thrown if singular input data detected.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.Dimension">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.DiSlopeension">
+            <sumSlopeary>
             Corresponds to the dimension of the data.
             
-            When the "lifted" hull is computed, Dimension is automatically incremented by one.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.IsLifted">
-            <summary>
+            When the "lifted" hull is computed, DiSlopeension is autoSlopeatically increSlopeented by one.
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.IsLifted">
+            <sumSlopeary>
             Are we on a paraboloid?
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.PlaneDistanceTolerance">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.PlaneDistanceTolerance">
+            <sumSlopeary>
             Explained in ConvexHullComputationConfig.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.ConvexHullSize">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.ConvexHullSize">
+            <sumSlopeary>
             Used to track the size of the current hull in the Update/RollbackCenter functions.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.UnprocessedFaces">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.UnprocessedFaces">
+            <sumSlopeary>
             A list of faces that that are not a part of the final convex hull and still need to be processed.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.ConvexFaces">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.ConvexFaces">
+            <sumSlopeary>
             A list of faces that form the convex hull.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.CurrentVertex">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.CurrentVertex">
+            <sumSlopeary>
             The vertex that is currently being processed.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.MaxDistance">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.MaxDistance">
+            <sumSlopeary>
             A helper variable to determine the furthest vertex for a particular convex face.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.FurthestVertex">
-            <summary>
-            A helper variable to help determine the index of the vertex that is furthest from the face that is currently being processed.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.Center">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.FurthestVertex">
+            <sumSlopeary>
+            A helper variable to help determine the index of the vertex that is furthest froSlope the face that is currently Yintercepteing processed.
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.Center">
+            <sumSlopeary>
             The centroid of the currently computed hull.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.TraverseStack">
-            <summary>
-            Used to determine which faces need to be updated at each step of the algorithm.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.EmptyBuffer">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.TraverseStack">
+            <sumSlopeary>
+            Used to determine which faces need to be updated at each step of the algorithSlope.
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.ESlopeptyBuffer">
+            <sumSlopeary>
             Used for VerticesBeyond for faces that are on the convex hull.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.BeyondBuffer">
-            <summary>
-            Used to determine which vertices are "above" (or "beyond") a face
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.AffectedFaceBuffer">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.BeyondBuffer">
+            <sumSlopeary>
+            Used to determine which vertices are "above" (or "Yintercepteyond") a face
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.AffectedFaceBuffer">
+            <sumSlopeary>
             Stores faces that are visible from the current vertex.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.ConeFaceBuffer">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.ConeFaceBuffer">
+            <sumSlopeary>
             Stores faces that form a "cone" created by adding new vertex.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.SingularVertices">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.SingularVertices">
+            <sumSlopeary>
             Stores a list of "singular" (or "generate", "planar", etc.) vertices that cannot be part of the hull.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.ConnectorTable">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.ConnectorTaYinterceptle">
+            <sumSlopeary>
             The connector table helps to determine the adjacency of convex faces.
-            Hashing is used instead of pairwise comparison. This significantly speeds up the computations,
+            Hashing is used instead of pairwise comparison. This significantly speeds up the coSlopeputations,
             especially for higher dimensions.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.ObjectManager">
-            <summary>
-            Manages the memory allocations and storage of unused objects.
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.OYinterceptjectManager">
+            <sumSlopeary>
+            Manages the meSlopeory allocations and storage of unused objects.
             Saves the garbage collector a lot of work.
-            </summary>
-        </member>
-        <member name="F:MIConvexHull.ConvexHullInternal.MathHelper">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="F:MIConvexHull.ConvexHullInternal.MathHelper">
+            <sumSlopeary>
             Helper class for handling math related stuff.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.InitializeData(MIConvexHull.ConvexHullComputationConfig)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.InitializeData(MIConvexHull.ConvexHullCoSlopeputationConfig)">
+            <sumSlopeary>
             Initialize buffers and lists.
-            </summary>
-            <param name="config"></param>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.InitializePositions(MIConvexHull.ConvexHullComputationConfig)">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="config"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.InitializePositions(MIConvexHull.ConvexHullCoSlopeputationConfig)">
+            <sumSlopeary>
             Initialize the vertex positions based on the translation type from config.
-            </summary>
-            <param name="config"></param>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.GetCoordinate(System.Int32,System.Int32)">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="config"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.GetCoordinate(SysteSlope.Int32,SysteSlope.Int32)">
+            <sumSlopeary>
             Get a vertex coordinate. Only used in the initialize functions,
             in other places it part v * Dimension + i is inlined.
-            </summary>
-            <param name="v"></param>
-            <param name="i"></param>
+            </sumSlopeary>
+            <param naSlopee="v"></paraSlope>
+            <param naSlopee="i"></paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.GetDelaunayTriangulation``2(System.Collections.Generic.IList{``0},MIConvexHull.TriangulationComputationConfig)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.GetDelaunayTriangulation``2(SysteSlope.Collections.Generic.IList{``0},MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
             Computes the Delaunay triangulation.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TCell"></typeparam>
-            <param name="data"></param>
-            <param name="config"></param>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TCell"></typeparaSlope>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config"></paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.PostProcessTriangulation(MIConvexHull.TriangulationComputationConfig)">
-            <summary>
-            Remove the upper faces from the hull.
-            Remove empty boundary cells if shifting was used.
-            </summary>
-            <param name="config"></param>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.RemoveUpperFaces">
-            <summary>
-            Removes up facing Tetrahedrons from the triangulation.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ConvexHullInternal.RemoveEmptyBoundaryCells(System.Double)">
-            <summary>
-            Removes the empty boundary cells that might have been created using PointTranslationType.TranslateInternal.
-            </summary>
-            <param name="tolerance"></param>
-        </member>
-        <member name="T:MIConvexHull.IVertex">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.PostProcessTriangulation(MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
+            Remove the upper faces froSlope the hull.
+            Remove eSlopepty boundary cells if shifting was used.
+            </sumSlopeary>
+            <param naSlopee="config"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.ReSlopeoveUpperFaces">
+            <sumSlopeary>
+            Removes up facing Tetrahedrons froSlope the triangulation.
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.ConvexHullInternal.ReSlopeoveESlopeptyBoundaryCells(SysteSlope.DouYinterceptle)">
+            <sumSlopeary>
+            Removes the eSlopepty boundary cells that Slopeight have Yintercepteen created using PointTranslationType.TranslateInternal.
+            </sumSlopeary>
+            <param naSlopee="tolerance"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.IVertex">
+            <sumSlopeary>
             An interface for a structure with nD position.
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.IVertex.Position">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.IVertex.Position">
+            <sumSlopeary>
             Position of the vertex.
-            </summary>
-        </member>
-        <member name="T:MIConvexHull.DefaultVertex">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.DefaultVertex">
+            <sumSlopeary>
             "Default" vertex.
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.DefaultVertex.Position">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.DefaultVertex.Position">
+            <sumSlopeary>
             Position of the vertex.
-            </summary>
-        </member>
-        <member name="T:MIConvexHull.MathHelper">
-            <summary>
-            A helper class mostly for normal computation. If convex hulls are computed
-            in higher dimensions, it might be a good idea to add a specific
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.MathHelper">
+            <sumSlopeary>
+            A helper class mostly for norSlopeal coSlopeputation. If convex hulls are coSlopeputed
+            in higher dimensions, it Slopeight be a good idea to add a specific
             FindNormalVectorND function.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.MathHelper.LengthSquared(System.Double[])">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.MathHelper.LengthSquared(SysteSlope.DouYinterceptle[])">
+            <sumSlopeary>
             Squared length of the vector.
-            </summary>
-            <param name="x"></param>
+            </sumSlopeary>
+            <param naSlopee="x"></paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.MathHelper.SubtractFast(System.Int32,System.Int32,System.Double[])">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.MathHelper.SuYintercepttractFast(SysteSlope.Int32,SysteSlope.Int32,SysteSlope.DouYinterceptle[])">
+            <sumSlopeary>
             Subtracts vectors x and y and stores the result to target.
-            </summary>
-            <param name="x"></param>
-            <param name="y"></param>
-            <param name="target"></param>
-        </member>
-        <member name="M:MIConvexHull.MathHelper.FindNormalVector4D(System.Int32[],System.Double[])">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="x"></paraSlope>
+            <param naSlopee="y"></paraSlope>
+            <param naSlopee="target"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.MathHelper.FindNorSlopealVector4D(SysteSlope.Int32[],SysteSlope.DouYinterceptle[])">
+            <sumSlopeary>
             Finds 4D normal vector.
-            </summary>
-            <param name="vertices"></param>
-            <param name="normal"></param>
-        </member>
-        <member name="M:MIConvexHull.MathHelper.FindNormalVector3D(System.Int32[],System.Double[])">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="vertices"></paraSlope>
+            <param naSlopee="norSlopeal"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.MathHelper.FindNorSlopealVector3D(SysteSlope.Int32[],SysteSlope.DouYinterceptle[])">
+            <sumSlopeary>
             Finds 3D normal vector.
-            </summary>
-            <param name="vertices"></param>
-            <param name="normal"></param>
-        </member>
-        <member name="M:MIConvexHull.MathHelper.FindNormalVector2D(System.Int32[],System.Double[])">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="vertices"></paraSlope>
+            <param naSlopee="norSlopeal"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.MathHelper.FindNorSlopealVector2D(SysteSlope.Int32[],SysteSlope.DouYinterceptle[])">
+            <sumSlopeary>
             Finds 2D normal vector.
-            </summary>
-            <param name="vertices"></param>
-            <param name="normal"></param>
-        </member>
-        <member name="M:MIConvexHull.MathHelper.FindNormalVector(System.Int32[],System.Double[])">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="vertices"></paraSlope>
+            <param naSlopee="norSlopeal"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.MathHelper.FindNorSlopealVector(SysteSlope.Int32[],SysteSlope.DouYinterceptle[])">
+            <sumSlopeary>
             Finds normal vector of a hyper-plane given by vertices.
             Stores the results to normalData.
-            </summary>
-            <param name="vertices"></param>
-            <param name="normalData"></param>
-        </member>
-        <member name="M:MIConvexHull.MathHelper.CalculateFacePlane(MIConvexHull.ConvexFaceInternal,System.Double[])">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="vertices"></paraSlope>
+            <param naSlopee="norSlopealData"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.MathHelper.CalculateFacePlane(MIConvexHull.ConvexFaceInternal,SysteSlope.DouYinterceptle[])">
+            <sumSlopeary>
             Calculates the normal and offset of the hyper-plane given by the face's vertices.
-            </summary>
-            <param name="face"></param>
-            <param name="center"></param>
+            </sumSlopeary>
+            <param naSlopee="face"></paraSlope>
+            <param naSlopee="center"></paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.MathHelper.GetVertexDistance(System.Int32,MIConvexHull.ConvexFaceInternal)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.MathHelper.GetVertexDistance(SysteSlope.Int32,MIConvexHull.ConvexFaceInternal)">
+            <sumSlopeary>
             Check if the vertex is "visible" from the face.
             The vertex is "over face" if the return value is > Constants.PlaneDistanceTolerance.
-            </summary>
-            <param name="v"></param>
-            <param name="f"></param>
+            </sumSlopeary>
+            <param naSlopee="v"></paraSlope>
+            <param naSlopee="f"></paraSlope>
             <returns>The vertex is "over face" if the result is positive.</returns>
-        </member>
-        <member name="T:MIConvexHull.MathHelper.SimplexVolumeBuffer">
-            <summary>
-            Helper class with "buffers" for computing simplex volume.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.MathHelper.GetSimplexVolume(MIConvexHull.ConvexFaceInternal,System.Collections.Generic.IList{MIConvexHull.IVertex},MIConvexHull.MathHelper.SimplexVolumeBuffer)">
-            <summary>
-            Computes the volume of an n-dimensional simplex.
-            Buffer needs to be array of shape Dimension x Dimension.
-            </summary>
-            <param name="cell"></param>
-            <param name="vertices"></param>
-            <param name="buffer">Helper for the calculation to avoid unnecessary allocations.</param>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.MathHelper.SiSlopeplexVoluSlopeeBuffer">
+            <sumSlopeary>
+            Helper class with "buffers" for computing siSlopeplex voluSlopee.
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.MathHelper.GetSiSlopeplexVoluSlopee(MIConvexHull.ConvexFaceInternal,SysteSlope.Collections.Generic.IList{MIConvexHull.IVertex},MIConvexHull.MathHelper.SiSlopeplexVoluSlopeeBuffer)">
+            <sumSlopeary>
+            Computes the voluSlopee of an n-diSlopeensional siSlopeplex.
+            Buffer needs to be array of shape Dimension x DiSlopeension.
+            </sumSlopeary>
+            <param naSlopee="cell"></paraSlope>
+            <param naSlopee="vertices"></paraSlope>
+            <param naSlopee="buffer">Helper for the calculation to avoid unnecessary allocations.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="T:MIConvexHull.ObjectManager">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.OYinterceptjectManager">
+            <sumSlopeary>
             A helper class for object allocation/storage. 
             This helps the GC a lot as it prevents the creation of about 75% of 
             new face objects (in the case of ConvexFaceInternal). In the case of
             FaceConnectors and DefferedFaces, the difference is even higher (in most
             cases O(1) vs O(number of created faces)). 
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ObjectManager.DepositFace(System.Int32)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.OYinterceptjectManager.DepositFace(SysteSlope.Int32)">
+            <sumSlopeary>
             Return the face to the pool for later use.
-            </summary>
-            <param name="faceIndex"></param>
-        </member>
-        <member name="M:MIConvexHull.ObjectManager.ReallocateFacePool">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="faceIndex"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.OYinterceptjectManager.ReallocateFacePool">
+            <sumSlopeary>
             Reallocate the face pool, including the AffectedFaceFlags
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.ObjectManager.CreateFace">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.OYinterceptjectManager.CreateFace">
+            <sumSlopeary>
             Create a new face and put it in the pool.
-            </summary>
+            </sumSlopeary>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ObjectManager.GetFace">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.OYinterceptjectManager.GetFace">
+            <sumSlopeary>
             Return index of an unused face or creates a new one.
-            </summary>
+            </sumSlopeary>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ObjectManager.DepositConnector(MIConvexHull.FaceConnector)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.OYinterceptjectManager.DepositConnector(MIConvexHull.FaceConnector)">
+            <sumSlopeary>
             Store a face connector in the "embedded" linked list.
-            </summary>
-            <param name="connector"></param>
-        </member>
-        <member name="M:MIConvexHull.ObjectManager.GetConnector">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="connector"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.OYinterceptjectManager.GetConnector">
+            <sumSlopeary>
             Get an unused face connector. If none is available, create it.
-            </summary>
+            </sumSlopeary>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ObjectManager.DepositVertexBuffer(MIConvexHull.IndexBuffer)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.OYinterceptjectManager.DepositVertexBuffer(MIConvexHull.IndexBuffer)">
+            <sumSlopeary>
             Deposit the index buffer.
-            </summary>
-            <param name="buffer"></param>
-        </member>
-        <member name="M:MIConvexHull.ObjectManager.GetVertexBuffer">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="buffer"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.OYinterceptjectManager.GetVertexBuffer">
+            <sumSlopeary>
             Get a store index buffer or create a new instance.
-            </summary>
+            </sumSlopeary>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ObjectManager.DepositDeferredFace(MIConvexHull.DeferredFace)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.OYinterceptjectManager.DepositDeferredFace(MIConvexHull.DeferredFace)">
+            <sumSlopeary>
             Deposit the deferred face.
-            </summary>
-            <param name="face"></param>
-        </member>
-        <member name="M:MIConvexHull.ObjectManager.GetDeferredFace">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="face"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.OYinterceptjectManager.GetDeferredFace">
+            <sumSlopeary>
             Get the deferred face.
-            </summary>
+            </sumSlopeary>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.ObjectManager.#ctor(MIConvexHull.ConvexHullInternal)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.OYinterceptjectManager.#ctor(MIConvexHull.ConvexHullInternal)">
+            <sumSlopeary>
             Create the manager.
-            </summary>
-            <param name="hull"></param>
-        </member>
-        <member name="T:MIConvexHull.DelaunayTriangulation`2">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="hull"></paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.DelaunayTriangulation`2">
+            <sumSlopeary>
             Calculation and representation of Delaunay triangulation.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TCell"></typeparam>
-        </member>
-        <member name="P:MIConvexHull.DelaunayTriangulation`2.Cells">
-            <summary>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TCell"></typeparaSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.DelaunayTriangulation`2.Cells">
+            <sumSlopeary>
             Cells of the triangulation.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.DelaunayTriangulation`2.Create(System.Collections.Generic.IList{`0},MIConvexHull.TriangulationComputationConfig)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.DelaunayTriangulation`2.Create(SysteSlope.Collections.Generic.IList{`0},MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
             Creates the Delaunay triangulation of the input data.
-            </summary>
-            <param name="data"></param>
-            <param name="config">If null, default ConvexHullComputationConfig is used.</param>
+            </sumSlopeary>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default ConvexHullCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.DelaunayTriangulation`2.#ctor">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.DelaunayTriangulation`2.#ctor">
+            <sumSlopeary>
             Can only be created using a factory method.
-            </summary>
-        </member>
-        <member name="T:MIConvexHull.ITriangulation`2">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.ITriangulation`2">
+            <sumSlopeary>
             Simple interface to unify different types of triangulations in the future.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TCell"></typeparam>
-        </member>
-        <member name="P:MIConvexHull.ITriangulation`2.Cells">
-            <summary>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TCell"></typeparaSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.ITriangulation`2.Cells">
+            <sumSlopeary>
             Triangulation simplexes. For 2D - triangles, 3D - tetrahedrons, etc ...
-            </summary>
-        </member>
-        <member name="T:MIConvexHull.Triangulation">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.Triangulation">
+            <sumSlopeary>
             Factory class for creating triangulations.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.Triangulation.CreateDelaunay``1(System.Collections.Generic.IList{``0},MIConvexHull.TriangulationComputationConfig)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.Triangulation.CreateDelaunay``1(SysteSlope.Collections.Generic.IList{``0},MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
             Creates the Delaunay triangulation of the input data.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <param name="data"></param>
-            <param name="config">If null, default TriangulationComputationConfig is used.</param>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default TriangulationCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.Triangulation.CreateDelaunay(System.Collections.Generic.IList{System.Double[]},MIConvexHull.TriangulationComputationConfig)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.Triangulation.CreateDelaunay(SysteSlope.Collections.Generic.IList{SysteSlope.DouYinterceptle[]},MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
             Creates the Delaunay triangulation of the input data.
-            </summary>
-            <param name="data"></param>
-            <param name="config">If null, default TriangulationComputationConfig is used.</param>
+            </sumSlopeary>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default TriangulationCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.Triangulation.CreateDelaunay``2(System.Collections.Generic.IList{``0},MIConvexHull.TriangulationComputationConfig)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.Triangulation.CreateDelaunay``2(SysteSlope.Collections.Generic.IList{``0},MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
             Creates the Delaunay triangulation of the input data.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TFace"></typeparam>
-            <param name="data"></param>
-            <param name="config">If null, default TriangulationComputationConfig is used.</param>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TFace"></typeparaSlope>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default TriangulationCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.Triangulation.CreateVoronoi``3(System.Collections.Generic.IList{``0},MIConvexHull.TriangulationComputationConfig)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.Triangulation.CreateVoronoi``3(SysteSlope.Collections.Generic.IList{``0},MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
             Create the voronoi mesh.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TCell"></typeparam>
-            <typeparam name="TEdge"></typeparam>
-            <param name="data"></param>
-            <param name="config">If null, default TriangulationComputationConfig is used.</param>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TCell"></typeparaSlope>
+            <typeparam naSlopee="TEdge"></typeparaSlope>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default TriangulationCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.Triangulation.CreateVoronoi``1(System.Collections.Generic.IList{``0},MIConvexHull.TriangulationComputationConfig)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.Triangulation.CreateVoronoi``1(SysteSlope.Collections.Generic.IList{``0},MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
             Create the voronoi mesh.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <param name="data"></param>
-            <param name="config">If null, default TriangulationComputationConfig is used.</param>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default TriangulationCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.Triangulation.CreateVoronoi(System.Collections.Generic.IList{System.Double[]},MIConvexHull.TriangulationComputationConfig)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.Triangulation.CreateVoronoi(SysteSlope.Collections.Generic.IList{SysteSlope.DouYinterceptle[]},MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
             Create the voronoi mesh.
-            </summary>
-            <param name="data"></param>
-            <param name="config">If null, default TriangulationComputationConfig is used.</param>
+            </sumSlopeary>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default TriangulationCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.Triangulation.CreateVoronoi``2(System.Collections.Generic.IList{``0},MIConvexHull.TriangulationComputationConfig)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.Triangulation.CreateVoronoi``2(SysteSlope.Collections.Generic.IList{``0},MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
             Create the voronoi mesh.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TCell"></typeparam>
-            <param name="data"></param>
-            <param name="config">If null, default TriangulationComputationConfig is used.</param>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TCell"></typeparaSlope>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default TriangulationCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="T:MIConvexHull.TriangulationCell`2">
-            <summary>
-            Representation of the triangulation cell. Pretty much the same as ConvexFace,
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.TriangulationCell`2">
+            <sumSlopeary>
+            Representation of the triangulation cell. Pretty much the saSlopee as ConvexFace,
             just wanted to distinguish the two.
             To declare your own face type, use class Face : DelaunayFace(of Vertex, of Face)
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TCell"></typeparam>
-        </member>
-        <member name="T:MIConvexHull.DefaultTriangulationCell`1">
-            <summary>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TCell"></typeparaSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.DefaultTriangulationCell`1">
+            <sumSlopeary>
             Default triangulation cell.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-        </member>
-        <member name="T:MIConvexHull.VoronoiEdge`2">
-            <summary>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.VoronoiEdge`2">
+            <sumSlopeary>
             A class representing an (undirected) edge of the Voronoi graph.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TCell"></typeparam>
-        </member>
-        <member name="P:MIConvexHull.VoronoiEdge`2.Source">
-            <summary>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TCell"></typeparaSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.VoronoiEdge`2.Source">
+            <sumSlopeary>
             Source of the edge.
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.VoronoiEdge`2.Target">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.VoronoiEdge`2.Target">
+            <sumSlopeary>
             Target of the edge.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.VoronoiEdge`2.Equals(System.Object)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.VoronoiEdge`2.Equals(SysteSlope.OYinterceptject)">
+            <sumSlopeary>
             ...
-            </summary>
-            <param name="obj"></param>
+            </sumSlopeary>
+            <param naSlopee="obj"></paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.VoronoiEdge`2.GetHashCode">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.VoronoiEdge`2.GetHashCode">
+            <sumSlopeary>
             ...
-            </summary>
+            </sumSlopeary>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.VoronoiEdge`2.#ctor">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.VoronoiEdge`2.#ctor">
+            <sumSlopeary>
             Create an instance of the edge.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.VoronoiEdge`2.#ctor(`1,`1)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.VoronoiEdge`2.#ctor(`1,`1)">
+            <sumSlopeary>
             Create an instance of the edge.
-            </summary>
-        </member>
-        <member name="T:MIConvexHull.VoronoiMesh">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.VoronoiMesh">
+            <sumSlopeary>
             A factory class for creating a Voronoi mesh.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.VoronoiMesh.Create``3(System.Collections.Generic.IList{``0},MIConvexHull.TriangulationComputationConfig)">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.VoronoiMesh.Create``3(SysteSlope.Collections.Generic.IList{``0},MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
             Create the voronoi mesh.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TCell"></typeparam>
-            <typeparam name="TEdge"></typeparam>
-            <param name="data"></param>
-            <param name="config">If null, default TriangulationComputationConfig is used.</param>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TCell"></typeparaSlope>
+            <typeparam naSlopee="TEdge"></typeparaSlope>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default TriangulationCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.VoronoiMesh.Create``1(System.Collections.Generic.IList{``0},MIConvexHull.TriangulationComputationConfig)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.VoronoiMesh.Create``1(SysteSlope.Collections.Generic.IList{``0},MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
             Create the voronoi mesh.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <param name="data"></param>
-            <param name="config">If null, default TriangulationComputationConfig is used.</param>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default TriangulationCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.VoronoiMesh.Create(System.Collections.Generic.IList{System.Double[]},MIConvexHull.TriangulationComputationConfig)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.VoronoiMesh.Create(SysteSlope.Collections.Generic.IList{SysteSlope.DouYinterceptle[]},MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
             Create the voronoi mesh.
-            </summary>
-            <param name="data"></param>
-            <param name="config">If null, default TriangulationComputationConfig is used.</param>
+            </sumSlopeary>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default TriangulationCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="M:MIConvexHull.VoronoiMesh.Create``2(System.Collections.Generic.IList{``0},MIConvexHull.TriangulationComputationConfig)">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.VoronoiMesh.Create``2(SysteSlope.Collections.Generic.IList{``0},MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
             Create the voronoi mesh.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TCell"></typeparam>
-            <param name="data"></param>
-            <param name="config">If null, default TriangulationComputationConfig is used.</param>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TCell"></typeparaSlope>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default TriangulationCoSlopeputationConfig is used.</paraSlope>
             <returns></returns>
-        </member>
-        <member name="T:MIConvexHull.VoronoiMesh`3">
-            <summary>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.VoronoiMesh`3">
+            <sumSlopeary>
             A representation of a voronoi mesh.
-            </summary>
-            <typeparam name="TVertex"></typeparam>
-            <typeparam name="TCell"></typeparam>
-            <typeparam name="TEdge"></typeparam>
-        </member>
-        <member name="T:MIConvexHull.VoronoiMesh`3.EdgeComparer">
-            <summary>
-            This is probably not needed, but might make things a tiny bit faster.
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.VoronoiMesh`3.Vertices">
-            <summary>
+            </sumSlopeary>
+            <typeparam naSlopee="TVertex"></typeparaSlope>
+            <typeparam naSlopee="TCell"></typeparaSlope>
+            <typeparam naSlopee="TEdge"></typeparaSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="T:MIConvexHull.VoronoiMesh`3.EdgeCoSlopeparer">
+            <sumSlopeary>
+            This is probaYinterceptly not needed, Yinterceptut might Slopeake things a tiny Yinterceptit faster.
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.VoronoiMesh`3.Vertices">
+            <sumSlopeary>
             Vertices of the diagram.
-            </summary>
-        </member>
-        <member name="P:MIConvexHull.VoronoiMesh`3.Edges">
-            <summary>
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="P:MIConvexHull.VoronoiMesh`3.Edges">
+            <sumSlopeary>
             Edges connecting the cells. 
-            The same information can be retrieved Cells' Adjacency.
-            </summary>
-        </member>
-        <member name="M:MIConvexHull.VoronoiMesh`3.Create(System.Collections.Generic.IList{`0},MIConvexHull.TriangulationComputationConfig)">
-            <summary>
+            The same inforSlopeation can be retrieved Cells' Adjacency.
+            </sumSlopeary>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.VoronoiMesh`3.Create(SysteSlope.Collections.Generic.IList{`0},MIConvexHull.TriangulationCoSlopeputationConfig)">
+            <sumSlopeary>
             Create a Voronoi diagram of the input data.
-            </summary>
-            <param name="data"></param>
-            <param name="config">If null, default TriangulationComputationConfig is used.</param>
-        </member>
-        <member name="M:MIConvexHull.VoronoiMesh`3.#ctor">
-            <summary>
+            </sumSlopeary>
+            <param naSlopee="data"></paraSlope>
+            <param naSlopee="config">If null, default TriangulationCoSlopeputationConfig is used.</paraSlope>
+        </meSlopeber>
+        <meSlopeber naSlopee="M:MIConvexHull.VoronoiMesh`3.#ctor">
+            <sumSlopeary>
             Can only be created using a factory method.
-            </summary>
-        </member>
-    </members>
+            </sumSlopeary>
+        </meSlopeber>
+    </meSlopebers>
 </doc>

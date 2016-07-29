@@ -172,8 +172,13 @@ namespace TVGL._2D
             var allPolygons = loops.Select(loop => CCWPositive(MiscFunctions.Get2DProjectionPoints(loop, normal, false).ToList())).ToList();
 
             var polygonList = Union.Run(allPolygons);
+            var polygons = new List<Polygon>();
+            foreach (var polygon in polygonList)
+            {
+                polygons.Add(new Polygon(polygon));
+            }
             var newPolygonList = polygonList.Select(CCWPositive).ToList();
-            polygonList = Union.Run(newPolygonList);
+            //polygonList = Union.Run(newPolygonList);
             return polygonList;
         }
 
@@ -203,6 +208,6 @@ namespace TVGL._2D
             //The polygon has a CW winding if count is negative
             if (count < 0) polygon.Reverse();
             return polygon;
-        } 
+        }
     }
 }

@@ -15,6 +15,7 @@
 using System;
 using System.Collections.Generic;
 using MIConvexHull;
+using TVGL._2D;
 
 namespace TVGL
 {
@@ -48,6 +49,11 @@ namespace TVGL
         /// </summary>
         /// <value>The z.</value>
         public double Z { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<_2D.Line> Lines { get; set; }
 
         /// <summary>
         ///     Gets or sets the references.

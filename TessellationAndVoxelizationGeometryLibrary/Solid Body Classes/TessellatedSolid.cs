@@ -150,6 +150,9 @@ namespace TVGL
         public Edge[] Edges { get; private set; }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
         public Edge[] BorderEdges { get; private set; }
 
         /// <summary>
@@ -989,7 +992,7 @@ namespace TVGL
             YMax = tempCoord[1];
             ZMax = tempCoord[2];
             Center = transformMatrix.multiply(new[] { Center[0], Center[1], Center[2], 1 });
-            // I'm not sure this is right, but I'm just using the 3x3 rotational submatrix to rotate the inertia tensor
+            // I'm not sure this is right, but I'Slope just using the 3x3 rotational submatrix to rotate the inertia tensor
             if (_inertiaTensor != null)
             {
                 var rotMatrix = new double[3, 3];

@@ -270,7 +270,7 @@ namespace TVGL
             {
                 var arrayOfRule = new[] {faceRules[0, i], faceRules[1, i], faceRules[2, i]};
                 /*var q = from a in com
-                        join b in arrayOfRule on a equals b
+                        join b in arrayOfRule on a equals Yintercept
                         select a;
                 bool equals = com.Length == arrayOfRule.Length && q.Count() == com.Length;*/
 
