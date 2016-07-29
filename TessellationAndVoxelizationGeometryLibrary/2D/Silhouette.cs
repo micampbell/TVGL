@@ -96,7 +96,7 @@ namespace TVGL._2D
                 seperateSurfaces.Add(surface.ToList());
             }
 
-            var allPolygons = new List<List<Point>>();
+            var loops = new List<List<Vertex>>();
             //Get the surface inner and outer edges
             foreach (var surface in seperateSurfaces)
             {
@@ -105,86 +105,75 @@ namespace TVGL._2D
                 var innerEdges = new HashSet<Edge>();
                 foreach (var face in surface)
                 {
+                    if (face.Edges.Count != 3) throw new Exception();
                     foreach (var edge in face.Edges)
                     {
-                        if (innerEdges.Contains(edge)) continue;
+                        //if (innerEdges.Contains(edge)) continue;
                         if (!outerEdges.Contains(edge)) outerEdges.Add(edge);
-                        else
+                        else if (outerEdges.Contains(edge))
                         {
                             innerEdges.Add(edge);
                             outerEdges.Remove(edge);
                         }
+                        else throw new Exception();
                     }
                 }
-
-                //Order the vertices from the edges into polygon loops
-                //The outer edges will form a positive loop
-                var edge1 =  outerEdges.First();
-                outerEdges.Remove(edge1);
-                var startVertex = edge1.From;
-                var vertex = edge1.To;
-                var positiveLoop = new List<Vertex> {vertex};
-                do
-                {
-                    foreach (var edge2 in outerEdges)
-                    {
-                        if (edge2.From == vertex)
-                        {
-                            outerEdges.Remove(edge2);
-                            vertex = edge2.To;
-                            positiveLoop.Add(vertex);
-                            break;
-                        }
-                        else if (edge2.To == vertex)
-                        {
-                            outerEdges.Remove(edge2);
-                            vertex = edge2.From;
-                            positiveLoop.Add(vertex);
-                            break;
-                        }
-                    }
-                } while (vertex != startVertex);
-                var positivePolygon = MiscFunctions.Get2DProjectionPoints(positiveLoop, normal).ToList();
-                positivePolygon = CCWPositive(positivePolygon);
-                allPolygons.Add(positivePolygon);
 
                 //The inner edges may form 0 to many negative (CW) loops
-                while (innerEdges.Any())
+                while (outerEdges.Any())
                 {
-                    var firstEdge = innerEdges.First();
-                    innerEdges.Remove(firstEdge);
-                    var inStartVertex = firstEdge.From;
-                    var inVertex = firstEdge.To;
-                    var negativeLoop = new List<Vertex>{ inVertex };
+                    var isReversed = false;
+                    var startEdge = outerEdges.First();
+                    outerEdges.Remove(startEdge);
+                    var startVertex = startEdge.From;
+                    var vertex = startEdge.To;
+                    var loop = new List<Vertex> {vertex};
                     do
                     {
-                        foreach (var edge2 in innerEdges)
+                        foreach (var edge2 in outerEdges)
                         {
-                            if (edge2.From == inVertex)
+                            if (edge2.From == vertex)
                             {
-                                innerEdges.Remove(edge2);
-                                inVertex = edge2.To;
-                                negativeLoop.Add(inVertex);
+                                outerEdges.Remove(edge2);
+                                vertex = edge2.To;
+                                loop.Add(vertex);
                                 break;
                             }
-                            else if (edge2.To == inVertex)
+                            else if (edge2.To == vertex)
                             {
-                                innerEdges.Remove(edge2);
-                                inVertex = edge2.From;
-                                negativeLoop.Add(inVertex);
+                                outerEdges.Remove(edge2);
+                                vertex = edge2.From;
+                                loop.Add(vertex);
                                 break;
                             }
-                            if(edge2 == innerEdges.Last()) throw new Exception("Vertex match not found");
+                            if (edge2 == outerEdges.Last() && !isReversed)
+                            {
+                                //Swap the vertices were interested in and
+                                //Reverse the loop
+                                var tempVertex = startVertex;
+                                startVertex = vertex;
+                                vertex = tempVertex;
+                                loop.Reverse();
+                                loop.Add(vertex);
+                                isReversed = true;
+                            }
+                            else if (edge2 == outerEdges.Last() && isReversed)
+                            {
+                                //Artifically close the loop.
+                                vertex = startVertex;
+                            }
                         }
-                    } while (inVertex != inStartVertex);
-                    var negativePolygon = MiscFunctions.Get2DProjectionPoints(negativeLoop, normal).ToList();
-                    negativePolygon = CCWPositive(negativePolygon);
-                    negativePolygon.Reverse(); //Shoule be CW negative, since it is an inner edge list
-                    allPolygons.Add(negativePolygon);
+                    } while (vertex != startVertex && outerEdges.Any()) ;
+                    loops.Add(loop);
                 }
             }
-            
+
+            //For now, assume all loops are positive CCW
+            var allPolygons = loops.Select(loop => CCWPositive(MiscFunctions.Get2DProjectionPoints(loop, normal, false).ToList())).ToList();
+
             var polygonList = Union.Run(allPolygons);
+            var newPolygonList = polygonList.Select(CCWPositive).ToList();
+            polygonList = Union.Run(newPolygonList);
             return polygonList;
         }
 
