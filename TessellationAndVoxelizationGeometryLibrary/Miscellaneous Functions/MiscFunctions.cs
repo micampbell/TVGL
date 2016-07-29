@@ -1449,24 +1449,24 @@ namespace TVGL
                 return true;
             }
             //Create nodes and add them to a list
-            var nodes = points.Select(point => new Node(point, 0, 0)).ToList();
+            var nodes = points.Select(point => new TriangulatePolygonClasses.Node(point, 0, 0)).ToList();
 
             //Create first line and update nodes with information
-            var line = new Line(nodes.Last(), nodes[0]);
+            var line = new TriangulatePolygonClasses.NodeLine(nodes.Last(), nodes[0]);
             nodes.Last().StartLine = line;
             nodes[0].EndLine = line;
             //Create all other lines 
             for (var i = 1; i < points.Count; i++)
             {
-                line = new Line(nodes[i - 1], nodes[i]);
+                line = new TriangulatePolygonClasses.NodeLine(nodes[i - 1], nodes[i]);
                 nodes[i - 1].StartLine = line;
                 nodes[i].EndLine = line;
             }
 
             //sort points by descending y, then descending x
-            nodes.Add(new Node(pointInQuestion, 0, 0));
+            nodes.Add(new TriangulatePolygonClasses.Node(pointInQuestion, 0, 0));
             var sortedNodes = nodes.OrderByDescending(node => node.Y).ThenByDescending(node => node.X).ToList();
-            var lineList = new List<Line>();
+            var lineList = new List<TriangulatePolygonClasses.NodeLine>();
 
             //Use red-black tree sweep to determine which lines should be tested for intersection
             foreach (var node in sortedNodes)
@@ -1476,7 +1476,7 @@ namespace TVGL
                 if (node.StartLine == null)
                 {
                     if (lineList.Count % 2 != 0 || lineList.Count < 1) return false;
-                    Line leftLine, rightLine;
+                    TriangulatePolygonClasses.NodeLine leftLine, rightLine;
                     bool isOnLine;
                     var numberOfLinesToLeft = TriangulatePolygon.LinesToLeft(node, lineList, out leftLine, out isOnLine);
                     //Check if the point is on the left line or right line (note that one direction search is sufficient).

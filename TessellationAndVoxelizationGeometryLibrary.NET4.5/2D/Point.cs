@@ -15,7 +15,6 @@
 using System;
 using System.Collections.Generic;
 using MIConvexHull;
-using TVGL._2D;
 using StarMathLib;
 
 namespace TVGL
@@ -54,7 +53,7 @@ namespace TVGL
         /// <summary>
         /// 
         /// </summary>
-        public List<_2D.Line> Lines { get; set; }
+        public List<Line> Lines { get; set; }
 
         /// <summary>
         ///     Gets or sets the references.
