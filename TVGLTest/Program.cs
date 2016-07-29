@@ -91,7 +91,7 @@ namespace TVGL_Test
                 //ts[0].SolidColor = new Color(KnownColors.Salmon);
                 //using (fileStream = File.Create(filename + ".amf"))
                 //    IO.Save(fileStream, ts, FileType.AMF);
-                TVGL.Presenter.Show(ts);
+                //TVGL.Presenter.Show(ts);
                 //TVGL.Presenter.Show(ts[1]);
                 // TestSimplify(ts[1]);
                 //TestPolygon(ts[0]);
