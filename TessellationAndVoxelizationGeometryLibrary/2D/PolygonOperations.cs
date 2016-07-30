@@ -73,7 +73,38 @@ namespace TVGL._2D
     /// <summary>
     /// Interface to the 2D offset/clipping library: Clipper http://www.angusj.com/delphi/clipper.php
     /// </summary>
-    public static class PolygonOffset
+    public static class SimplifyPolygon
+    {
+        public static List<List<Point>> Run(List<Point> polygon, double scale = 100000)
+        {
+            //Convert Points (TVGL) to IntPoints (Clipper)
+            var intPolygon = polygon.Select(point => new IntPoint(point.X*scale, point.Y*scale)).ToList();
+            
+            //Simplify
+            var solution = Clipper.Clipper.SimplifyPolygon(intPolygon);
+
+            var outputLoops = new List<List<Point>>();
+            foreach (var loop in solution)
+            {
+                var offsetLoop = new List<Point>();
+                for (var i = 0; i < loop.Count; i++)
+                {
+                    var intPoint = loop[i];
+                    var x = Convert.ToDouble(intPoint.X) / scale;
+                    var y = Convert.ToDouble(intPoint.Y) / scale;
+                    offsetLoop.Add(new Point(new List<double> { x, y, 0.0 }));
+                }
+                outputLoops.Add(offsetLoop);
+            }
+            return outputLoops;
+        }
+    }
+
+
+    /// <summary>
+        /// Interface to the 2D offset/clipping library: Clipper http://www.angusj.com/delphi/clipper.php
+        /// </summary>
+        public static class PolygonOffset
     {
         /// <summary>
         /// Offets the given loop by the given offset, rounding corners.

@@ -29,7 +29,7 @@ namespace TVGL_Test
        //"../../../TestFiles/shark.ply",
        // "../../../TestFiles/bunnySmall.ply",
        // "../../../TestFiles/cube.ply",
-        //"../../../TestFiles/airplane.ply",
+       // "../../../TestFiles/airplane.ply",
         //"../../../TestFiles/TXT - G5 support de carrosserie-1.STL.ply",
         //"../../../TestFiles/Tetrahedron.STL",
         //"../../../TestFiles/off_axis_box.STL",

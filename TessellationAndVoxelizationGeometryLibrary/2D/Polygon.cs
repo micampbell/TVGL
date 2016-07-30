@@ -35,12 +35,22 @@ namespace TVGL
         /// <summary>
         /// Gets whether the path is CCW positive == not a hole.
         /// </summary>
-        public bool IsPositive;
+        public bool IsPositive => !(Area < 0);
 
         /// <summary>
         /// Gets whether the path is CCW positive == not a hole.
         /// </summary>
         public bool IsConvex;
+
+        /// <summary>
+        /// Gets the area of the polygon. Negative Area for holes.
+        /// </summary>
+        public double Area;
+
+        /// <summary>
+        /// Gets whether the path is self intersecting.
+        /// </summary>
+        public bool IsSelfIntersecting;
 
         internal Polygon()
         {
@@ -50,8 +60,9 @@ namespace TVGL
         {
             Path = new List<Point>(points);
             IsOpen = isOpen;
-            IsPositive = IsCCWPositive();
             IsConvex = IsThisConvex();
+            IsSelfIntersecting = IsThisSelfIntersecting();
+            Area = CalculateArea();
         }
 
         //Gets whether this polygon is a hole, based on its position
@@ -84,40 +95,16 @@ namespace TVGL
         public void SetToCCWPositive()
         {
             var polygon = new List<Point>(Path);
-            var isPositive = IsCCWPositive();
-            if (!isPositive) polygon.Reverse();
+            if (!IsPositive) polygon.Reverse();
             Path = polygon;
+            //Invert the area.
+            Area = -Area;
         }
 
-        /// <summary>
-        /// Gets whether a Polygon is Positive CCW
-        /// </summary>
-        /// <assumptions>
-        /// 1. the polygon is closed
-        /// 2. the last point is not repeated.
-        /// 3. the polygon is simple (does not intersect itself or have holes)
-        /// </assumptions>
-        /// <source>
-        /// http://debian.fmi.uni-sofia.bg/~sergei/cgsr/docs/clockwise.htm
-        /// </source>
-        private bool IsCCWPositive()
-        {
-            var n = Path.Count;
-            var count = 0;
 
-            for (var i = 0; i < n; i++)
-            {
-                var j = (i + 1) % n;
-                var k = (i + 2) % n;
-                var z = (Path[j].X - Path[i].X) * (Path[k].Y - Path[j].Y);
-                z -= (Path[j].Y - Path[i].Y) * (Path[k].X - Path[j].X);
-                if (z < 0)
-                    count--;
-                else if (z > 0)
-                    count++;
-            }
-            //The polygon has a CW winding if count is negative
-            return count >= 0;
+        private double CalculateArea()
+        {
+            return MiscFunctions.AreaOfPolygon(Path.ToArray());
         }
 
         /// <summary>
@@ -156,8 +143,9 @@ namespace TVGL
             if (flag != 0)
             {
                 return (false);
-            }  
-            throw new Exception("Concavity could not be determined. May be due to colinear points. Add functionality to code to account for this.");
+            }
+            return false;
+           // throw new Exception("Concavity could not be determined. May be due to colinear points. Add functionality to code to account for this.");
         }
 
         /// <summary>
@@ -176,13 +164,11 @@ namespace TVGL
             return lines;
         }
 
-        private bool IsSelfIntersecting()
+        private bool IsThisSelfIntersecting()
         {
-            var lines = PathLines();
             var orderedLoop = Path;
             const int precision = 15;
             var sortedPoints = orderedLoop.OrderBy(point => Math.Round(point.Y, precision)).ThenBy(point => Math.Round(point.X, precision)).ToList();
-            var index = orderedLoop.IndexOf(sortedPoints[0]); // index of first point in orderedLoop
 
             //inititallize lineList 
             var lineList = new HashSet<Line>();
@@ -227,14 +213,19 @@ namespace TVGL
                         }
                     }
 
-                    //Check if any of the lines are intersecting
+                    //Check if any of the lines are crossing 
                     foreach (var line1 in lineList2)
                     {
                         foreach (var line2 in lineList2)
                         {
+                            if (line2 == line1) continue;
+                            //Only consider them, if they don't share any points.
+                            if (line1.FromPoint == line2.FromPoint || line1.ToPoint == line2.FromPoint ||
+                                line1.FromPoint == line2.ToPoint || line1.ToPoint == line2.ToPoint) continue;
                             Point insectionPoint;
                             var linesIntersect = LineLineIntersection(line1, line2, out insectionPoint);
-                            if (linesIntersect) return true;
+                            if (linesIntersect && !insectionPoint.Equals(line1.ToPoint) && !insectionPoint.Equals(line1.FromPoint) &&
+                                !insectionPoint.Equals(line2.ToPoint) && !insectionPoint.Equals(line2.FromPoint)) return true;
                         }
                     }
                 }
@@ -249,6 +240,7 @@ namespace TVGL
         /// <param name="line1"></param>
         /// <param name="line2"></param>
         /// <param name="intersectionPoint"></param>
+        /// <param name="considerCollinearOverlapAsIntersect"></param>
         /// <source>
         /// http://www.codeproject.com/Tips/862988/Find-the-Intersection-Point-of-Two-Line-Segments
         /// </source>
@@ -283,15 +275,16 @@ namespace TVGL
             if (rxs.IsNegligible() && !qpxr.IsNegligible()) return false;
 
             // t = (q - p) x s / (r x s)
+            //Note, the output of this will be t = [0,0,#] since this is a 2D cross product.
             var t = q.subtract(p).crossProduct(s).divide(rxs);
 
             // u = (q - p) x r / (r x s)
+            //Note, the output of this will be u = [0,0,#] since this is a 2D cross product.
             var u = q.subtract(p).crossProduct(r).divide(rxs);
 
             // 4. If r x s != 0 and 0 <= t <= 1 and 0 <= u <= 1
             // the two line segments meet at the point p + t r = q + u s.
-            var tNorm = t.norm1(); //ToDo: check to make sure this returns distance, not something else
-            if (!rxs.IsNegligible() && (0 <= t.norm1() && t.norm1() <= 1) && (0 <= u.norm1() && u.norm1() <= 1))
+            if (!rxs.IsNegligible() && (0 <= t[2] && t[2] <= 1) && (0 <= u[2] && u[2] <= 1))
             {
                 // We can calculate the intersection point using either t or u.
                 var x = p[0] + t[0] * r[0];

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using StarMathLib;
 using TVGL._2D.Clipper;
@@ -130,7 +131,7 @@ namespace TVGL._2D
                     var loop = new List<Vertex> {vertex};
                     do
                     {
-                        foreach (var edge2 in outerEdges)
+                        foreach (var edge2 in vertex.Edges.Where(edge2 => outerEdges.Contains(edge2)))
                         {
                             if (edge2.From == vertex)
                             {
@@ -146,7 +147,7 @@ namespace TVGL._2D
                                 loop.Add(vertex);
                                 break;
                             }
-                            if (edge2 == outerEdges.Last() && !isReversed)
+                            if (edge2 == vertex.Edges.Last() && !isReversed)
                             {
                                 //Swap the vertices were interested in and
                                 //Reverse the loop
@@ -157,7 +158,7 @@ namespace TVGL._2D
                                 loop.Add(vertex);
                                 isReversed = true;
                             }
-                            else if (edge2 == outerEdges.Last() && isReversed)
+                            else if (edge2 == vertex.Edges.Last() && isReversed)
                             {
                                 //Artifically close the loop.
                                 vertex = startVertex;
@@ -167,19 +168,17 @@ namespace TVGL._2D
                     loops.Add(loop);
                 }
             }
-
             //For now, assume all loops are positive CCW
             var allPolygons = loops.Select(loop => CCWPositive(MiscFunctions.Get2DProjectionPoints(loop, normal, false).ToList())).ToList();
+            var solution = Union.Run(allPolygons);
 
-            var polygonList = Union.Run(allPolygons);
-            var polygons = new List<Polygon>();
-            foreach (var polygon in polygonList)
+            //Remove all tiny polygons
+            var allSignificantPolygons = new List<List<Point>>();
+            foreach (var polygon in solution)
             {
-                polygons.Add(new Polygon(polygon));
+                if(!MiscFunctions.AreaOfPolygon(polygon.ToArray()).IsNegligible(0.01)) allSignificantPolygons.Add(polygon);
             }
-            var newPolygonList = polygonList.Select(CCWPositive).ToList();
-            //polygonList = Union.Run(newPolygonList);
-            return polygonList;
+            return Union.Run(allSignificantPolygons);
         }
 
         //Sets a convex polygon to counter clock wise positive
@@ -191,22 +190,8 @@ namespace TVGL._2D
         private static List<Point> CCWPositive(IList<Point> p)
         {
             var polygon = new List<Point>(p);
-            var n = p.Count;
-            var count = 0;
-
-            for (var i = 0; i < n; i++)
-            {
-                var j = (i + 1) % n;
-                var k = (i + 2) % n;
-                var z = (p[j].X - p[i].X) * (p[k].Y - p[j].Y);
-                z -= (p[j].Y - p[i].Y) * (p[k].X - p[j].X);
-                if (z < 0)
-                    count--;
-                else if (z > 0)
-                    count++;
-            }
-            //The polygon has a CW winding if count is negative
-            if (count < 0) polygon.Reverse();
+            var area = MiscFunctions.AreaOfPolygon(p.ToArray());
+            if (area < 0) polygon.Reverse();
             return polygon;
         }
     }

@@ -140,6 +140,7 @@ namespace TVGL
             Y = point.Y;
             Z = point.Z;
             References = point.References;
+            Lines = point.Lines;
         }
 
         /// <summary>
@@ -155,6 +156,7 @@ namespace TVGL
             X = x;
             Y = y;
             Z = z;
+            Lines = new List<Line>();
         }
 
         /// <summary>
