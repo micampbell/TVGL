@@ -241,7 +241,7 @@ namespace TVGL
                             }
 
                             //inititallize lineList 
-                            var lineList = new List<NodeLine>();
+                            var lineList = new HashSet<NodeLine>();
                             for (var j = 0; j < sortedGroup.Count; j++)
                             {
                                 var node = sortedGroup[j];
@@ -480,7 +480,7 @@ namespace TVGL
                         }
 
                         //inititallize lineList and sortedNodes
-                        var lineList = new List<NodeLine>();
+                        var lineList = new HashSet<NodeLine>();
 
                         #region Trapezoidize Polygons
 
@@ -984,7 +984,7 @@ namespace TVGL
                     }
 
                     //inititallize lineList 
-                    var lineList = new List<NodeLine>();
+                    var lineList = new HashSet<NodeLine>();
                     for (var j = 0; j < sortedGroup.Count; j++)
                     {
                         var node = sortedGroup[j];
@@ -1169,7 +1169,7 @@ namespace TVGL
                 }
 
                 //inititallize lineList and sortedNodes
-                var lineList = new List<NodeLine>();
+                var lineList = new HashSet<NodeLine>();
                 //Use the red-black tree to determine if the first node from a negative loop is inside the polygon.
                 //for each node in sortedNodes, update the lineList. Note that at this point each node only has two edges.
                 for (var j = 0; j < sortedGroup.Count; j++)
@@ -1387,6 +1387,7 @@ namespace TVGL
                         }
                         else throw new Exception("Rounding Error");
 
+                        //ToDo: verify this next line, since the comment is opposite from the code-
                         //Choose whichever line has the right most other node
                         rightLine = nodeOnLine.EndLine.FromNode.X > nodeOnLine.StartLine.ToNode.X ? nodeOnLine.StartLine : nodeOnLine.EndLine;
                     }

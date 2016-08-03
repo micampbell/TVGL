@@ -1437,7 +1437,7 @@ namespace TVGL
         /// <param name="onBoundaryIsInside">if set to <c>true</c> [on boundary is inside].</param>
         /// <returns><c>true</c> if [is point inside polygon] [the specified points]; otherwise, <c>false</c>.</returns>
         /// <exception cref="Exception">Failed to return intercept information</exception>
-        public static bool IsPointInsidePolygon(List<Point> points, Point pointInQuestion,
+        public static bool IsPointInsidePolygon(IList<Point> points, Point pointInQuestion,
             bool onBoundaryIsInside = true)
         {
             //If the point in question is == a point in points, then it is inside the polygon
