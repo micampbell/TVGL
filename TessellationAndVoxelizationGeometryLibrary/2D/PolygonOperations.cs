@@ -65,21 +65,57 @@ using TVGL._2D.Clipper;
 
 namespace TVGL._2D
 {
-    using Path = List<IntPoint>;
     using Paths = List<List<IntPoint>>;
 
     #region internal Interface with Clipper
-
     /// <summary>
-    /// Interface to the 2D offset/clipping library: Clipper http://www.angusj.com/delphi/clipper.php
+    /// A set of general operation for points and polygons
     /// </summary>
-    public static class SimplifyPolygon
+    public class PolygonOperations
     {
-        public static List<List<Point>> Run(List<Point> polygon, double scale = 100000)
+        /// <summary>
+        /// Sets a polygon to counter clock wise positive
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        /// <assumptions>
+        /// 1. the polygon is closed
+        /// 2. the last point is not repeated.
+        /// 3. the polygon is simple (does not intersect itself or have holes)
+        /// </assumptions>
+        public static List<Point> CCWPositive(IList<Point> p)
+        {
+            var polygon = new List<Point>(p);
+            var area = MiscFunctions.AreaOfPolygon(p.ToArray());
+            if (area < 0) polygon.Reverse();
+            return polygon;
+        }
+
+        /// <summary>
+        /// Sets a polygon to clock wise negative
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public static List<Point> CWNegative(IList<Point> p)
+        {
+            var polygon = new List<Point>(p);
+            var area = MiscFunctions.AreaOfPolygon(p.ToArray());
+            if (area > 0) polygon.Reverse();
+            return polygon;
+        }
+
+        /// <summary>
+        /// Simplifies a polygon, by removing self intersection. This may output several polygons.
+        /// </summary>
+        /// <param name="polygon"></param>
+        /// <param name="scale"></param>
+        /// <returns></returns>
+        public static List<List<Point>> Simplify(IList<Point> polygon, double scale = 100000)
         {
             //Convert Points (TVGL) to IntPoints (Clipper)
-            var intPolygon = polygon.Select(point => new IntPoint(point.X*scale, point.Y*scale)).ToList();
-            
+            var intPolygon = polygon.Select(point => new IntPoint(point.X * scale, point.Y * scale, point.References)).ToList();
+
             //Simplify
             var solution = Clipper.Clipper.SimplifyPolygon(intPolygon);
 
@@ -92,19 +128,74 @@ namespace TVGL._2D
                     var intPoint = loop[i];
                     var x = Convert.ToDouble(intPoint.X) / scale;
                     var y = Convert.ToDouble(intPoint.Y) / scale;
-                    offsetLoop.Add(new Point(new List<double> { x, y, 0.0 }));
+                    offsetLoop.Add(new Point(new List<double> { x, y, 0.0 }) { References = intPoint.References });
                 }
                 outputLoops.Add(offsetLoop);
             }
+
             return outputLoops;
         }
-    }
 
+        /// <summary>
+        /// Simplifies a polygon, by removing self intersection. This results in one polygon, but may not be successful 
+        /// if multiple polygons 
+        /// </summary>
+        /// <param name="polygon"></param>
+        /// <param name="simplifiedPolygon"></param>
+        /// <param name="scale"></param>
+        /// <returns></returns>
+        public static bool CanSimplifyToSinglePolygon(IList<Point> polygon, out List<Point> simplifiedPolygon, double scale = 100000)
+        {
+            //Initialize output parameter
+            simplifiedPolygon = new List<Point>();
+
+            //Convert Points (TVGL) to IntPoints (Clipper)
+            var intPolygon = polygon.Select(point => new IntPoint(point.X * scale, point.Y * scale, point.References)).ToList();
+
+            //Simplify
+            var solution = Clipper.Clipper.SimplifyPolygon(intPolygon);
+
+            var outputLoops = new List<List<Point>>();
+            foreach (var loop in solution)
+            {
+                var offsetLoop = new List<Point>();
+                for (var i = 0; i < loop.Count; i++)
+                {
+                    var intPoint = loop[i];
+                    var x = Convert.ToDouble(intPoint.X) / scale;
+                    var y = Convert.ToDouble(intPoint.Y) / scale;
+                    offsetLoop.Add(new Point(new List<double> { x, y, 0.0 }) { References = intPoint.References });
+                }
+                outputLoops.Add(offsetLoop);
+            }
+
+
+            //If simplification split the polygon into multiple polygons. Union the polygons together, removing the extraneous lines
+            if (outputLoops.Count == 1)
+            {
+                simplifiedPolygon = outputLoops.First();
+                return true;
+            }
+            if (outputLoops.Count == 0)
+            {
+                return false;
+            } 
+            var positiveLoops = outputLoops.Select(CCWPositive).ToList();
+            var unionLoops = Union.Run(positiveLoops);
+            if (unionLoops.Count != 1)
+            {
+                return false;
+            }
+            simplifiedPolygon = unionLoops.First();
+            return true;
+        }
+    }
+    
 
     /// <summary>
-        /// Interface to the 2D offset/clipping library: Clipper http://www.angusj.com/delphi/clipper.php
-        /// </summary>
-        public static class PolygonOffset
+    /// Interface to the 2D offset/clipping library: Clipper http://www.angusj.com/delphi/clipper.php
+    /// </summary>
+    public static class PolygonOffset
     {
         /// <summary>
         /// Offets the given loop by the given offset, rounding corners.
@@ -171,7 +262,7 @@ namespace TVGL._2D
         /// <param name="scale"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public static List<List<Point>> Run(IList<List<Point>> polygons, double scale = 100000)
+        public static List<List<Point>> Run(IList<List<Point>> polygons, double scale = 100000000)
         {
             const PolyFillType fillMethod = PolyFillType.pftPositive;
             var solution = new Paths();
@@ -582,15 +673,24 @@ namespace TVGL._2D.Clipper
         public IntPoint(cInt X, cInt Y)
         {
             this.X = X; this.Y = Y;
+            References = new List<Vertex>();
         }
-        public IntPoint(double x, double y)
+
+        public IntPoint(double x, double y, List<Vertex> references = null)
         {
             this.X = (cInt)x; this.Y = (cInt)y;
+            References = references;
         }
+
+        /// <summary>
+        /// List of vertex references.
+        /// </summary>
+        public List<Vertex> References;
 
         public IntPoint(IntPoint pt)
         {
             this.X = pt.X; this.Y = pt.Y;
+            References = pt.References;
         }
 
         public static bool operator ==(IntPoint a, IntPoint b)

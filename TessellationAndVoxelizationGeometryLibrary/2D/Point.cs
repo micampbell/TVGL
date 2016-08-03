@@ -62,6 +62,16 @@ namespace TVGL
         public List<Vertex> References { get; set; }
 
         /// <summary>
+        /// Gets or sets the index of the plygon it belongs to.
+        /// </summary>
+        public int PolygonIndex { get; set; }
+
+        /// <summary>
+        /// Gets or sets the index in a path.
+        /// </summary>
+        public int IndexInPath { get; set; }
+
+        /// <summary>
         ///     Gets or sets the coordinates or position.
         /// </summary>
         /// <value>The coordinates or position.</value>
