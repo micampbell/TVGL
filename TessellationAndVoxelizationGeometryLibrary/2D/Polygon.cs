@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using StarMathLib;
+using TVGL._2D;
 
 namespace TVGL
 {
@@ -15,6 +17,10 @@ namespace TVGL
         /// The list of 2D points that make up a polygon.
         /// </summary>
         public IList<Point> Path;
+        /// <summary>
+        /// The list of lines that make up a polygon.
+        /// </summary>
+        public IList<Line> PathLines;
         /// <summary>
         /// A list of the polygons inside this polygon.
         /// </summary>
@@ -33,9 +39,20 @@ namespace TVGL
         public readonly bool IsOpen;
 
         /// <summary>
-        /// Gets whether the path is CCW positive == not a hole.
+        /// Gets or sets whether the path is CCW positive. This will reverse the path if it was ordered CW.
         /// </summary>
-        public bool IsPositive => !(Area < 0);
+        public bool IsPositive
+        {
+            get { return !(Area < 0); }
+            set
+            {
+                if (value == true)
+                {
+                    SetToCCWPositive();
+                }
+                else SetToCWNegative();
+            }
+        }        
 
         /// <summary>
         /// Gets whether the path is CCW positive == not a hole.
@@ -61,6 +78,7 @@ namespace TVGL
             Path = new List<Point>(points);
             IsOpen = isOpen;
             IsConvex = IsThisConvex();
+            PathLines = SetPathLines();
             IsSelfIntersecting = IsThisSelfIntersecting();
             Area = CalculateArea();
         }
@@ -89,16 +107,76 @@ namespace TVGL
             child.Index = count;
         }
 
+        internal void Simplify()
+        {
+            List<Point> outPath;
+            var canSimplify = PolygonOperations.CanSimplifyToSinglePolygon(Path, out outPath);
+            if (canSimplify)
+            {
+                Path = outPath;
+                IsSelfIntersecting = false;
+            }
+            else
+            {
+                Debug.WriteLine("Could not simplify polygon to a single polygon.");
+            }
+        }
+
         /// <summary>
         /// Sets a polygon to counter clock wise positive
         /// </summary>
-        public void SetToCCWPositive()
+        private void SetToCCWPositive()
         {
-            var polygon = new List<Point>(Path);
-            if (!IsPositive) polygon.Reverse();
-            Path = polygon;
+            //Check if already positive ccw.
+            if (!(Area < 0)) return;
+
+            //It is negative. Reverse the path and path lines.
+            var path = new List<Point>(Path);
+            var lines = new List<Line>(PathLines);
+            path.Reverse();
+            lines.Reverse();
+
+            //Renumber the points and lines
+            for (var i = 0; i < path.Count; i++)
+            {
+                path[i].IndexInPath = i;
+            }
+            for (var i = 0; i < lines.Count; i++)
+            {
+                lines[i].IndexInList = i;
+            }
+
             //Invert the area.
             Area = -Area;
+            Path = path;
+            PathLines = lines;
+        }
+
+        private void SetToCWNegative()
+        {
+            //Check if already negative cw.
+            if (Area < 0) return;
+
+            //It is positive. Reverse the path and path lines.
+            var path = new List<Point>(Path);
+            var lines = new List<Line>(PathLines);
+            path.Reverse();
+            lines.Reverse();
+
+            //Renumber the points and lines
+            for (var i = 0; i < path.Count; i++)
+            {
+                path[i].IndexInPath = i;
+            }
+            for (var i = 0; i < lines.Count; i++)
+            {
+                lines[i].IndexInList = i;
+            }
+
+            //Invert the area.
+            Area = -Area;
+            Path = path;
+            PathLines = lines;
         }
 
 
@@ -152,30 +230,45 @@ namespace TVGL
         /// Returns a list of lines that make up the path of this polygon
         /// </summary>
         /// <returns></returns>
-        public List<Line> PathLines()
+        private List<Line> SetPathLines()
         {
             var lines = new List<Line>();
             var n = Path.Count;
             for (var i = 0; i < n; i++)
             {
                 var j = (i + 1) % n;
-                lines.Add(new Line(Path[i], Path[j], true));
+                lines.Add(new Line(Path[i], Path[j], true) { IndexInList = i });
             }
             return lines;
         }
 
         private bool IsThisSelfIntersecting()
         {
+            var intersectionPoints = GetSelfIntersectionPoints();
+            return intersectionPoints.Any();
+        }
+
+        /// <summary>
+        /// Gets all the intersection points if the polygon is self intersecting.
+        /// </summary>
+        /// <returns></returns>
+        public List<Point> GetSelfIntersectionPoints()
+        {
+            //Path Lines must be created first.
+            if (PathLines == null || PathLines.Count == 0)
+            {
+                SetPathLines();
+            }
             var orderedLoop = Path;
             const int precision = 15;
             var sortedPoints = orderedLoop.OrderBy(point => Math.Round(point.Y, precision)).ThenBy(point => Math.Round(point.X, precision)).ToList();
-
+            var intersectionPoints = new Dictionary<int, Point>();
             //inititallize lineList 
             var lineList = new HashSet<Line>();
-            for (var i = 0; i < sortedPoints.Count; i++)
+            foreach (var point1 in sortedPoints)
             {
                 //Add to or remove lines from Red-Black Tree
-                foreach (var line in sortedPoints[i].Lines)
+                foreach (var line in point1.Lines)
                 {
                     if (lineList.Contains(line))
                     {
@@ -198,10 +291,10 @@ namespace TVGL
                         .ThenBy(point => Math.Round(point.Y, precision))
                         .ToList();
                 var lineList2 = new HashSet<Line>();
-                for (var j = 0; j < sortedPointSet2.Count; j++)
+                foreach (var point in sortedPointSet2)
                 {
                     //Add to or remove lines from Red-Black Tree
-                    foreach (var line in sortedPointSet2[j].Lines.Where(line => lineList.Contains(line)))
+                    foreach (var line in point.Lines.Where(line => lineList.Contains(line)))
                     {
                         if (lineList2.Contains(line))
                         {
@@ -219,18 +312,30 @@ namespace TVGL
                         foreach (var line2 in lineList2)
                         {
                             if (line2 == line1) continue;
+                            //Check if this intersection has already been found
+                            var index = HashIndexOfIntersection(line1, line2);
+                            if (intersectionPoints.ContainsKey(index)) continue;
                             //Only consider them, if they don't share any points.
                             if (line1.FromPoint == line2.FromPoint || line1.ToPoint == line2.FromPoint ||
                                 line1.FromPoint == line2.ToPoint || line1.ToPoint == line2.ToPoint) continue;
-                            Point insectionPoint;
-                            var linesIntersect = LineLineIntersection(line1, line2, out insectionPoint);
-                            if (linesIntersect && !insectionPoint.Equals(line1.ToPoint) && !insectionPoint.Equals(line1.FromPoint) &&
-                                !insectionPoint.Equals(line2.ToPoint) && !insectionPoint.Equals(line2.FromPoint)) return true;
+                            Point intersectionPoint;
+                            var linesIntersect = LineLineIntersection(line1, line2, out intersectionPoint);
+                            if (linesIntersect) intersectionPoints.Add(index, intersectionPoint);
                         }
                     }
                 }
             }
-            return false;
+            //Debug.WriteLine("Number of intersections = " + intersectionPoints.Count);
+            return intersectionPoints.Values.ToList();
+        }
+
+        private int HashIndexOfIntersection(Line line1, Line line2)
+        {
+            if (line1.IndexInList < line2.IndexInList)
+            {
+                return line2.IndexInList * Path.Count + line1.IndexInList;
+            }
+            return line1.IndexInList * Path.Count + line2.IndexInList;
         }
 
         /// <summary>

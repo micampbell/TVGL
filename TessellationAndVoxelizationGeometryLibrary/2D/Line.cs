@@ -74,7 +74,9 @@ namespace TVGL
         /// </summary>
         /// <value>The Yintercept.</value>
         internal double Yintercept { get; private set; }
-        
+
+        internal int IndexInList { get; set; }
+
         /// <summary>
         ///     Gets X intercept given Y
         /// </summary>
@@ -112,6 +114,17 @@ namespace TVGL
             ToPoint= tempPoint;
         }
         #endregion
+
+        /// <summary>
+        /// Gets the other point that makes up this line.
+        /// </summary>
+        /// <param name="point"></param>
+        /// <returns></returns>
+        public Point OtherPoint(Point point)
+        {
+            if (point == FromPoint) return ToPoint;
+            return point == ToPoint ? FromPoint : null;
+        }
     }
 }
 
