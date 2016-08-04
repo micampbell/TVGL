@@ -301,7 +301,7 @@ namespace TVGL._2D
         /// <param name="polygons"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public static List<List<Point>> Run(IList<List<Point>> polygons, IList<Point> otherPolygon, double scale = 1000000000)
+        public static List<List<Point>> Run(IList<List<Point>> polygons, IList<Point> otherPolygon, double scale = 10000000000000000)
         {
             const PolyFillType fillMethod = PolyFillType.pftPositive;
             var solution = new Paths();
