@@ -69,18 +69,40 @@ namespace TVGL._2D
                 polygonList = Union.Run(polygonList, nextPolygon);
             }
 
-            //ToDo: Fix holes. The issue with this method is that the projection is not perfect, so small holes form on the part.
-            //ToDo: Removing small holes is not enough, because holes can break up two polygons that would otherwise be joined during the union.
-            //ToDo: This issue is likely caused by rounding error in the projection transform (e.g. it uses tan(theta))
-            //ToDo: if empty space is defined by two disconnected positive polygons, rather than a negative polygon, connect the two polygons.
-            //Remove all tiny polygons
-            var allSignificantPolygons = new List<List<Point>>();
-            foreach (var polygon in polygonList)
-            {
-                if (!MiscFunctions.AreaOfPolygon(polygon.ToArray()).IsNegligible(0.0001)) allSignificantPolygons.Add(polygon);
-            }
 
-            return allSignificantPolygons;
+            var smallestX = double.PositiveInfinity;
+            var largestX = double.NegativeInfinity;
+            foreach (var path in polygonList)
+            {
+                foreach (var point in path)
+                {
+                    if (point.X < smallestX)
+                    {
+                        smallestX = point.X;
+                    }
+                    if (point.X > largestX)
+                    {
+                        largestX = point.X;
+                    }
+                }
+            }
+            var scale = largestX - smallestX;
+
+            var offsetPolygons = PolygonOffset.Round(polygonList, scale / 10);
+            polygonList.AddRange(offsetPolygons);
+
+            ////ToDo: Fix holes. The issue with this method is that the projection is not perfect, so small holes form on the part.
+            ////ToDo: Removing small holes is not enough, because holes can break up two polygons that would otherwise be joined during the union.
+            ////ToDo: This issue is likely caused by rounding error in the projection transform (e.g. it uses tan(theta))
+            ////ToDo: if empty space is defined by two disconnected positive polygons, rather than a negative polygon, connect the two polygons.
+            ////Remove all tiny polygons
+            //var allSignificantPolygons = new List<List<Point>>();
+            //foreach (var polygon in polygonList)
+            //{
+            //    if (!MiscFunctions.AreaOfPolygon(polygon.ToArray()).IsNegligible(0.0001)) allSignificantPolygons.Add(polygon);
+            //}
+
+            return polygonList;
         }
 
         /// <summary>
