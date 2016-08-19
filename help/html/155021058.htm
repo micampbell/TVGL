@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="save" content="history" />
+    <title>MakeSolids Method </title>
+    <link rel="stylesheet" type="text/css" href="../styles/lightweight.css" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <link rel="stylesheet" type="text/css" href="../styles/lw-code.css" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <script type="text/javascript" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" src="../scripts/languageSelector.js"> </script>
+    <meta name="container" content="TVGL.Boolean_Operations" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <meta name="file" content="155021058" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <meta name="guid" content="155021058" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <xml xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      <MSHelp:Attr Name="AssetID" Value="M:TVGL.Boolean_Operations.Slice.MakeSolids(ContactData,UnitType,List{TessellatedSolid}@,List{TessellatedSolid}@)" />
+      <MSHelp:TOCTitle Title="MakeSolids Method " />
+      <MSHelp:RLTitle Title="Slice.MakeSolids Method  (TVGL.Boolean_Operations)" />
+      <MSHelp:Keyword Index="A" Term="M:TVGL.Boolean_Operations.Slice.MakeSolids(ContactData,UnitType,List{TessellatedSolid}@,List{TessellatedSolid}@)" />
+      <MSHelp:Keyword Index="A" Term="frlrfTVGLBoolean_OperationsSliceClassMakeSolidsTopic" />
+      <MSHelp:Keyword Index="K" Term="MakeSolids method" />
+      <MSHelp:Keyword Index="K" Term="Slice.MakeSolids method" />
+      <MSHelp:Keyword Index="F" Term="TVGL.Boolean_Operations.Slice.MakeSolids" />
+      <MSHelp:Attr Name="APIType" Value="Managed" />
+      <MSHelp:Attr Name="APILocation" Value="TessellationAndVoxelizationGeometryLibraryUniversal.dll" />
+      <MSHelp:Attr Name="APIName" Value="TVGL.Boolean_Operations.Slice.MakeSolids" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="DevLang" Value="VB" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="Abstract" Value="Returns lists of solids, given contact data for this slice" />
+      <MSHelp:Attr Name="AssemblyVersion" Value="" />
+    </xml>
+  </head>
+  <body>
+    <div class="contentPlaceHolder" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      <div class="content">
+        <div class="topicContainer">
+          <div class="topic">
+            <p class="majorTitle" />
+            <h1 class="title">Slice<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>MakeSolids Method </h1>
+            <div id="mainSection">
+              <div id="mainBody">
+                <div class="summary">
+   Returns lists of solids, given contact data for this slice
+   </div>
+                <p />
+    <b>Namespace:</b> 
+   <a href="220536184.htm">TVGL.Boolean_Operations</a><br />
+    <b>Assembly:</b>
+   <span sdata="assembly">TessellationAndVoxelizationGeometryLibraryUniversal</span> (in TessellationAndVoxelizationGeometryLibraryUniversal.dll)<div class="LW_CollapsibleArea_Container"><div class="LW_CollapsibleArea_TitleDiv"><h2 class="LW_CollapsibleArea_Title">Syntax</h2><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div><a id="syntaxSection"><!----></a><div class="CodeSnippetContainer"><div class="CodeSnippetContainerTabs"><div class="CodeSnippetContainerTabLeft"><!----></div><div class="CodeSnippetContainerTabFirst CSharpTab" id="CSharpTabId" style="background:white;border-bottom-color:white"><a href="javascript:setActiveTab('CodeSnippetContainerCode','CSharpCode','CSharpTabId');" title="C#">C#</a></div><div class="CodeSnippetContainerTab VisualBasicTab" id="VisualBasicTabId"><a href="javascript:setActiveTab('CodeSnippetContainerCode','VisualBasicCode','VisualBasicTabId');" title="Visual Basic">VB</a></div><div class="CodeSnippetContainerTab ManagedCPlusPlusTab" id="ManagedCPlusPlusTabId"><a href="javascript:setActiveTab('CodeSnippetContainerCode','ManagedCPlusPlusCode','ManagedCPlusPlusTabId');" title="Visual C++">C++</a></div><div class="CodeSnippetContainerTabRight"><!----></div></div><div class="CodeSnippetContainerCodeCollection"><div class="CodeSnippetToolBar"><div class="CodeSnippetToolBarText" /></div><div class="CodeSnippetContainerCode CSharpCode"><pre xml:space="preserve" class="libCScode"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="identifier">MakeSolids</span>(
+	<a href="1105889141.htm">ContactData</a> <span class="parameter">contactData</span>,
+	<a href="1496309619.htm">UnitType</a> <span class="parameter">unitType</span>,
+	<span class="keyword">out</span> <a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a>&lt;<a href="1470531471.htm">TessellatedSolid</a>&gt; <span class="parameter">positiveSideSolids</span>,
+	<span class="keyword">out</span> <a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a>&lt;<a href="1470531471.htm">TessellatedSolid</a>&gt; <span class="parameter">negativeSideSolids</span>
+)</pre></div><div class="CodeSnippetContainerCode VisualBasicCode"><pre xml:space="preserve" class="libCScode"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Sub</span> <span class="identifier">MakeSolids</span> ( _
+	<span class="parameter">contactData</span> <span class="keyword">As</span> <a href="1105889141.htm">ContactData</a>, _
+	<span class="parameter">unitType</span> <span class="keyword">As</span> <a href="1496309619.htm">UnitType</a>, _
+	&lt;<a href="http://msdn.microsoft.com/en-us/library/system.runtime.interopservices.outattribute.aspx" target="_blank">OutAttribute</a>&gt; <span class="keyword">ByRef</span> <span class="parameter">positiveSideSolids</span> <span class="keyword">As</span> <a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a>(<span class="keyword">Of</span> <a href="1470531471.htm">TessellatedSolid</a>), _
+	&lt;<a href="http://msdn.microsoft.com/en-us/library/system.runtime.interopservices.outattribute.aspx" target="_blank">OutAttribute</a>&gt; <span class="keyword">ByRef</span> <span class="parameter">negativeSideSolids</span> <span class="keyword">As</span> <a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a>(<span class="keyword">Of</span> <a href="1470531471.htm">TessellatedSolid</a>) _
+)</pre></div><div class="CodeSnippetContainerCode ManagedCPlusPlusCode"><pre xml:space="preserve" class="libCScode"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="keyword">void</span> <span class="identifier">MakeSolids</span>(
+	<a href="1105889141.htm">ContactData</a>^ <span class="parameter">contactData</span>, 
+	<a href="1496309619.htm">UnitType</a>^ <span class="parameter">unitType</span>, 
+	[<a href="http://msdn.microsoft.com/en-us/library/system.runtime.interopservices.outattribute.aspx" target="_blank">OutAttribute</a>] <a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a>&lt;<a href="1470531471.htm">TessellatedSolid</a>^&gt;^% <span class="parameter">positiveSideSolids</span>, 
+	[<a href="http://msdn.microsoft.com/en-us/library/system.runtime.interopservices.outattribute.aspx" target="_blank">OutAttribute</a>] <a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a>&lt;<a href="1470531471.htm">TessellatedSolid</a>^&gt;^% <span class="parameter">negativeSideSolids</span>
+)</pre></div></div></div><div id="parameters"><h4 class="subHeading">Parameters</h4><dl paramName="contactData"><dt><span class="parameterItalic">contactData</span></dt><dd>Type: <a href="1105889141.htm">TVGL<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>ContactData</a><br /></dd></dl><dl paramName="unitType"><dt><span class="parameterItalic">unitType</span></dt><dd>Type: <a href="1496309619.htm">TVGL<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>UnitType</a><br /></dd></dl><dl paramName="positiveSideSolids"><dt><span class="parameterItalic">positiveSideSolids</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><a href="1470531471.htm">TessellatedSolid</a><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span><span class="cpp">%</span><br /></dd></dl><dl paramName="negativeSideSolids"><dt><span class="parameterItalic">negativeSideSolids</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><a href="1470531471.htm">TessellatedSolid</a><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span><span class="cpp">%</span><br /></dd></dl></div></div><div class="LW_CollapsibleArea_Container"><div class="LW_CollapsibleArea_TitleDiv"><h2 class="LW_CollapsibleArea_Title">See Also</h2><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div><a id="seeAlsoSection"><!----></a><div class="seeAlsoStyle"><a href="1274694911.htm">Slice Class</a></div><div class="seeAlsoStyle"><a href="220536184.htm">TVGL.Boolean_Operations Namespace</a></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div id="footer" class="footerContainer">
+          <div class="footerLogoContainer">
+            <div style="margin-top:5px">
+              <span class="customCopyrightFooter" />
+            </div>
+            <div style="margin-top:5px" class="copyrightFooter">Help File generated with GhostDoc</div>
+            <div> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

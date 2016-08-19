@@ -63,13 +63,39 @@
                         <img src="../icons/static.gif" alt="Static member" title="Static member" />
                       </td>
                       <td>
-                        <a href="1765279334.htm">DefineContact</a>
+                        <a href="237643816.htm">GetContactData</a>
                       </td>
                       <td>
                         <div class="summary">
-   When the tessellated solid is sliced at the specified plane, the contact surfaces are
-   described by the return ContactData object. This is a non-destructive function typically
-   used to find the shape and size of 2D surface on the prescribed plane..
+   Gets the contact data for a slice, without making the individual solids.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;static;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
+                      </td>
+                      <td>
+                        <a href="155021058.htm">MakeSolids</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Returns lists of solids, given contact data for this slice
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;static;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
+                      </td>
+                      <td>
+                        <a href="1483040910.htm">NewFace</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   Creates a new face given two straddle edges
    </div>
                       </td>
                     </tr>
@@ -83,9 +109,10 @@
                       </td>
                       <td>
                         <div class="summary">
-   Performs the slicing operation on the prescribed flat plane. This destructively alters
-   the tessellated solid into one or more solids which are returned in the "out" parameter
-   lists.
+   This slice function makes a seperate cut for the positive and negative side,
+   at a specified offset in both directions. It rebuilds straddle triangles,
+   but only uses one of the two straddle edge intersection vertices to prevent
+   tiny triangles from being created.
    </div>
                       </td>
                     </tr>

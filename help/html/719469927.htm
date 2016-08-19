@@ -59,14 +59,11 @@
                         <img src="../icons/static.gif" alt="Static member" title="Static member" />
                       </td>
                       <td>
-                        <a href="1710536768.htm">ConvexHull2D(IList<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="fs">&lt;'</span><span class="nu">(</span></span>IVertex<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="fs">&gt;</span><span class="nu">)</span></span>, <span class="languageSpecificText"><span class="cpp">array&lt;</span></span>Double<span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span>)</a>
+                        <a href="1526827183.htm">AddInCornerVertices</a>
                       </td>
                       <td>
                         <div class="summary">
-   Returns the 2D convex hull for the 3D vertices within the plane defined by the normal, direction.
-   The returned points are a List of points (3D double array) that represent the points as they have been
-   converted to the 2D plane. The vertices are not altered by this function. This is a simple two-line function
-   that first call the non-destructive "Get2DProjectionPoints" and then the overload of "ConvexHull2D".
+       Adds the corner vertices (actually 3d points) to the bounding box
    </div>
                       </td>
                     </tr>
@@ -76,12 +73,12 @@
                         <img src="../icons/static.gif" alt="Static member" title="Static member" />
                       </td>
                       <td>
-                        <a href="75238577.htm">ConvexHull2D(IList<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="fs">&lt;'</span><span class="nu">(</span></span><span class="languageSpecificText"><span class="cpp">array&lt;</span></span>Double<span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="fs">&gt;</span><span class="nu">)</span></span>)</a>
+                        <a href="678195778.htm">BoundingRectangle</a>
                       </td>
                       <td>
                         <div class="summary">
-   Returns the 2D convex hull for the x and y values of the vertices - ignoring their z coordinate. This is essentially
-   called by the other overload of "ConvexHull2D".
+       Finds the minimum bounding rectangle given a set of points. Either send any set of points
+       OR the convex hull 2D.
    </div>
                       </td>
                     </tr>
@@ -91,14 +88,11 @@
                         <img src="../icons/static.gif" alt="Static member" title="Static member" />
                       </td>
                       <td>
-                        <a href="1625903854.htm">FindOBBAlongDirection</a>
+                        <a href="354047617.htm">ConvexHull2DArea</a>
                       </td>
                       <td>
                         <div class="summary">
-   Finds the minimum oriented bounding rectangle (2D). The 3D points of a tessellated solid
-   are projected to the plane defined by "direction". This returns a BoundingBox structure
-   where the first direction is the same as the prescribed direction and the other two are
-   in-plane unit vectors.
+       Finds the area of the convex hull region, given a set of convex hull points.
    </div>
                       </td>
                     </tr>
@@ -108,13 +102,14 @@
                         <img src="../icons/static.gif" alt="Static member" title="Static member" />
                       </td>
                       <td>
-                        <a href="952911177.htm">Get2DProjectionPoints(IList<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="fs">&lt;'</span><span class="nu">(</span></span>IVertex<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="fs">&gt;</span><span class="nu">)</span></span>, <span class="languageSpecificText"><span class="cpp">array&lt;</span></span>Double<span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span>, <span class="languageSpecificText"><span class="cpp">array&lt;</span></span>Double<span class="languageSpecificText"><span class="cpp">,2&gt;</span><span class="cs">[,]</span><span class="vb">(,)</span><span class="nu">[,]</span><span class="fs">[,]</span></span><span class="languageSpecificText"><span class="cpp">%</span></span>)</a>
+                        <a href="859496580.htm">ConvexHull2DMaximal</a>
                       </td>
                       <td>
                         <div class="summary">
-   Transforms the vertices so that they are in the x-y plane (although the z-values will be non-zero)
-   This destructively alters the vertices. However, the backTransform is provided to change the points
-   back if needed.
+       Returns the MAXIMMAL 2D convex hull for given list of points. This only works on the x and y coordinates of the
+       points. The term maximal refers to the fact that all points that lie on the convex hull are included in the result.
+       This is useful if one if trying to identify such points. Otherwise, if the shape is what is important than the
+       minimal approach is preferred.
    </div>
                       </td>
                     </tr>
@@ -124,13 +119,15 @@
                         <img src="../icons/static.gif" alt="Static member" title="Static member" />
                       </td>
                       <td>
-                        <a href="571986527.htm">Get2DProjectionPoints(IList<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="fs">&lt;'</span><span class="nu">(</span></span>IVertex<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="fs">&gt;</span><span class="nu">)</span></span>, <span class="languageSpecificText"><span class="cpp">array&lt;</span></span>Double<span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span>)</a>
+                        <a href="1218487430.htm">ConvexHull2DMinimal</a>
                       </td>
                       <td>
                         <div class="summary">
-   Returns the positions (array of 3D arrays) of the vertices as that they would be represted in
-   the x-y plane (although the z-values will be non-zero). This does not destructively alter
-   the vertices.
+       Returns the MINIMAL 2D convex hull for given list of points. This only works on the x and y coordinates of the
+       points. The term minimal refers to the fact that only the necessary points that define the convex hull are included
+       in the result. This is useful if one if trying to identify the shape of the hull. It is slightly faster than the
+       maximal
+       approach and it will likely lead to less exceptions in other methods (such as bounding box).
    </div>
                       </td>
                     </tr>
@@ -140,13 +137,12 @@
                         <img src="../icons/static.gif" alt="Static member" title="Static member" />
                       </td>
                       <td>
-                        <a href="1748122641.htm">Get2DProjectionPoints(IList<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="fs">&lt;'</span><span class="nu">(</span></span><span class="languageSpecificText"><span class="cpp">array&lt;</span></span>Double<span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="fs">&gt;</span><span class="nu">)</span></span>, <span class="languageSpecificText"><span class="cpp">array&lt;</span></span>Double<span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span>)</a>
+                        <a href="321933712.htm">GetLengthAndExtremeVertices</a>
                       </td>
                       <td>
                         <div class="summary">
-   Returns the positions (array of 3D arrays) of the vertices as that they would be represted in
-   the x-y plane (although the z-values will be non-zero). This does not destructively alter
-   the vertices.
+       Given a Direction, dir, this function returns the maximum length along this Direction
+       for the provided vertices as well as the two vertices that represent the extremes.
    </div>
                       </td>
                     </tr>
@@ -156,12 +152,12 @@
                         <img src="../icons/static.gif" alt="Static member" title="Static member" />
                       </td>
                       <td>
-                        <a href="807511366.htm">GetLengthAndExtremeVertices</a>
+                        <a href="838148294.htm">MEC_Center</a>
                       </td>
                       <td>
                         <div class="summary">
-   Given a direction, dir, this function returns the maximum length along this direction
-   for the provided vertices as well as the two vertices that represent the extremes.
+       Takes a set of points and a line, and determines which side of the line the center of the MEC of  the points lies
+       on.
    </div>
                       </td>
                     </tr>
@@ -171,11 +167,98 @@
                         <img src="../icons/static.gif" alt="Static member" title="Static member" />
                       </td>
                       <td>
-                        <a href="1189276139.htm">OrientedBoundingBox</a>
+                        <a href="749952484.htm">Median</a>
                       </td>
                       <td>
                         <div class="summary">
-   Orienteds the bounding box.
+       Takes a set of elements and a metric for comparing them pairwise, and returns the median of the elements.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;static;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
+                      </td>
+                      <td>
+                        <a href="1032546057.htm">MinimumBoundingCylinder</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+       Gets the minimum bounding cylinder using 13 guesses for the depth direction
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;static;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
+                      </td>
+                      <td>
+                        <a href="755699340.htm">MinimumCircle</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+       Minimums the circle.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;static;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
+                      </td>
+                      <td>
+                        <a href="280303032.htm">OBBAlongDirection</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+       Finds the minimum oriented bounding rectangle (2D). The 3D points of a tessellated solid
+       are projected to the plane defined by "Direction". This returns a BoundingBox structure
+       where the first Direction is the same as the prescribed Direction and the other two are
+       in-plane unit vectors.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;static;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
+                      </td>
+                      <td>
+                        <a href="1189276139.htm">OrientedBoundingBox(TessellatedSolid)</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+       Finds the minimum bounding box.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;static;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
+                      </td>
+                      <td>
+                        <a href="312357931.htm">OrientedBoundingBox(IList<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="fs">&lt;'</span><span class="nu">(</span></span>Vertex<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="fs">&gt;</span><span class="nu">)</span></span>)</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+       Finds the minimum bounding box.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;static;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
+                      </td>
+                      <td>
+                        <a href="2042466376.htm">OrientedBoundingBox_Test</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+       Finds the minimum bounding box oriented along a particular Direction.
    </div>
                       </td>
                     </tr>

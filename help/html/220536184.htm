@@ -58,89 +58,28 @@
                         <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
                       </td>
                       <td>
-                        <a href="1191216211.htm">ContactData</a>
-                      </td>
-                      <td>
-                        <div class="summary">
-   A ContactData object represents a 2D path on the surface of the tesselated solid.
-   It is notably comprised of loops (both positive and negative) and loops are comprised
-   of contact elements).
-   </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
-                      </td>
-                      <td>
-                        <a href="145148741.htm">ContactElement</a>
-                      </td>
-                      <td>
-                        <div class="summary">
-   A ContactElement describes the atomic class for the collective ContactData class which describes
-   how a slice affects the solid. A ContactElement is basically an edge that may or may not correspond
-   to a real edge in the solid. Additionally, it has properties that reference pertinent data in the solid.
-   </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
-                      </td>
-                      <td>
-                        <a href="696107650.htm">Loop</a>
-                      </td>
-                      <td>
-                        <div class="summary">
-   The Loop class is basically a list of ContactElements that form a path. Usually, this path
-   is closed, hence the name "loop", but it may be used and useful for open paths as well.
-   </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
-                      </td>
-                      <td>
                         <a href="1274694911.htm">Slice</a>
                       </td>
                       <td>
                         <div class="summary">
    The Slice class includes static functions for cutting a tessellated solid.
+   Slice4 Performs the slicing operation on the prescribed flat plane. This is a NON-Destructive
+   operation, and returns two of more new tessellated solids  in the "out" parameter
+   lists.
+   However, it does reference the solid's faces. So this may conflict with parallel processing.
    </div>
                       </td>
                     </tr>
-                  </table>
-                </div>
-                <div class="LW_CollapsibleArea_Container">
-                  <div class="LW_CollapsibleArea_TitleDiv">
-                    <h2 class="LW_CollapsibleArea_Title">Enumerations</h2>
-                    <div class="LW_CollapsibleArea_HrDiv">
-                      <hr class="LW_CollapsibleArea_Hr" />
-                    </div>
-                  </div>
-                  <a id="enumerationSection">
-                    <!---->
-                  </a>
-                  <table id="typeList" class="members">
-                    <tr>
-                      <th class="iconColumn">
-           
-       </th>
-                      <th class="nameColumn">Enumeration</th>
-                      <th class="descriptionColumn">Description</th>
-                    </tr>
                     <tr>
                       <td>
-                        <img src="../icons/pubenumeration.gif" alt="Public enumeration" title="Public enumeration" />
+                        <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
                       </td>
                       <td>
-                        <a href="274829933.htm">FaceSplitType</a>
+                        <a href="280530891.htm">Slice<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>StraddleEdge</a>
                       </td>
                       <td>
                         <div class="summary">
-   The enumerator, FaceSplitType, is used to describe how a ContactElement within the ContactData
-   relates to the tessellated solid.
+   Straddle edge references original edge and an intersection vertex.
    </div>
                       </td>
                     </tr>

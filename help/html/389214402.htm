@@ -59,11 +59,11 @@
                         <img src="../icons/static.gif" alt="Static member" title="Static member" />
                       </td>
                       <td>
-                        <a href="1967799410.htm">EpsilonSameAngle</a>
+                        <a href="198521019.htm">BaseTolerance</a>
                       </td>
                       <td>
                         <div class="summary">
-       The epsilon same angle
+       The error ratio used as a base for determining a good tolerance within a given tessellated solid.
    </div>
                       </td>
                     </tr>
@@ -87,11 +87,11 @@
                         <img src="../icons/static.gif" alt="Static member" title="Static member" />
                       </td>
                       <td>
-                        <a href="615017809.htm">FloatSize</a>
+                        <a href="897596602.htm">OBBAngleTolerance</a>
                       </td>
                       <td>
                         <div class="summary">
-       The float size
+       The angle tolerance used in the Oriented Bounding Box calculations
    </div>
                       </td>
                     </tr>
@@ -101,11 +101,11 @@
                         <img src="../icons/static.gif" alt="Static member" title="Static member" />
                       </td>
                       <td>
-                        <a href="287875760.htm">LookUpStringFormat</a>
+                        <a href="933992859.htm">SameFaceNormalDotTolerance</a>
                       </td>
                       <td>
                         <div class="summary">
-       The look up string format
+       The tolerance for the same normal of a face when two are dot-producted.
    </div>
                       </td>
                     </tr>
@@ -115,109 +115,16 @@
                         <img src="../icons/static.gif" alt="Static member" title="Static member" />
                       </td>
                       <td>
-                        <a href="1488766553.htm">MaxNumberEdgesPerFace</a>
+                        <a href="1875115007.htm">VertexCheckSumMultiplier</a>
                       </td>
                       <td>
                         <div class="summary">
-       The maximum number edges per face
-   </div>
-                      </td>
-                    </tr>
-                    <tr data="public;static;declared;notNetfw;">
-                      <td>
-                        <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
-                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
-                      </td>
-                      <td>
-                        <a href="1397712492.htm">MinProbabilityForPrimitiveClassifer</a>
-                      </td>
-                      <td>
-                        <div class="summary">
-       The minimum probability for primitive classifier
-   </div>
-                      </td>
-                    </tr>
-                    <tr data="public;static;declared;notNetfw;">
-                      <td>
-                        <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
-                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
-                      </td>
-                      <td>
-                        <a href="541957364.htm">MinProbabilityForPrimitiveOfWingedEdge</a>
-                      </td>
-                      <td>
-                        <div class="summary">
-       The minimum probability for primitive of winged edge
-   </div>
-                      </td>
-                    </tr>
-                    <tr data="public;static;declared;notNetfw;">
-                      <td>
-                        <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
-                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
-                      </td>
-                      <td>
-                        <a href="808552586.htm">NumberStyle</a>
-                      </td>
-                      <td>
-                        <div class="summary">
-       The number style
-   </div>
-                      </td>
-                    </tr>
-                    <tr data="public;static;declared;notNetfw;">
-                      <td>
-                        <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
-                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
-                      </td>
-                      <td>
-                        <a href="1576414120.htm">RegExCoord</a>
-                      </td>
-                      <td>
-                        <div class="summary">
-       The reg ex coord
-   </div>
-                      </td>
-                    </tr>
-                    <tr data="public;static;declared;notNetfw;">
-                      <td>
-                        <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
-                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
-                      </td>
-                      <td>
-                        <a href="1905536325.htm">RegExSolid</a>
-                      </td>
-                      <td>
-                        <div class="summary">
-       The reg ex solid
-   </div>
-                      </td>
-                    </tr>
-                    <tr data="public;static;declared;notNetfw;">
-                      <td>
-                        <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
-                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
-                      </td>
-                      <td>
-                        <a href="1046351073.htm">SurfaceAreaFractionForPrimitive</a>
-                      </td>
-                      <td>
-                        <div class="summary">
-       The surface area fraction for primitive
-   </div>
-                      </td>
-                    </tr>
-                    <tr data="public;static;declared;notNetfw;">
-                      <td>
-                        <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
-                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
-                      </td>
-                      <td>
-                        <a href="89887836.htm">VertexSize</a>
-                      </td>
-                      <td>
-                        <div class="summary">
-       The vertex size
+   VertexCheckSumMultiplier is the checksum multiplier to be used for face and edge references.
+   Since the edges connect two vertices the maximum value this can be is
+   the square root of the max. value of a long (see above). However, during
+   debugging, it is nice to see the digits of the vertex indices embedded in
+   check, so when debugging, this is reducing to 1 billion instead of 3 billion.
+   This way if you are connecting vertex 1234 with 5678, you will get a checksum = 5678000001234
    </div>
                       </td>
                     </tr>

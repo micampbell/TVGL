@@ -29,7 +29,7 @@
       <MSHelp:Attr Name="Locale" Value="en-us" />
       <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
       <MSHelp:Attr Name="TopicType" Value="apiref" />
-      <MSHelp:Attr Name="Abstract" Value="The Slice class includes static functions for cutting a tessellated solid." />
+      <MSHelp:Attr Name="Abstract" Value="The Slice class includes static functions for cutting a tessellated solid. Slice4 Performs the slicing operation on the prescribed flat plane. This is a NON-Destructive operation, and returns two of more new tessellated solids in the &quot;o ..." />
       <MSHelp:Attr Name="AssemblyVersion" Value="" />
     </xml>
   </head>
@@ -44,6 +44,10 @@
               <div id="mainBody">
                 <div class="summary">
    The Slice class includes static functions for cutting a tessellated solid.
+   Slice4 Performs the slicing operation on the prescribed flat plane. This is a NON-Destructive
+   operation, and returns two of more new tessellated solids  in the "out" parameter
+   lists.
+   However, it does reference the solid's faces. So this may conflict with parallel processing.
    </div>
                 <p />
     <b>Namespace:</b> 
