@@ -1,0 +1,20 @@
+Most of code is pasted from:
+https://github.com/i2e-haw-hamburg/cad-in-unity
+this project is trying to create tessellations from STEP
+and recognizes that surfaces need to be converted. This is a great step towards our goal.
+But many files have already been re-worked. See new folder under InputOutput Operations.
+STEP is so very complex, but I'm getting a handle for how to parse it. Here are some useful
+web links:
+https://www.steptools.com/stds/stp_aim/html/
+   this wiki has all the details of class connectivity in STEP
+
+http://www.wikistep.org/im/overview-summary.html
+  here's another one
+
+  this javascript project has been informative for comparing result
+  https://github.com/erossignon/node-STEP
+
+
+  here's a good starting point
+  http://stepcode.github.io/docs/home/
+

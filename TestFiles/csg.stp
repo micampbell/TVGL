@@ -1,0 +1,92 @@
+ISO-10303-21;
+HEADER;
+/* 
+ */
+FILE_DESCRIPTION( 
+/* description         */ ('STEP DATA'), 
+/* implementation_level*/ '2;1');
+FILE_NAME (
+/* name                */ 
+'csg.stp', 
+/* time_stamp          */ '2002-03-08 T13:21:53',
+/* author              */ ('',''),
+/* organization        */ ('',
+'',
+ '', 'US'),
+/* preprocessor_version*/ 'preprocessor_version',
+/* originating_system  */ '',
+/* authorization       */ 'unknown');
+FILE_SCHEMA(('aic_csg'));/*AIC_CSG, ISO10303-515:2000*/
+ENDSEC;
+DATA;
+
+/* from STEP measure schema, (part 41) */
+#210 = (
+	LENGTH_UNIT () 
+	NAMED_UNIT (*) 
+	SI_UNIT (.MILLI., .METRE.) 
+	);
+#220 = LENGTH_MEASURE_WITH_UNIT ( LENGTH_MEASURE(25.4), #210);
+#230 = DIMENSIONAL_EXPONENTS (1., 0., 0., 0., 0., 0., 0.);
+#240 = (   CONVERSION_BASED_UNIT ('INCH', #220) 
+   LENGTH_UNIT () 
+  NAMED_UNIT (#230) );
+#250 = (   NAMED_UNIT (*) 
+   PLANE_ANGLE_UNIT () 
+   SI_UNIT ($, .RADIAN.) );
+#260 = PLANE_ANGLE_MEASURE_WITH_UNIT 
+( PLANE_ANGLE_MEASURE(0.0174532925), #250);
+#270 = DIMENSIONAL_EXPONENTS (0., 0., 0., 0., 0., 0., 0.);
+#280 = (   CONVERSION_BASED_UNIT ('DEGREE', #260) 
+   NAMED_UNIT (#270) 
+  PLANE_ANGLE_UNIT () );
+#290 = (   NAMED_UNIT (*) 
+   SI_UNIT ($, .STERADIAN.) 
+   SOLID_ANGLE_UNIT () );
+/* from STEP representation schema, (part 43) */
+#300 = UNCERTAINTY_MEASURE_WITH_UNIT ( LENGTH_MEASURE(0.001000), #240,
+ 'MODEL_ACCURACY', 'Maximum Tolerance applied to model');
+
+#2001=CSG_SOLID(#2013);
+#2003=BLOCK(#2007,1,1,1);
+#2004=CARTESIAN_POINT('',(4,0,0));
+#2005=DIRECTION('',(2,0,0));
+#2006=DIRECTION('',(0,3,0));
+#2007=AXIS2_PLACEMENT_3D('',#2004,#2005,#2006);
+#2008=BLOCK(#2012,1,1,1);
+#2009=CARTESIAN_POINT('',(4,0,0));
+#2010=DIRECTION('',(2,0,0));
+#2011=DIRECTION('',(0,3,0));
+#2012=AXIS2_PLACEMENT_3D('',#2009,#2010,#2011);
+#2013=BOOLEAN_RESULT(#2003,#2008,.UNION.);
+#2017 = (GEOMETRIC_REPRESENTATION_CONTEXT (3)
+   GLOBAL_UNCERTAINTY_ASSIGNED_CONTEXT ((#300)) 
+   GLOBAL_UNIT_ASSIGNED_CONTEXT ((#240, #280, #290)) 
+   REPRESENTATION_CONTEXT ('', '') 
+);
+#2018=CSG_SHAPE_REPRESENTATION('',(#2001
+),#2017);
+
+
+/* from STEP support schema, (part 41) */
+#1078=COORDINATED_UNIVERSAL_TIME_OFFSET(0,5,.BEHIND.);
+#1079=LOCAL_TIME(13,22,54,#1078);
+#1083=PERSON('','','',(''),$,$);
+#1084=ORGANIZATION('.','','1');
+#1085=PERSON_AND_ORGANIZATION(#1083,#1084);
+#1086=CALENDAR_DATE(2002,8,3);
+#1087=DATE_AND_TIME(#1086,#1079);
+#1102=APPLICATION_CONTEXT('aic_csg');
+#1103=APPLICATION_PROTOCOL_DEFINITION('international standard',
+'aic_csg',1994,#1102);
+#1104=MECHANICAL_CONTEXT('',#1102,'mechanical');
+#1105=PRODUCT('','csg'
+,'A PART EXAMPLE',(#1104));
+#1119=PRODUCT_DEFINITION_FORMATION_WITH_SPECIFIED_SOURCE
+('A',     'PRE?RELEASE',#1105,.MADE.);
+#1155=DESIGN_CONTEXT('',#1102,'design');
+#1156=PRODUCT_DEFINITION('design','',#1119,#1155);
+#1157=PRODUCT_DEFINITION_SHAPE('','',#1156);
+#1158=SHAPE_DEFINITION_REPRESENTATION(#1157,#2018);
+ENDSEC;
+END-ISO-10303-21;
