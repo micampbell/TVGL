@@ -82,7 +82,6 @@ namespace TVGL.IOFunctions
                         case "endvertices":
                             endofVertices = true;
                             break;
-
                         case "endshell":
                             inObject = false;
                             shellData.Add(shellSolid);

@@ -180,6 +180,9 @@ namespace TVGL.IOFunctions
                     case FileType.SHELL:
                         solid = ShellFileData.OpenSolids(s, filename)[0];
                         break;
+                    case FileType.STEP:
+                        solid = STEPFileData.OpenSolids(s, filename)[0];
+                        break;
                     default:
                         var serializer = new JsonSerializer();
                         var sr = new StreamReader(s);
@@ -258,8 +261,10 @@ namespace TVGL.IOFunctions
         }
         public static Solid Open(Stream s, string filename = "")
         {
+#if !DEBUG
             try
             {
+#endif
                 var extension = GetFileTypeFromExtension(Path.GetExtension(filename));
                 switch (extension)
                 {
@@ -279,7 +284,8 @@ namespace TVGL.IOFunctions
                         return PLYFileData.OpenSolid(s, filename);
                     case FileType.SHELL:
                         return ShellFileData.OpenSolids(s, filename)[0];
-                        break;
+                    case FileType.STEP:
+                        return STEPFileData.OpenSolids(s, filename)[0];
                     default:
                         var serializer = new JsonSerializer();
                         var sr = new StreamReader(s);
@@ -298,11 +304,13 @@ namespace TVGL.IOFunctions
                             return (Solid)JsonConvert.DeserializeObject(jObject.ToString(), type);
                         }
                 }
-            }
+#if !DEBUG
+        }
             catch (Exception exc)
             {
                 throw new Exception("Cannot open file. Message: " + exc.Message);
             }
+#endif
         }
 
         public static void OpenFromString(string data, FileType fileType, out TessellatedSolid solid)
@@ -364,6 +372,8 @@ namespace TVGL.IOFunctions
                 case "off": return FileType.OFF;
                 case "ply": return FileType.PLY_ASCII;
                 case "shell": return FileType.SHELL;
+                case "stp":
+                case "step": return FileType.STEP;
                 case "tvgl":
                 case "json": return FileType.TVGL;
                 default: return FileType.unspecified;
@@ -383,6 +393,7 @@ namespace TVGL.IOFunctions
                 case FileType.PLY_ASCII:
                 case FileType.PLY_Binary: return "ply";
                 case FileType.SHELL: return "shell";
+                case FileType.STEP: return "stp";
                 case FileType.TVGL: return "tvgl";
                 default: return "";
             }
@@ -913,9 +924,9 @@ namespace TVGL.IOFunctions
             }
             return Double.NaN;
         }
-        #endregion
+#endregion
 
-        #region Save/Write
+#region Save/Write
         /// <summary>
         /// Saves the specified solids to a file.
         /// </summary>
@@ -1084,6 +1095,6 @@ namespace TVGL.IOFunctions
                        now.Minute + ":" + now.Second;
             }
         }
-        #endregion
+#endregion
     }
 }
