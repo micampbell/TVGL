@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using STPLoader.Implementation.Parser;
 
 namespace TVGL.IOFunctions.Step
 {
@@ -38,9 +37,8 @@ namespace TVGL.IOFunctions.Step
         public IList<double> List2;
 
         public bool Boo4;
-        
-        public override void Init()
-        {
+        public override void Init(Dictionary<long, Entity> Data)
+                {
             Info = ParseHelper.Parse<string>(Data[0]);
             Number = ParseHelper.Parse<int>(Data[1]);
             PointIds = ParseHelper.ParseList<string>(Data[2]).Select(ParseHelper.ParseId).ToList();

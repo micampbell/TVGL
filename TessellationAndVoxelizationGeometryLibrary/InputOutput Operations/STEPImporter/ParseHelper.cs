@@ -12,7 +12,7 @@ namespace TVGL.IOFunctions.Step
     /// </summary>
 	internal static class ParseHelper
     {
-        private static readonly IDictionary<string, Type> EntityTypes = new Dictionary<string, Type>()
+        internal static readonly IDictionary<string, Type> EntityTypes = new Dictionary<string, Type>()
         {
             {"CARTESIAN_POINT", typeof(CartesianPoint)},
             {"DIRECTION", typeof(DirectionPoint)},
@@ -32,7 +32,10 @@ namespace TVGL.IOFunctions.Step
             {"EDGE_LOOP", typeof(EdgeLoop)},
             {"FACE_OUTER_BOUND", typeof(FaceOuterBound)},
             {"LINE", typeof(Line)},
-            {"PLANE", typeof(Plane)}
+            {"PLANE", typeof(Plane)},
+            //{"SOLID_MODEL", typeof(StepSolid) }, //abstract and can't be instantiated
+            {"CSG_SOLID", typeof(CSGStepSolid) },
+            {"MANIFOLD_SOLID_BREP", typeof(BREPStepSolid) },
         };
 
         internal static Stream FindSection(Stream stream, string start, string end)
@@ -94,9 +97,10 @@ namespace TVGL.IOFunctions.Step
             return ParseList<string>(listString);
         }
 
-        internal static IList<T> ParseList<T>(string listString)
+        internal static T[] ParseList<T>(string listString)
         {
-            return Regex.Split(inner, @",(?![^\(]*\))").Select(x => (T)Convert.ChangeType(x, typeof(T), CultureInfo.InvariantCulture)).ToList();
+            return Regex.Split(listString, @",(?![^\(]*\))").Select(x => (T)Convert.ChangeType(x.Trim(), typeof(T),
+                CultureInfo.InvariantCulture)).ToArray();
         }
 
 
@@ -113,28 +117,7 @@ namespace TVGL.IOFunctions.Step
 
             var list = ParseList(rightPart.Substring(positionOfList));
 
-            return CreateEntity(type, id, list);
-        }
-
-        private static Entity CreateEntity(string type, long id, IList<string> list)
-        {
-            if (SpecificEntity(type))
-            {
-                var entity = (Entity)Activator.CreateInstance(EntityTypes[type]);
-                entity.Id = id;
-                entity.Type = type;
-                entity.Data = list;
-                entity.Init();
-                return entity;
-            }
-            return CreateEntity<Entity>(type, id, list);
-        }
-
-        private static T CreateEntity<T>(string type, long id, IList<string> list) where T : Entity, new()
-        {
-            var entity = new T { Id = id, Type = type, Data = list };
-            entity.Init();
-            return entity;
+            return Entity.CreateEntity(type, id, list);
         }
 
         internal static long ParseId(string id)
@@ -146,10 +129,6 @@ namespace TVGL.IOFunctions.Step
             return long.Parse(id.Substring(1));
         }
 
-        internal static bool SpecificEntity(string entityName)
-        {
-            return EntityTypes.ContainsKey(entityName);
-        }
 
         internal static string ParseString(string data)
         {

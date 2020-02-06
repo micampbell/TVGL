@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using STPLoader.Implementation.Parser;
 
 namespace TVGL.IOFunctions.Step
 {
@@ -13,7 +12,7 @@ namespace TVGL.IOFunctions.Step
         public long SurfaceId;
         public bool Boo;
 
-        public override void Init()
+        public override void Init(Dictionary<long, Entity> Data)
         {
             Info = ParseHelper.Parse<string>(Data[0]);
             BoundIds = ParseHelper.ParseList<string>(Data[1]).Select(ParseHelper.ParseId).ToList();

@@ -1,26 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using STPLoader.Implementation.Parser;
 
 namespace TVGL.IOFunctions.Step
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public class Bound : Entity
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public string Info;
-        /// <summary>
-        /// 
-        /// </summary>
         public long EdgeLoopId;
-
         public bool Boo;
-
-        public override void Init()
+        public override void Init(Dictionary<long, Entity> Data)
         {
             Info = ParseHelper.Parse<String>(Data[0]);
             EdgeLoopId = ParseHelper.ParseId(Data[1]);
